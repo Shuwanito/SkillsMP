@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-gov-memory-auditor",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Audit the shared memory of the education department. Several agents have stored contradictory curriculum recommendations: one says LOMLOE requires digital competency in all subjects, another says it's optional for arts.",
+      "expected_output": "A memory integrity audit identifying the contradiction, tracing its origin, and proposing quarantine and resolution steps.",
+      "assertions": [
+        "Response identifies the specific contradiction between the two memory entries",
+        "Response traces the likely root cause of the inconsistency (outdated information, misinterpretation, different regulatory sources)",
+        "Response proposes quarantine of the incorrect entry and a verification process before correction"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "The nexus-ped-motivation agent's behavior has shifted over the last 30 days. It initially recommended balanced gamification but now recommends aggressive reward systems in every response. Investigate for goal drift.",
+      "expected_output": "A goal drift investigation comparing current behavior against baseline, identifying the drift pattern and proposing corrective action.",
+      "assertions": [
+        "Response compares current agent behavior patterns against the established baseline",
+        "Response identifies the specific drift (from balanced SDT-aligned to aggressive reward-focused) with evidence",
+        "Response proposes corrective measures including baseline recalibration and memory review"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Run an integrity check across all department memory stores. Look for duplicate entries, expired memories that should have been purged, and cross-department inconsistencies.",
+      "expected_output": "A comprehensive integrity audit report covering duplicates, expired entries, and cross-department inconsistencies with remediation priorities.",
+      "assertions": [
+        "Response defines a systematic scan methodology covering all memory stores",
+        "Response categorizes findings by type (duplicates, expired, inconsistencies) with severity levels",
+        "Response prioritizes remediation actions and proposes a cleanup schedule"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "We suspect that an external data source injected misleading information into the content department's memory during the last web learning cycle. Investigate for memory poisoning.",
+      "expected_output": "A memory poisoning investigation tracing the suspected injection, assessing impact scope, and implementing containment measures.",
+      "assertions": [
+        "Response outlines a forensic investigation process to trace the poisoned memory entries to their source",
+        "Response assesses the scope of impact (which agents consumed the poisoned data, what decisions were affected)",
+        "Response implements quarantine measures before any deletion and proposes anti-poisoning safeguards"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Establish memory hygiene baselines for the 23 departments. Define what constitutes a healthy memory state, acceptable drift thresholds, and scheduled audit frequency.",
+      "expected_output": "A memory hygiene policy with baseline definitions, drift thresholds, and an audit schedule for all departments.",
+      "assertions": [
+        "Response defines specific baseline metrics for healthy memory state (consistency score, freshness, redundancy ratio)",
+        "Response establishes quantified drift thresholds per agent role that trigger alerts",
+        "Response proposes a scheduled audit calendar with different frequencies based on department risk level"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Audit the education department's memory for contradictions",
+      "Investigate if this agent has drifted from its original goals",
+      "Run an integrity check across all department memories",
+      "We suspect memory poisoning from an external source, investigate",
+      "Establish memory hygiene baselines and audit schedules"
+    ],
+    "should_not_trigger": [
+      "Audit our platform for GDPR compliance",
+      "Check if our AI has algorithmic bias",
+      "Design a curriculum aligned with LOMLOE",
+      "Create a rubric for student presentations",
+      "How do I motivate disengaged students?"
+    ]
+  }
+}

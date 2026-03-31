@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-marketing-sales",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a personalized technical demo script for a mid-size university (5,000 students) evaluating our AI tutoring agents. They care most about student outcomes and integration with their existing Moodle LMS.",
+      "expected_output": "A demo script highlighting student outcome metrics, Moodle integration capabilities, and a structured flow from pain points to solution demonstration.",
+      "assertions": [
+        "Response includes a structured demo script with clear flow and talking points",
+        "Response addresses Moodle LMS integration specifically",
+        "Response focuses on student outcomes as the primary value driver"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Design an automated commercial proposal template for our Corporate Training Module. Include pricing, implementation timeline, and ROI projections.",
+      "expected_output": "A proposal template with executive summary, product description, pricing tiers, implementation timeline, and ROI calculator section.",
+      "assertions": [
+        "Response includes a complete proposal structure with executive summary and pricing",
+        "Response provides an implementation timeline with milestones",
+        "Response includes an ROI projection section with calculation methodology"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "What are the top 5 objections we face when selling AI agent services to school districts, and how should our sales team respond to each?",
+      "expected_output": "A battle card with 5 common objections, data-backed responses, and suggested proof points for each objection.",
+      "assertions": [
+        "Response identifies at least 5 realistic objections specific to school district sales",
+        "Response provides data-backed or evidence-based responses for each objection",
+        "Response includes proof points or case study references to support responses"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Design a sales pipeline with stage definitions and follow-up cadences for selling our Skills Assessment Platform to HR departments. Include lead-to-close timeline.",
+      "expected_output": "A pipeline with defined stages, time-in-stage benchmarks, follow-up cadences, and content for each touchpoint.",
+      "assertions": [
+        "Response defines at least 4 pipeline stages with clear criteria for stage progression",
+        "Response includes follow-up cadence with specific timing and content per stage",
+        "Response estimates lead-to-close timeline with conversion rate benchmarks"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Create sales enablement materials for our sales team to sell the White-Label Agent Factory to enterprise clients. What battle cards, one-pagers, and ROI tools do they need?",
+      "expected_output": "A sales enablement kit description with specific materials, their purpose, target audience, and key messaging for each piece.",
+      "assertions": [
+        "Response lists at least 4 specific sales enablement materials with descriptions",
+        "Response tailors materials to enterprise buyer personas and decision-making stages",
+        "Response includes ROI-focused content with quantifiable value metrics"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Create a demo script for a university evaluating our product",
+      "Design a commercial proposal for the corporate training module",
+      "What sales objections do we face with school districts?",
+      "Build a sales pipeline for selling to HR departments",
+      "What sales enablement materials does our team need?"
+    ],
+    "should_not_trigger": [
+      "What is our brand perception among educators?",
+      "Model the ROI of entering the legal tech vertical",
+      "Design a patient case simulation for medical training",
+      "Automate our GDPR compliance audit process",
+      "How should we allocate our investment budget?"
+    ]
+  }
+}

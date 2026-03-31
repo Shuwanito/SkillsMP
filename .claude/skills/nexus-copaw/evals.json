@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-copaw",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Evaluate CoPaw AI assistant for integration into our NEXUS ecosystem. We need it to handle student support queries and route complex issues to human tutors. Assess compatibility and integration feasibility.",
+      "expected_output": "A comprehensive evaluation of CoPaw covering API compatibility, feature assessment, integration architecture, and a feasibility recommendation for student support use case",
+      "assertions": [
+        "Response must assess CoPaw's API capabilities and protocol compatibility with NEXUS ecosystem standards",
+        "Response must evaluate whether CoPaw can handle the specific student support use case including query routing",
+        "Response must provide a clear feasibility recommendation with identified integration risks and blockers"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "We want to integrate ChatGPT, Claude, and Gemini APIs into our ecosystem as pluggable tutoring backends. Design the integration architecture that allows switching between them.",
+      "expected_output": "An integration architecture with abstraction layer design, API adapter patterns, failover logic, and configuration for pluggable LLM backends",
+      "assertions": [
+        "Response must design an abstraction layer that normalizes the APIs of all three providers behind a common interface",
+        "Response must address differences in API protocols, rate limits, and response formats across providers",
+        "Response must include failover and fallback logic for provider outages or degraded performance"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Assess the Intercom Fin AI agent for customer support integration. We need to know if it can handle our EdTech-specific queries and what the integration effort would be.",
+      "expected_output": "An evaluation of Intercom Fin covering EdTech domain fit, API integration requirements, customization capabilities, and total integration effort estimate",
+      "assertions": [
+        "Response must evaluate Intercom Fin's ability to handle education-specific terminology and query types",
+        "Response must detail the API integration requirements including authentication, webhooks, and data flow",
+        "Response must estimate integration effort in developer-hours or sprints with key milestones"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "A new AI agent marketplace (SkillsMP) offers 500+ pre-built education agents. Evaluate 3 of their top-rated agents for potential import into NEXUS: MathTutor Pro, LanguageCoach, and StudyPlanner.",
+      "expected_output": "A comparative evaluation of 3 marketplace agents covering capability fit, quality assessment, NEXUS compatibility, and import recommendation",
+      "assertions": [
+        "Response must evaluate each agent individually against NEXUS ecosystem requirements and standards",
+        "Response must assess skill quality and coverage for each agent's claimed domain",
+        "Response must provide import recommendations with specific compatibility issues to resolve for each agent"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Our integration of an external grading assistant is producing incomplete recommendations -- it only covers multiple choice but not essay or project grading. Diagnose the completeness gap and propose fixes.",
+      "expected_output": "A gap analysis of the incomplete integration with root cause identification, missing capability mapping, and remediation plan to achieve full grading coverage",
+      "assertions": [
+        "Response must identify the specific capability gaps in the external assistant's coverage (essay grading, project evaluation)",
+        "Response must diagnose whether the gap is in the external tool's capabilities or in the integration configuration",
+        "Response must propose actionable fixes to achieve complete grading coverage, whether through configuration, supplementary tools, or custom development"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Evaluate CoPaw for integration into our NEXUS ecosystem",
+      "Design an architecture to integrate multiple LLM providers as pluggable backends",
+      "Assess Intercom Fin for customer support in our EdTech platform",
+      "Evaluate marketplace agents for import into our ecosystem",
+      "Our external grading assistant integration is incomplete, diagnose the issue"
+    ],
+    "should_not_trigger": [
+      "Set up a headless browser fleet for web auditing",
+      "Build a digital twin simulation of our production infrastructure",
+      "Design anomaly detection rules for our SIEM",
+      "What pricing model should we use for our AaaS product?",
+      "Analyze cognitive load on our student dashboard interface"
+    ]
+  }
+}

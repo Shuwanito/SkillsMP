@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-backend",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Review this FastAPI endpoint for issues: @app.post('/api/students') async def create_student(data: dict): student = Student(**data); db.add(student); db.commit(); return {'id': student.id}",
+      "expected_output": "Identifies missing Pydantic model validation, missing error handling, sync commit in async context, no response model, missing authentication.",
+      "assertions": [
+        "Flags the use of raw dict instead of a Pydantic model for input validation",
+        "Identifies the synchronous db.commit() in an async endpoint as a blocking call",
+        "Notes the missing error handling and lack of authentication middleware"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "This SQLAlchemy query is slow on our students table (2M rows): session.query(Student).filter(Student.active == True).order_by(Student.created_at.desc()).all()",
+      "expected_output": "Identifies .all() loading everything into memory, suggests pagination, recommends index on (active, created_at), proposes async session usage.",
+      "assertions": [
+        "Warns that .all() loads 2M rows into memory and recommends pagination with .limit() and .offset()",
+        "Recommends adding a composite database index on (active, created_at)",
+        "Suggests using async session for non-blocking database access"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Design a RESTful API for a quiz module that supports creation, taking, scoring, and reviewing quizzes. Consider pagination, filtering, and error responses.",
+      "expected_output": "Proposes well-structured API endpoints following REST conventions, includes pagination, proper HTTP status codes, error response schemas, and HATEOAS links.",
+      "assertions": [
+        "Defines CRUD endpoints following REST conventions with proper HTTP methods",
+        "Includes pagination parameters and filtering options on list endpoints",
+        "Specifies error response schemas with appropriate HTTP status codes"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Our API has no rate limiting and we just got hit with a burst of 50,000 requests in 1 minute. What middleware and strategies should we implement in FastAPI?",
+      "expected_output": "Recommends rate limiting middleware (slowapi/fastapi-limiter), token bucket algorithm, per-user and per-endpoint limits, with Redis-backed counters.",
+      "assertions": [
+        "Recommends specific FastAPI-compatible rate limiting libraries or middleware",
+        "Proposes per-user and per-endpoint rate limit strategies",
+        "Suggests a distributed rate limiting backend like Redis for scalability"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "We need to decompose our monolithic FastAPI app into microservices. The app handles auth, student management, quiz engine, analytics, and notifications. Propose a decomposition strategy.",
+      "expected_output": "Identifies bounded contexts, proposes service boundaries, defines inter-service communication patterns, addresses data ownership, and suggests migration order.",
+      "assertions": [
+        "Identifies at least 4 bounded contexts for microservice decomposition",
+        "Defines inter-service communication patterns (sync REST, async events, or both)",
+        "Proposes a phased migration order starting with the least coupled service"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Review this FastAPI endpoint for security and performance issues",
+      "Optimize this SQLAlchemy query that is running slowly",
+      "Design a RESTful API for the new module",
+      "How should we implement rate limiting in our FastAPI backend?",
+      "Propose a microservices decomposition for our monolithic app"
+    ],
+    "should_not_trigger": [
+      "Design a React component for the student dashboard",
+      "Set up CI/CD pipelines for our deployment",
+      "Analyze the learning curve data for student cohort A",
+      "Create a Terraform module for our AWS infrastructure",
+      "Build a causal graph to analyze student dropout factors"
+    ]
+  }
+}

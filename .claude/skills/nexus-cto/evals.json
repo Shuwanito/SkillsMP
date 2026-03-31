@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-cto",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Evaluate our current tech stack (FastAPI 0.95, SQLAlchemy 1.4, Pydantic v1, Python 3.10) against 2026 standards. Should we upgrade and what are the risks?",
+      "expected_output": "Identifies outdated versions, recommends upgrade path to FastAPI 0.110+, SQLAlchemy 2.0, Pydantic v2, Python 3.12+, with migration risks and effort estimates.",
+      "assertions": [
+        "Identifies that SQLAlchemy 1.4 and Pydantic v1 are significantly outdated",
+        "Recommends a phased upgrade path with specific target versions",
+        "Assesses migration risks and estimated effort for each upgrade"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Our monolithic FastAPI application is hitting scaling limits at 10,000 concurrent users. Evaluate architectural options: microservices, event-driven, or modular monolith.",
+      "expected_output": "Provides tradeoff analysis of each approach with benchmarks, recommends the best fit based on team size and current architecture, includes migration path.",
+      "assertions": [
+        "Analyzes all three architectural options with specific tradeoffs",
+        "Provides measurable criteria such as latency, throughput, and operational complexity",
+        "Recommends one option with justification based on current context"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Several of our key dependencies have announced deprecations: uvicorn is recommending granian, SQLAlchemy is dropping Python 3.9 support, and a critical middleware library has been abandoned. Advise on strategy.",
+      "expected_output": "Creates deprecation tracking plan, evaluates alternatives for each dependency, proposes migration timeline aligned with release cycles.",
+      "assertions": [
+        "Addresses each of the three deprecation scenarios with specific alternatives",
+        "Proposes a prioritized migration timeline",
+        "Considers the risk of the abandoned middleware library as highest priority"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Benchmark our current API response times (p50: 120ms, p95: 450ms, p99: 1200ms) against industry standards for EdTech platforms. Are we competitive?",
+      "expected_output": "Compares against EdTech benchmarks, identifies the p99 as problematic, suggests specific optimization strategies for tail latency.",
+      "assertions": [
+        "Compares the given metrics against industry benchmarks for EdTech platforms",
+        "Identifies the p99 latency of 1200ms as significantly above acceptable thresholds",
+        "Proposes specific optimization strategies to reduce tail latency"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "We are considering adding real-time collaboration features. Evaluate WebSocket vs SSE vs WebTransport for our FastAPI stack, considering our team's current expertise.",
+      "expected_output": "Evaluates all three technologies with implementation complexity, performance, and browser support. Recommends based on team capability and use case fit.",
+      "assertions": [
+        "Evaluates WebSocket, SSE, and WebTransport with specific pros and cons",
+        "Considers FastAPI compatibility and implementation complexity for each option",
+        "Factors in team learning curve when making the recommendation"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Evaluate our technology stack and recommend upgrades",
+      "What architecture should we adopt for scaling beyond current limits?",
+      "Several dependencies are being deprecated, what should we do?",
+      "Benchmark our API performance against industry standards",
+      "Compare technology options for a new feature and advise on strategy"
+    ],
+    "should_not_trigger": [
+      "Write a REST endpoint for user registration",
+      "Fix this CSS layout issue on mobile devices",
+      "Generate test cases for the payment module",
+      "Set up a Kubernetes cluster for staging",
+      "Analyze student learning outcomes from last semester"
+    ]
+  }
+}

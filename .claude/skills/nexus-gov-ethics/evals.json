@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-gov-ethics",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Audit our AI recommendation engine for algorithmic bias. It suggests learning paths based on past performance, but teachers report it consistently recommends lower-difficulty content to students from lower socioeconomic areas.",
+      "expected_output": "A bias audit identifying the socioeconomic bias pattern, its likely causes, and specific mitigation strategies.",
+      "assertions": [
+        "Response identifies socioeconomic status as a protected characteristic and the pattern as potential algorithmic discrimination",
+        "Response analyzes likely causes (biased training data, proxy variables, feedback loops)",
+        "Response proposes specific bias mitigation strategies (debiasing algorithms, fairness constraints, regular audits)"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Our platform uses AI to generate personalized feedback on student essays. Parents want to know how the AI makes its decisions. Assess the transparency of our system and propose improvements.",
+      "expected_output": "A transparency assessment evaluating the explainability of the AI system with age-appropriate disclosure recommendations.",
+      "assertions": [
+        "Response evaluates the current level of explainability of the AI feedback system",
+        "Response proposes age-appropriate transparency mechanisms for both students and parents",
+        "Response references relevant AI transparency frameworks (EU AI Act, UNESCO AI in Education guidelines)"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Review our consent mechanism: when students create an account, they click 'I agree to terms of service' (a 15-page legal document). Is this ethically adequate informed consent for minors?",
+      "expected_output": "An ethical assessment of the consent mechanism identifying failures in genuine informed consent for minors, with redesign proposals.",
+      "assertions": [
+        "Response identifies the consent mechanism as inadequate for genuine informed consent (length, complexity, click-through pattern)",
+        "Response addresses age-specific consent requirements (minors cannot meaningfully consent to 15-page legal documents)",
+        "Response proposes a redesigned consent mechanism that is genuinely informed, age-appropriate, and freely given"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Our content recommendation system shows different examples to boys and girls based on historical engagement data. Boys see more sports examples, girls see more arts examples. Is this an ethical concern?",
+      "expected_output": "An ethical analysis identifying gender stereotyping in content delivery as a bias concern, with recommendations to eliminate gendered recommendations.",
+      "assertions": [
+        "Response identifies the pattern as gender stereotyping that reinforces existing biases rather than neutral personalization",
+        "Response explains how historical data can encode and perpetuate societal biases",
+        "Response proposes specific interventions to eliminate gender-based content differentiation while maintaining personalization"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "We're considering implementing emotion detection via webcam during online exams to flag students who appear 'stressed' or 'distracted.' Conduct an ethical impact analysis.",
+      "expected_output": "A comprehensive ethical impact analysis identifying privacy, surveillance, accuracy, and equity concerns with this proposal.",
+      "assertions": [
+        "Response identifies major ethical concerns: privacy invasion, surveillance normalization, emotional surveillance of minors",
+        "Response addresses accuracy concerns (emotion detection technology limitations, cultural expression differences)",
+        "Response provides a clear ethical recommendation with balancing of potential benefits against significant harms"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Audit our AI system for algorithmic bias against certain student groups",
+      "Is our consent mechanism ethically adequate for minors?",
+      "Our recommendation engine shows different content by gender, is this ethical?",
+      "Assess the transparency of our AI-driven feedback system",
+      "Should we implement emotion detection during online exams?"
+    ],
+    "should_not_trigger": [
+      "Check if our platform complies with GDPR",
+      "Design a curriculum aligned with LOMLOE",
+      "Create adaptive exercises for Mathematics",
+      "How do I motivate disengaged students?",
+      "Adapt this content for a student with visual impairment"
+    ]
+  }
+}

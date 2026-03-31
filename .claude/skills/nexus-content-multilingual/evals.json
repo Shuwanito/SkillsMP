@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-content-multilingual",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Translate this 3rd ESO Spanish History lesson about the Reconquista into English for an international school. The content is culturally specific and uses terms like 'convivencia' and 'taifas.'",
+      "expected_output": "A translation that preserves educational intent and culturally specific concepts with explanatory context rather than literal word-for-word conversion.",
+      "assertions": [
+        "Response preserves culturally specific terms (convivencia, taifas) with contextual explanations rather than forced translations",
+        "Translation maintains the pedagogical intent and learning objectives of the original lesson",
+        "Response adapts cultural framing for an international audience without distorting historical content"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Audit this translated math lesson: the Spanish original uses 'resolver problemas contextualizados' and the English version says 'solve word problems.' Is this translation adequate for educational purposes?",
+      "expected_output": "A critique identifying the pedagogical meaning loss in the translation and proposing a more accurate educational translation.",
+      "assertions": [
+        "Response identifies that 'contextualized problems' carries different pedagogical meaning than 'word problems'",
+        "Response explains the educational significance lost in the literal translation",
+        "Response proposes a more accurate translation that preserves the pedagogical concept"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Create a bilingual (Spanish/Catalan) science lesson on photosynthesis for a school in Catalonia. Both versions must be educationally equivalent, not just word-for-word translations.",
+      "expected_output": "Two parallel versions that are educationally equivalent while respecting each language's educational conventions and terminology.",
+      "assertions": [
+        "Both versions cover the same scientific concepts with equivalent depth and accuracy",
+        "Each version uses natural educational conventions for its language (not literal translation artifacts)",
+        "Response addresses any terminology differences between Spanish and Catalan science education"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "A lesson about family structures designed for Spanish students needs to be adapted for use in a Japanese educational context. What cultural adaptations are needed beyond language translation?",
+      "expected_output": "A cultural adaptation analysis identifying specific cultural differences that affect content reception, with adaptation recommendations.",
+      "assertions": [
+        "Response identifies specific cultural differences relevant to family structure discussions (family composition norms, privacy expectations, social hierarchy)",
+        "Response goes beyond language translation to address pedagogical and cultural framing differences",
+        "Response maintains the core learning objectives while respecting Japanese cultural context"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Review these 5 translated assessment items from Spanish to Arabic for a 2nd ESO Mathematics test. Flag any items where the translation may introduce confusion or cultural bias.",
+      "expected_output": "A review identifying translation issues that could affect assessment validity, including directionality, number formatting, and cultural context problems.",
+      "assertions": [
+        "Response addresses right-to-left script considerations for mathematical notation and layout",
+        "Response checks for cultural bias in problem contexts (names, scenarios, cultural references)",
+        "Response flags any items where translation ambiguity could affect assessment validity"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Translate this lesson to English preserving educational meaning",
+      "Create a bilingual Spanish/Catalan version of this content",
+      "Audit this translation for pedagogical accuracy",
+      "Adapt this lesson for a different cultural context",
+      "Review translated assessment items for cultural bias"
+    ],
+    "should_not_trigger": [
+      "Adapt this text for a student with visual impairment",
+      "Create exercises with progressive difficulty",
+      "Design a rubric for evaluating essays",
+      "How do I reduce cognitive overload in this lesson?",
+      "Analyze this student's behavioral patterns"
+    ]
+  }
+}

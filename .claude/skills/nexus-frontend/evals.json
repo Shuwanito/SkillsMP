@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-frontend",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Audit this React component for accessibility: <button onClick={handleClick}><img src='icon.png'/></button> used as the main navigation toggle. No other attributes are present.",
+      "expected_output": "Identifies missing alt text on image, missing aria-label on button, missing keyboard focus indicators, and lack of semantic HTML.",
+      "assertions": [
+        "Flags the missing alt attribute on the img element",
+        "Recommends adding aria-label or aria-labelledby to the button",
+        "Notes the need for visible focus indicators for keyboard navigation"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Our React dashboard re-renders 47 components when a single student score updates. The page freezes for 800ms on each update. Diagnose and fix.",
+      "expected_output": "Identifies unnecessary re-renders, suggests React.memo, useMemo, useCallback, state colocation, and component splitting strategies.",
+      "assertions": [
+        "Identifies the cascading re-render problem from state propagation",
+        "Recommends React.memo or useMemo to prevent unnecessary re-renders",
+        "Suggests state colocation or context splitting to limit render scope"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Our LCP is 4.2 seconds, FID is 350ms, and CLS is 0.35 on the student dashboard page. All Core Web Vitals are failing. Propose optimization strategies.",
+      "expected_output": "Addresses each metric: lazy loading and image optimization for LCP, code splitting and defer for FID, dimension attributes and skeleton screens for CLS.",
+      "assertions": [
+        "Proposes specific strategies to reduce LCP below 2.5 seconds",
+        "Recommends code splitting or deferred loading to improve FID below 100ms",
+        "Suggests layout stability techniques like explicit dimensions or skeleton screens for CLS"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "We want to implement a micro-frontend architecture. Our app has 4 major sections: student portal, teacher dashboard, admin panel, and analytics. All currently share a single React build.",
+      "expected_output": "Evaluates Module Federation vs single-spa, proposes decomposition strategy, addresses shared state and routing, considers build and deployment independence.",
+      "assertions": [
+        "Evaluates at least two micro-frontend approaches (e.g., Module Federation, single-spa)",
+        "Proposes clear boundaries for the 4 sections as independent micro-frontends",
+        "Addresses shared state management and cross-micro-frontend communication"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Review this Material-UI usage pattern: we are importing the entire @mui/material package with import { Button, TextField, Grid } from '@mui/material' in 50+ components. Is this a problem?",
+      "expected_output": "Identifies tree-shaking issues with barrel imports, recommends deep imports or modular plugin, quantifies bundle size impact.",
+      "assertions": [
+        "Identifies that barrel imports can hinder tree-shaking and increase bundle size",
+        "Recommends deep path imports like '@mui/material/Button' as an alternative",
+        "Quantifies or estimates the bundle size impact of the current approach"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Audit this React component for accessibility and WCAG compliance",
+      "Our dashboard re-renders too many components, help optimize",
+      "Core Web Vitals are failing on our student page, how do we fix them?",
+      "Should we adopt micro-frontend architecture for our app?",
+      "Review our Material-UI import patterns for bundle size issues"
+    ],
+    "should_not_trigger": [
+      "Optimize this SQL query for the students table",
+      "Design a serverless architecture for the notification system",
+      "Train an ML model on student engagement data",
+      "Set up monitoring dashboards in Grafana",
+      "Review the infrastructure Terraform modules"
+    ]
+  }
+}

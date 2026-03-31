@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-innovation-trend",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "What are the top 5 emerging AI/ML technologies for education that we should consider for our 2027 roadmap? Focus on practical applicability, not hype.",
+      "expected_output": "A ranked list of 5 emerging technologies with maturity assessment, practical education use cases, adoption timeline, and recommendation scores",
+      "assertions": [
+        "Response must identify exactly 5 technologies with specific education use cases for each",
+        "Each technology must include a maturity assessment with estimated timeline for production readiness",
+        "Response must explicitly distinguish between practical technologies and hyped ones with reasoning"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Assess the quantum computing readiness for our platform. We run ML models for adaptive learning. When should we start preparing for quantum and what should we do now?",
+      "expected_output": "A quantum readiness assessment covering current quantum state-of-the-art, relevance to educational ML workloads, timeline for practical impact, and immediate preparation steps",
+      "assertions": [
+        "Response must assess the current state of quantum computing with realistic timelines, not speculative claims",
+        "Response must evaluate which specific ML workloads in adaptive learning could benefit from quantum acceleration",
+        "Response must provide actionable near-term preparation steps even if quantum advantage is years away"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Evaluate whether multimodal AI models (vision + language + audio) are mature enough to add real-time video tutoring analysis to our platform in 2026.",
+      "expected_output": "A technology evaluation covering current multimodal AI capabilities, latency and cost constraints for real-time video, and a build-vs-wait recommendation",
+      "assertions": [
+        "Response must assess current multimodal model capabilities with specific examples of production-ready solutions",
+        "Response must address real-time processing constraints including latency, compute cost, and infrastructure requirements",
+        "Response must provide a clear recommendation on whether to build now, prototype, or wait with justification"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Scan adjacent industries (healthcare, corporate training, legal tech) for technologies that could be adapted for our educational platform. What can we borrow?",
+      "expected_output": "A cross-industry technology scouting report identifying transferable technologies from healthcare, corporate, and legal sectors with adaptation strategies for education",
+      "assertions": [
+        "Response must identify at least one transferable technology from each of the three specified industries",
+        "Each technology must include a concrete adaptation strategy for educational use",
+        "Response must assess the effort and feasibility of each adaptation with realistic estimates"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "There's a lot of buzz about neuromorphic computing and brain-computer interfaces for education. Should we invest R&D resources in exploring these for our platform?",
+      "expected_output": "A critical evaluation that separates hype from practical potential for neuromorphic computing and BCIs in education, with a clear investment recommendation",
+      "assertions": [
+        "Response must critically evaluate the current maturity level of both technologies with evidence",
+        "Response must explicitly flag which claims are hype versus which have demonstrated practical results",
+        "Response must provide a clear invest/defer/ignore recommendation with opportunity cost analysis"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "What emerging technologies should we evaluate for our 2027 roadmap?",
+      "Is quantum computing relevant for our ML-based adaptive learning system?",
+      "Are multimodal AI models ready for real-time educational video analysis?",
+      "What technologies from healthcare or legal can we adapt for education?",
+      "Should we invest in neuromorphic computing research for our platform?"
+    ],
+    "should_not_trigger": [
+      "Build a digital twin simulation of our production environment",
+      "Prioritize our feature backlog for next quarter",
+      "Design a SIEM configuration for threat detection",
+      "How should we price our AaaS offering?",
+      "Evaluate external AI assistants for integration into our ecosystem"
+    ]
+  }
+}

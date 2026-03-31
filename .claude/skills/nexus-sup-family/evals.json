@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-sup-family",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a progress report template for families that communicates a 2nd ESO student's competency development in non-technical language. The report should be understandable by parents without educational background.",
+      "expected_output": "A clear, jargon-free report template with visual elements, plain language descriptions, and solution-oriented feedback.",
+      "assertions": [
+        "Report uses plain, non-technical language avoiding educational jargon",
+        "Report includes visual elements (progress indicators, charts) to aid comprehension",
+        "Report focuses on solutions and next steps, not just problem identification"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "A family is upset because their child received a failing grade and they feel the school didn't communicate the risk early enough. Design a mediation workflow to resolve this conflict.",
+      "expected_output": "A structured mediation framework for the family-school conflict with preparation, dialogue, resolution, and preventive measures.",
+      "assertions": [
+        "Response includes a structured mediation process with clear phases (preparation, meeting, resolution, follow-up)",
+        "Response addresses the family's legitimate concern about early communication failure",
+        "Response proposes preventive measures to avoid similar communication breakdowns in the future"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Design a family engagement strategy for a school with diverse families including immigrant families with limited Spanish proficiency, single-parent working families, and families with low digital literacy.",
+      "expected_output": "An inclusive engagement strategy with multi-channel, accessible communication approaches tailored to diverse family circumstances.",
+      "assertions": [
+        "Strategy addresses language barriers with multilingual or simplified communication options",
+        "Strategy accommodates different schedules and digital literacy levels with multiple communication channels",
+        "Strategy includes measurable participation goals and outreach mechanisms for hard-to-reach families"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Create a parent interview protocol for the beginning of the school year that helps teachers understand each student's home context without being intrusive or judgmental.",
+      "expected_output": "An interview guide with respectful, open-ended questions that gather useful context while maintaining family dignity and privacy.",
+      "assertions": [
+        "Interview questions are open-ended and non-judgmental, respecting diverse family structures",
+        "Protocol gathers educationally relevant information without being intrusive about private family matters",
+        "Protocol includes guidance for the interviewer on cultural sensitivity and active listening"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Our school's current family communication is limited to quarterly report cards sent by email. Many families don't engage. Propose a comprehensive family-school communication system.",
+      "expected_output": "A multi-channel communication system design with regular touchpoints, accessibility features, and two-way communication mechanisms.",
+      "assertions": [
+        "Response proposes multiple communication channels beyond email (messaging, in-person, phone, app notifications)",
+        "Response includes regular touchpoints throughout the year, not just quarterly reports",
+        "Response designs for two-way communication (families can respond, ask questions, share concerns)"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design a parent-friendly progress report template",
+      "How do I mediate a conflict between a family and the school?",
+      "Create a family engagement strategy for diverse families",
+      "Build a parent interview protocol for the start of the year",
+      "Improve our school-family communication system"
+    ],
+    "should_not_trigger": [
+      "Design a rubric for student presentations",
+      "Analyze this student's behavioral pattern",
+      "Create a scaffolding progression for algebra",
+      "Adapt content for a student with ASD",
+      "Check GDPR compliance for our platform"
+    ]
+  }
+}

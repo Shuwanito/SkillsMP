@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-finance-investment",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Evaluate the ROI of acquiring a specialized legal NLP startup for €250K versus building our own legal RAG engine in-house over 6 months. Which option delivers better risk-adjusted returns?",
+      "expected_output": "A structured make-vs-buy analysis comparing total cost of ownership, time-to-market, risk factors, and projected ROI for both options with a clear recommendation.",
+      "assertions": [
+        "Response includes a make-vs-buy comparison with cost estimates for both options",
+        "Response factors in maintenance and integration costs beyond initial investment",
+        "Response provides risk-adjusted ROI with at least base and downside scenarios"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Scout and evaluate 3 EdTech startups in the clinical simulation space that could be acquisition or partnership targets for NEXUS. Provide valuation estimates.",
+      "expected_output": "A scouting report with 3 identified startups, their key metrics, competitive positioning, estimated valuation range, and strategic fit assessment for NEXUS.",
+      "assertions": [
+        "Response identifies at least 3 specific startups or companies with descriptions",
+        "Response includes competitive differentiation analysis for each target",
+        "Response provides valuation estimates or ranges with methodology justification"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "We have €500K to allocate across 4 competing priorities: new healthcare vertical, SMB product launch, skill marketplace expansion, and agent factory scaling. How should we allocate?",
+      "expected_output": "A resource allocation recommendation with specific amounts per priority, scoring by ROI and strategic impact, and justification for the allocation split.",
+      "assertions": [
+        "Response provides specific allocation amounts that sum to €500K",
+        "Response scores or ranks each priority by financial impact and strategic fit",
+        "Response includes justification with data or comparable benchmarks"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Model the growth scenario for NEXUS entering the corporate training vertical. What investment is needed, what is the projected payback period, and what are the key risks?",
+      "expected_output": "A growth model with investment requirements, revenue projections over 12-24 months, payback period calculation, and risk assessment with mitigation strategies.",
+      "assertions": [
+        "Response includes specific investment amount estimates with breakdown",
+        "Response projects revenue over at least 12 months with payback period",
+        "Response identifies key risks with mitigation strategies"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Analyze the latest AI education investment trends in 2026. Which subsectors are attracting the most funding and what does this mean for NEXUS strategy?",
+      "expected_output": "A market analysis of AI education investment trends with data on funding rounds, hot subsectors, and strategic implications for NEXUS positioning.",
+      "assertions": [
+        "Response references specific investment trends or funding data in AI education",
+        "Response identifies trending subsectors with growth indicators",
+        "Response connects market trends to actionable strategic implications for NEXUS"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Should we build or buy a clinical simulation engine?",
+      "Evaluate the ROI of investing in the healthcare vertical",
+      "Scout EdTech startups for potential acquisition",
+      "How should we allocate budget across competing priorities?",
+      "Model the growth scenario for entering the legal tech market"
+    ],
+    "should_not_trigger": [
+      "Design a microlearning module for compliance training",
+      "What is our current brand positioning?",
+      "Create a referral program for educational institutions",
+      "Write a contract analysis pipeline specification",
+      "Build a competency assessment for software engineers"
+    ]
+  }
+}

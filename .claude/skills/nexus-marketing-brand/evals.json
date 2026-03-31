@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-marketing-brand",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build a differentiated brand narrative for NEXUS that resonates with educators and school administrators. What story should we tell and why?",
+      "expected_output": "A brand narrative with core story arc, emotional hooks for educators, key messaging pillars, and differentiation from generic AI tools.",
+      "assertions": [
+        "Response includes a cohesive brand narrative with clear story arc",
+        "Response targets educator and administrator pain points specifically",
+        "Response differentiates NEXUS from generic AI tools with unique positioning"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Design a community building strategy to create an active community of 1,000 educators around NEXUS within 6 months. Include engagement tactics and metrics.",
+      "expected_output": "A community strategy with platform selection, engagement tactics, growth milestones, and KPIs for measuring community health.",
+      "assertions": [
+        "Response recommends specific community platforms and engagement tactics",
+        "Response includes growth milestones with timeline toward 1,000 members",
+        "Response defines measurable engagement KPIs for community health"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Create a social proof framework for NEXUS. How should we collect, structure, and deploy testimonials and case studies to drive conversions?",
+      "expected_output": "A framework covering testimonial collection methods, case study templates, deployment channels, and expected conversion impact.",
+      "assertions": [
+        "Response describes a systematic process for collecting testimonials",
+        "Response includes case study structure with deployment channel recommendations",
+        "Response connects social proof tactics to measurable conversion impact"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Propose 3 co-branding partnerships that would strengthen NEXUS brand perception in the education market. Include value proposition for each partner.",
+      "expected_output": "Three specific partnership proposals with partner profiles, mutual value propositions, and expected brand impact.",
+      "assertions": [
+        "Response proposes at least 3 specific co-branding partners with rationale",
+        "Response articulates mutual value proposition for each partnership",
+        "Response assesses expected brand impact or reach for each partnership"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Monitor and analyze how educators perceive AI tutoring tools in online communities. What are the top concerns and how should NEXUS address them in brand messaging?",
+      "expected_output": "An analysis of educator sentiment toward AI tutoring, top concerns identified from community data, and messaging recommendations to address them.",
+      "assertions": [
+        "Response identifies specific educator concerns about AI tutoring tools",
+        "Response references real educator community contexts or forums",
+        "Response provides messaging recommendations that directly address identified concerns"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "How should we build our brand story for the education market?",
+      "Design a community strategy to engage teachers and educators",
+      "What co-branding partnerships should NEXUS pursue?",
+      "How do educators perceive AI tools and how should we address their concerns?",
+      "Create a testimonial and case study framework for our sales team"
+    ],
+    "should_not_trigger": [
+      "Calculate the payback period for our healthcare investment",
+      "Design a growth loop for viral user acquisition",
+      "Build an automated contract analysis system",
+      "Create a clinical simulation for emergency triage",
+      "Evaluate public tender opportunities in Spain"
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-ped-styles",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Analyze interaction data from our platform showing that Student A spends 3x longer on video content than text, completes visual exercises faster, but struggles with purely auditory instructions. What learning profile can we build?",
+      "expected_output": "A nuanced learning profile analysis that avoids rigid style categorization while identifying actionable content delivery preferences.",
+      "assertions": [
+        "Response identifies visual/multimedia preference patterns without rigidly categorizing the student into a single learning style",
+        "Response acknowledges the limitations and debates around learning style theories",
+        "Response provides actionable multimodal content delivery recommendations"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "A teacher wants to classify all 25 students as either 'visual,' 'auditory,' or 'kinesthetic' learners and create separate content tracks for each group. Evaluate this approach.",
+      "expected_output": "A critical evaluation explaining why rigid VAK categorization is problematic, with an alternative evidence-based approach.",
+      "assertions": [
+        "Response critically evaluates the VAK model citing current research evidence against rigid categorization",
+        "Response explains why separate content tracks based on styles can be counterproductive",
+        "Response proposes an alternative approach based on multimodal delivery for all students"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Design a learner preference detection assessment for our educational platform that can adapt content delivery without over-classifying students.",
+      "expected_output": "An assessment instrument that captures learner preferences across multiple dimensions while avoiding simplistic categorization.",
+      "assertions": [
+        "Assessment captures preferences across multiple dimensions (not just visual/auditory/kinesthetic)",
+        "Design avoids binary or rigid style assignments in favor of preference profiles or spectrums",
+        "Response includes guidance on how the platform should use results for adaptive content delivery"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Our platform data shows that 40% of 1st ESO students consistently take 2x the expected time to complete modules. Some rush through, others take much longer. How should we analyze and respond to these pacing differences?",
+      "expected_output": "A pacing analysis framework that identifies different pacing patterns and proposes adaptive responses for each pattern type.",
+      "assertions": [
+        "Response distinguishes between different causes of pacing variation (difficulty, engagement, distraction, mastery level)",
+        "Response proposes data analysis methods to identify the root cause of each student's pacing pattern",
+        "Response recommends adaptive pacing strategies rather than one-size-fits-all time adjustments"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Apply Gardner's multiple intelligences framework to recommend content adaptations for a 4th Primaria unit on the water cycle. How can the same content engage different intelligence profiles?",
+      "expected_output": "Content adaptation recommendations across multiple intelligence dimensions with critical awareness of the framework's limitations.",
+      "assertions": [
+        "Response provides specific content variations for at least 4 different intelligence dimensions (linguistic, spatial, kinesthetic, naturalist, etc.)",
+        "Response acknowledges the scientific debate around Gardner's theory while still offering practical applications",
+        "All content variations maintain the same core learning objectives about the water cycle"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Analyze this student's learning preferences from interaction data",
+      "Should I classify my students by learning style?",
+      "Design a learner profiling system for our platform",
+      "How do I adapt content for different types of learners?",
+      "Students are completing modules at very different speeds, what should I do?"
+    ],
+    "should_not_trigger": [
+      "Design a spaced repetition schedule for History",
+      "Create a gamification system for engagement",
+      "Adapt content for a student with dyslexia",
+      "Design a rubric for science projects",
+      "Audit this lesson plan for clear learning objectives"
+    ]
+  }
+}

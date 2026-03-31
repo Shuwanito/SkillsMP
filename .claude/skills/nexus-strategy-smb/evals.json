@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-strategy-smb",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a simplified version of our Corporate Training Module for small businesses with 10-50 employees. What features do we keep, what do we cut, and at what price point?",
+      "expected_output": "A product specification with feature prioritization, removed enterprise features, simplified UX, and a price point justified by SMB willingness-to-pay.",
+      "assertions": [
+        "Response identifies specific features to keep and features to cut with rationale",
+        "Response proposes a specific price point backed by SMB market data",
+        "Response simplifies UX for non-technical users"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Create a tiered pricing strategy for NEXUS SMB Training Lite. Design 3 tiers accessible to businesses with monthly budgets of €50-€500 for training tools.",
+      "expected_output": "A 3-tier pricing table with feature sets, user limits, price points, and positioning for each tier within the €50-500 range.",
+      "assertions": [
+        "Response includes 3 distinct pricing tiers within the €50-500 budget range",
+        "Response differentiates tiers by features, user limits, or usage volume",
+        "Response ensures the entry tier is genuinely accessible for very small businesses"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Identify the top 5 SMB verticals that would benefit most from AI-powered training tools. Rank by adoption potential and willingness to pay.",
+      "expected_output": "A ranked list of 5 SMB verticals with market size, training needs, digital readiness, and willingness-to-pay assessment.",
+      "assertions": [
+        "Response identifies at least 5 specific SMB verticals with descriptions",
+        "Response ranks verticals by adoption potential with supporting rationale",
+        "Response assesses willingness-to-pay for each vertical"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Design a self-service distribution channel for NEXUS SMB products. How can small businesses discover, try, and buy without talking to a salesperson?",
+      "expected_output": "A self-service distribution strategy with discovery channels, free trial mechanics, self-serve onboarding, and automated purchase flow.",
+      "assertions": [
+        "Response describes a complete self-service funnel from discovery to purchase",
+        "Response includes free trial or freemium mechanics with conversion strategy",
+        "Response minimizes friction for non-technical small business owners"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Adapt our onboarding experience for non-technical SMB users who have never used AI tools before. Design a first-day experience that achieves value in under 15 minutes.",
+      "expected_output": "A step-by-step first-day onboarding flow with time estimates per step, value demonstration within 15 minutes, and fallback support for stuck users.",
+      "assertions": [
+        "Response provides a step-by-step flow with time estimates summing to under 15 minutes",
+        "Response demonstrates clear value delivery within the first session",
+        "Response includes support mechanisms for users who get stuck"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design a simplified product for small businesses",
+      "Create accessible pricing tiers for SMBs",
+      "Which SMB verticals should we target first?",
+      "Build a self-service distribution channel for small businesses",
+      "How do we onboard non-technical users in under 15 minutes?"
+    ],
+    "should_not_trigger": [
+      "Evaluate M&A targets for enterprise expansion",
+      "Design an EU funding proposal for Erasmus+",
+      "Build a clinical simulation for surgery training",
+      "Create a legal RAG pipeline for contract analysis",
+      "Design a 360-degree feedback system for managers"
+    ]
+  }
+}

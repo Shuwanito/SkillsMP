@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-cyber-threat",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build a threat model for our AI-powered educational assistant that uses OpenAI GPT-4 for tutoring, stores student data in Supabase, and runs on AWS. Focus on AI-specific attack vectors.",
+      "expected_output": "A comprehensive threat model covering AI-specific threats (prompt injection, model poisoning, data extraction), infrastructure threats, and data privacy risks with attack trees",
+      "assertions": [
+        "Response must include an attack tree or structured threat model following STRIDE, PASTA, or equivalent methodology",
+        "Response must identify AI-specific threats including prompt injection, training data poisoning, and model output manipulation",
+        "Response must assess each threat with likelihood and impact ratings and propose specific mitigations"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Analyze adversarial ML risks for our recommendation engine that suggests learning paths to students based on their performance data and quiz scores",
+      "expected_output": "An adversarial ML risk assessment covering data poisoning, evasion attacks, model inversion, and membership inference specific to educational recommendation systems",
+      "assertions": [
+        "Response must identify at least 3 adversarial ML attack types relevant to recommendation engines",
+        "Response must explain how each attack could specifically impact student learning path recommendations",
+        "Response must propose defensive measures for each identified adversarial ML risk"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "What are the emerging threat vectors targeting EdTech platforms in 2026? We need a predictive threat assessment for the next 6 months.",
+      "expected_output": "A predictive threat intelligence report identifying emerging attack patterns against EdTech, including ransomware trends, supply chain risks, and AI-powered attacks with timeline estimates",
+      "assertions": [
+        "Response must identify at least 4 emerging threat vectors specific to EdTech platforms with supporting evidence",
+        "Response must include timeline estimates for when each threat is likely to materialize or escalate",
+        "Response must cite or reference at least 2 independent threat intelligence sources"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Correlate these signals: we've seen a 300% increase in failed login attempts from Eastern European IPs, two of our third-party JavaScript dependencies were flagged by Snyk, and a competitor EdTech was breached last week. What's the threat picture?",
+      "expected_output": "A threat intelligence correlation report connecting the three signals into a coherent threat picture with risk assessment and recommended immediate actions",
+      "assertions": [
+        "Response must correlate all three signals and explain potential relationships between them",
+        "Response must assess whether the signals indicate a coordinated campaign or coincidental events with reasoning",
+        "Response must provide prioritized immediate defensive actions based on the threat correlation"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Assess the dark web threat landscape for stolen educational credentials. Our platform has 50,000 student accounts. What should we be monitoring?",
+      "expected_output": "A dark web monitoring strategy covering credential markets, data breach forums, and specific indicators to watch for educational platform targeting",
+      "assertions": [
+        "Response must identify specific dark web marketplaces and forums where educational credentials are traded",
+        "Response must propose a monitoring strategy with specific indicators of compromise to track",
+        "Response must include proactive measures such as credential leak detection and automated password reset triggers"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Build a threat model for our AI tutoring application",
+      "What adversarial ML attacks could target our recommendation engine?",
+      "Predict the top cybersecurity threats for EdTech in the next quarter",
+      "Correlate these security signals and assess the threat level",
+      "Monitor the dark web for mentions of our platform or stolen credentials"
+    ],
+    "should_not_trigger": [
+      "Run a penetration test on our API endpoints",
+      "Configure SIEM alerts for failed login attempts",
+      "Design an accessible registration form for screen readers",
+      "What is the optimal pricing for our corporate training module?",
+      "Orchestrate a fleet of headless browsers for web scraping"
+    ]
+  }
+}

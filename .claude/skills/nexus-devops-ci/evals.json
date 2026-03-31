@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-devops-ci",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a CI/CD pipeline for our FastAPI application using GitHub Actions. It should run linting, unit tests, integration tests, security scanning, build a Docker image, and deploy to staging then production with manual approval.",
+      "expected_output": "Proposes multi-stage GitHub Actions workflow with parallelized test jobs, Docker build and push, staged deployment with approval gates.",
+      "assertions": [
+        "Designs a multi-stage pipeline with parallel execution of independent jobs (lint, unit tests, security scan)",
+        "Includes Docker image build and push to a container registry",
+        "Implements staged deployment with manual approval gate between staging and production"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Our CI pipeline takes 28 minutes to complete. The breakdown: 2 min checkout, 8 min dependency install, 10 min tests, 5 min Docker build, 3 min deploy. Optimize it to under 10 minutes.",
+      "expected_output": "Proposes dependency caching, test parallelization, Docker layer caching, and identifies the dependency install as the main bottleneck.",
+      "assertions": [
+        "Recommends dependency caching to reduce the 8-minute install step",
+        "Proposes test parallelization or selective test running to reduce the 10-minute test step",
+        "Suggests Docker layer caching or multi-stage builds to speed up the 5-minute build"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Implement a GitOps workflow for our Kubernetes deployments. We currently deploy manually with kubectl apply. We want declarative, version-controlled, and automatically synced deployments.",
+      "expected_output": "Proposes ArgoCD or Flux, designs repository structure for manifests, defines sync policies, includes drift detection and rollback strategy.",
+      "assertions": [
+        "Recommends a GitOps tool (ArgoCD or Flux) with justification",
+        "Designs a Git repository structure for Kubernetes manifests",
+        "Defines sync policies with automatic drift detection and remediation"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Design a canary deployment strategy for our API service. We want to route 5% of traffic to the new version, monitor error rates and latency for 15 minutes, then gradually increase to 100% or rollback automatically.",
+      "expected_output": "Proposes progressive canary with traffic splitting, defines success metrics and thresholds, includes automated rollback triggers.",
+      "assertions": [
+        "Designs a progressive canary rollout starting at 5% with defined increment steps",
+        "Defines specific success metrics (error rate, latency thresholds) for promotion decisions",
+        "Includes automated rollback triggers when metrics exceed thresholds"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Our deployment pipeline has no rollback mechanism. Last week a bad deploy caused 2 hours of downtime because the team had to manually rebuild and redeploy the previous version. Design a robust rollback strategy.",
+      "expected_output": "Proposes versioned container images, instant rollback via previous image tag, database migration rollback strategy, and automated health-check-based rollback.",
+      "assertions": [
+        "Designs instant rollback using versioned container images or deployment revisions",
+        "Addresses database migration rollback with backward-compatible migration strategy",
+        "Proposes automated health-check-based rollback that triggers without manual intervention"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design a CI/CD pipeline for our FastAPI app with GitHub Actions",
+      "Our CI pipeline takes too long, help us optimize it",
+      "Implement a GitOps workflow for our Kubernetes deployments",
+      "Design a canary deployment strategy for our API service",
+      "We need a rollback mechanism for our deployment pipeline"
+    ],
+    "should_not_trigger": [
+      "Design an ETL pipeline for student data ingestion",
+      "Review this React component for accessibility issues",
+      "Fine-tune an LLM for educational question answering",
+      "Build a causal graph for student dropout analysis",
+      "Design a WebXR virtual lab experience"
+    ]
+  }
+}

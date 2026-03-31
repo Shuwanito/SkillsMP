@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-strategy-bizdev",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Evaluate the healthcare AI training market as a new vertical for NEXUS. What is the market size, competitive landscape, and recommended entry strategy?",
+      "expected_output": "A market evaluation with TAM/SAM estimates, key competitors, entry barriers, and a recommended go-to-market strategy for the healthcare training vertical.",
+      "assertions": [
+        "Response includes market size estimates with TAM or SAM figures",
+        "Response maps the competitive landscape with key players",
+        "Response proposes a specific market entry strategy with channel recommendations"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Identify 5 unmet needs in the legal tech training sector that NEXUS could address with its agent ecosystem. Rank them by market opportunity.",
+      "expected_output": "A list of 5 specific unmet needs with market opportunity sizing, feasibility assessment, and prioritization ranking.",
+      "assertions": [
+        "Response identifies at least 5 specific unmet needs in legal tech training",
+        "Response ranks needs by market opportunity with sizing rationale",
+        "Response assesses NEXUS feasibility to address each need"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Design a distribution and channel strategy for selling NEXUS agents in the Latin American corporate training market. What partners and channels should we use?",
+      "expected_output": "A channel strategy with partner types, distribution models, localization requirements, and a phased rollout plan for LATAM.",
+      "assertions": [
+        "Response identifies specific distribution channels relevant to LATAM market",
+        "Response addresses localization and regional adaptation requirements",
+        "Response proposes partnership or reseller models with target partner profiles"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Build a partnership pipeline for entering the HR tech vertical. Identify 5 potential alliance partners and the value exchange for each.",
+      "expected_output": "A pipeline with 5 partner profiles, mutual value propositions, partnership types, and priority ranking.",
+      "assertions": [
+        "Response identifies at least 5 specific potential partners in HR tech",
+        "Response articulates the value exchange for each partnership",
+        "Response prioritizes partnerships by strategic value and feasibility"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Propose 3 new products or services NEXUS should develop based on detected needs in the retail sector AI training market.",
+      "expected_output": "Three product/service proposals with target customer description, problem being solved, revenue model, and development requirements.",
+      "assertions": [
+        "Response proposes at least 3 specific products or services for retail training",
+        "Response connects each proposal to a validated market need",
+        "Response includes revenue model and high-level development requirements"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Evaluate the healthcare training market for NEXUS entry",
+      "What unmet needs exist in the legal tech sector we could serve?",
+      "Design a channel strategy for Latin America",
+      "Build a partnership pipeline for entering HR tech",
+      "What new products should we develop for the retail training market?"
+    ],
+    "should_not_trigger": [
+      "Optimize our conversion funnel from free to paid",
+      "Design a microlearning module for compliance training",
+      "Calculate unit economics for our skill marketplace",
+      "Build a clinical case simulation for pediatrics",
+      "Create a brand narrative for NEXUS"
+    ]
+  }
+}

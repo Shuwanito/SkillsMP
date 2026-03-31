@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-innovation-twin",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a digital twin of our production infrastructure: 3 AWS EC2 instances, 1 RDS PostgreSQL, 1 Redis cache, behind an ALB. We need to simulate what happens if traffic doubles during exam season.",
+      "expected_output": "A digital twin architecture design with infrastructure modeling, traffic simulation parameters, and predicted behavior under 2x load with bottleneck identification",
+      "assertions": [
+        "Response must define a digital twin schema that accurately models all specified infrastructure components and their interactions",
+        "Response must include simulation parameters for 2x traffic with specific metrics to monitor (CPU, memory, DB connections, cache hit rate)",
+        "Response must predict bottlenecks and failure points under doubled load with confidence intervals"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Run a what-if simulation: what happens to our system if the Redis cache goes down for 15 minutes during peak hours (5,000 concurrent users)? How does it cascade?",
+      "expected_output": "A cascade failure simulation showing how Redis downtime propagates through the system, including response time degradation, database overload, and user impact",
+      "assertions": [
+        "Response must model the cascade path from Redis failure through dependent services with specific degradation metrics",
+        "Response must estimate the impact on response times, database load, and user experience during the 15-minute outage",
+        "Response must propose mitigation strategies such as circuit breakers, fallback caching, or graceful degradation"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "We're planning to migrate from a monolithic FastAPI app to microservices. Build a simulation to compare response times, failure isolation, and operational cost before and after the migration.",
+      "expected_output": "A pre-deployment simulation comparing monolith vs. microservices architectures with quantified metrics for response time, failure blast radius, and infrastructure cost",
+      "assertions": [
+        "Response must model both architectures with realistic parameters for inter-service latency, failure isolation, and resource usage",
+        "Response must provide quantified comparisons for response time, failure blast radius, and operational cost",
+        "Response must include error margins and confidence intervals for the simulation predictions"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Create a predictive model for our database growth. Current PostgreSQL: 50GB, growing 2GB/month, 800 active users adding 15% monthly. When do we hit performance degradation?",
+      "expected_output": "A predictive growth model with database size projections, performance degradation thresholds, and recommended scaling actions with timeline",
+      "assertions": [
+        "Response must project database growth over at least 12 months accounting for user growth compounding",
+        "Response must identify specific performance degradation thresholds based on database size, query patterns, and connection limits",
+        "Response must recommend scaling actions with specific trigger points and timeline for each action"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Validate our deployment plan: rolling update of 3 instances, 30-second health check interval, with a new version that changes the database schema. What could go wrong?",
+      "expected_output": "A deployment risk assessment identifying potential failure scenarios during the rolling update with schema migration, including rollback strategies",
+      "assertions": [
+        "Response must identify the database schema migration as a critical risk during rolling deployment with old/new version compatibility issues",
+        "Response must model specific failure scenarios including partial rollout states and data consistency risks",
+        "Response must propose a safer deployment strategy or rollback plan with specific steps"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Simulate what happens to our infrastructure under double the traffic",
+      "Build a digital twin of our production environment",
+      "What happens if our Redis cache goes down during peak hours?",
+      "Model our database growth and predict when we need to scale",
+      "Validate our rolling deployment plan for potential failure scenarios"
+    ],
+    "should_not_trigger": [
+      "What emerging AI technologies should we evaluate for 2027?",
+      "Run a penetration test on our API endpoints",
+      "Design a pricing model for our SaaS product",
+      "Audit our UI for WCAG 3.0 accessibility compliance",
+      "Evaluate an external AI assistant for integration"
+    ]
+  }
+}

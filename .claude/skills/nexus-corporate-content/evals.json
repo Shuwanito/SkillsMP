@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-corporate-content",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a business simulation for onboarding new sales managers at a tech company. The simulation should cover pipeline management, deal negotiation, and team leadership over a simulated quarter.",
+      "expected_output": "A detailed simulation design with scenario descriptions, decision points, scoring rubric, and learning objectives mapped to sales management competencies.",
+      "assertions": [
+        "Response includes a multi-stage simulation with realistic business scenarios",
+        "Response maps simulation activities to specific sales management competencies",
+        "Response provides a scoring rubric or assessment criteria for participant performance"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Create a competency-based assessment for data analysts being promoted to senior roles. Cover SQL proficiency, data storytelling, stakeholder management, and strategic thinking.",
+      "expected_output": "An assessment design with question types, competency mapping, difficulty levels, and pass/fail criteria for each competency area.",
+      "assertions": [
+        "Response covers all 4 specified competency areas with distinct assessment methods",
+        "Response uses appropriate question types or tasks for each competency",
+        "Response includes clear pass/fail criteria and scoring methodology"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Design a case study for compliance training in the financial services sector. The case should teach anti-money laundering (AML) procedures through a realistic scenario.",
+      "expected_output": "A case study with realistic scenario, discussion questions, key learning points, and instructor guidance for facilitating the session.",
+      "assertions": [
+        "Response presents a realistic AML scenario relevant to financial services",
+        "Response includes discussion questions that drive critical thinking about compliance",
+        "Response provides instructor guidance with key learning points and debrief structure"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Adapt our educational content for a corporate manufacturing client. They need role-playing scenarios for safety training that cover equipment operation, hazard identification, and emergency procedures.",
+      "expected_output": "Role-playing scenario designs with safety context, participant roles, decision points, and assessment tied to workplace safety competencies.",
+      "assertions": [
+        "Response creates role-playing scenarios specific to manufacturing safety contexts",
+        "Response covers equipment operation, hazard identification, and emergency procedures",
+        "Response ties scenario outcomes to measurable safety competencies"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Design an instructional content package for a corporate leadership development program targeting mid-level managers. Include a mix of case studies, simulations, and self-assessments.",
+      "expected_output": "A content package outline with learning objectives, content modules, delivery formats, and assessment strategy for a leadership development track.",
+      "assertions": [
+        "Response includes multiple content types: case studies, simulations, and assessments",
+        "Response defines clear learning objectives for the leadership development track",
+        "Response adapts content to mid-level manager challenges and workplace applicability"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design a business simulation for corporate onboarding",
+      "Create a competency assessment for a promotion evaluation",
+      "Build a compliance case study for financial services training",
+      "Design role-playing scenarios for manufacturing safety training",
+      "Create a leadership development content package for managers"
+    ],
+    "should_not_trigger": [
+      "What is our burn rate and runway?",
+      "Design a viral growth loop for our product",
+      "Build a legal document retrieval system",
+      "Create a clinical simulation for medical students",
+      "Evaluate partnership opportunities with Google Education"
+    ]
+  }
+}

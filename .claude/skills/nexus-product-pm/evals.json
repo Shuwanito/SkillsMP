@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-product-pm",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a pricing model for our Agent-as-a-Service (AaaS) offering where clients get customized AI agents. We need tiers for SMBs, mid-market, and enterprise. Current cost per agent execution is $0.03.",
+      "expected_output": "A multi-tier AaaS pricing model with specific price points, usage limits, dynamic components, and margin analysis for each segment",
+      "assertions": [
+        "Response must define at least 3 pricing tiers with specific price points and included features for each segment",
+        "Response must include a dynamic pricing component based on usage, outcomes, or execution volume",
+        "Response must include margin analysis showing profitability at different adoption levels given the $0.03 cost basis"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Develop a go-to-market strategy for launching our Corporate Training Module in the European market. Target is EUR 500K revenue in Year 1.",
+      "expected_output": "A detailed GTM strategy covering target segments, channels, messaging, launch timeline, and revenue projections against the EUR 500K target",
+      "assertions": [
+        "Response must identify specific target customer segments with estimated market size in Europe",
+        "Response must propose at least 3 go-to-market channels with expected customer acquisition cost for each",
+        "Response must include a phased launch timeline with revenue milestones that build toward the EUR 500K target"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Our current SaaS pricing is flat EUR 29/month per user. Competitors offer usage-based and outcome-based models. Should we switch? We have 800 users and EUR 12K MRR.",
+      "expected_output": "A pricing strategy analysis comparing flat-rate vs. usage-based vs. outcome-based models with revenue impact projections and migration risk assessment",
+      "assertions": [
+        "Response must compare at least 3 pricing models with projected revenue impact on the existing EUR 12K MRR base",
+        "Response must assess customer churn risk during pricing model migration",
+        "Response must include competitor pricing benchmarks to validate the recommended model"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Project revenue for our skills marketplace under three scenarios: conservative (5% market penetration), moderate (15%), and aggressive (30%). The addressable market is 66,500 skills at $0.50-$5.00 per execution.",
+      "expected_output": "A three-scenario revenue projection with monthly/annual breakdowns, key assumptions, and sensitivity analysis for the skills marketplace",
+      "assertions": [
+        "Response must produce revenue projections for all three scenarios with monthly or quarterly granularity",
+        "Response must clearly state assumptions for execution frequency, average price, and growth rate",
+        "Response must include sensitivity analysis showing how changes in key variables affect revenue"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "How should we position our white-label agent factory against competitors like LobeHub and OpenClaw? What is our unique value proposition and ideal customer profile?",
+      "expected_output": "A market positioning strategy with competitive differentiation, unique value proposition, ideal customer profile, and messaging framework",
+      "assertions": [
+        "Response must identify specific competitive advantages and disadvantages versus named competitors",
+        "Response must define a clear ideal customer profile with firmographic and behavioral characteristics",
+        "Response must articulate a unique value proposition that is defensible and differentiated from generic agent platforms"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design a pricing model for our agent-as-a-service offering",
+      "Create a go-to-market strategy for our new product launch in Europe",
+      "Should we switch from flat-rate to usage-based pricing?",
+      "Project revenue scenarios for our skills marketplace",
+      "How do we position our white-label agents against competitors?"
+    ],
+    "should_not_trigger": [
+      "Prioritize our feature backlog for the next sprint",
+      "Build a threat model for our authentication system",
+      "Reduce cognitive load on our student dashboard",
+      "Set up headless browser automation for web scraping",
+      "Audit our forms for WCAG 3.0 compliance"
+    ]
+  }
+}

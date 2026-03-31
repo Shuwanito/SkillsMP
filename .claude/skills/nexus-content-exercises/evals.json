@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-content-exercises",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Generate a set of 10 adaptive exercises on fractions for 5th Primaria with progressive difficulty from basic identification to mixed operations. Students are in a cooking class context.",
+      "expected_output": "A contextualized exercise set with clear difficulty progression from simple to complex fraction operations, all situated in a cooking context.",
+      "assertions": [
+        "Exercises are contextualized within a cooking scenario (recipes, ingredient measurements) rather than abstract math",
+        "Difficulty progression is clear and measurable across the 10 exercises (from identification to operations)",
+        "Exercises are age-appropriate for 5th Primaria (ages 10-11)"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Create adaptive problems for 3rd ESO Physics on Newton's laws. The exercises should adjust based on whether the student got the previous answer correct or incorrect.",
+      "expected_output": "An adaptive problem set with branching paths based on student performance, maintaining progressive difficulty with scaffolding for incorrect answers.",
+      "assertions": [
+        "Response includes branching logic: correct answers lead to harder problems, incorrect answers lead to scaffolded support",
+        "Problems are contextualized in real-world physics scenarios (not abstract force calculations)",
+        "Response covers all three Newton's laws across the exercise set"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Audit this exercise set: 20 algebra problems for 2nd ESO that all follow the format 'solve for x: ax + b = c' with different numbers. Is this well-designed?",
+      "expected_output": "A critique identifying the lack of contextualization, variety, and progressive difficulty, with specific improvement recommendations.",
+      "assertions": [
+        "Response identifies the exercises as decontextualized and repetitive in format",
+        "Response flags the absence of difficulty progression (all same format)",
+        "Response proposes improvements including varied problem types, real-world contexts, and progressive complexity"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Design a difficulty progression curve for a 4th ESO Chemistry exercise module on stoichiometry, from basic mole calculations to limiting reagent problems. Define what makes each level harder.",
+      "expected_output": "A structured difficulty progression with explicit criteria for each level and clear definition of what increases complexity at each step.",
+      "assertions": [
+        "Response defines at least 4 distinct difficulty levels with explicit criteria for each",
+        "Response explains what makes each level harder (more variables, multi-step reasoning, unit conversions, limiting reagents)",
+        "Progression is calibrated for 4th ESO Chemistry students (ages 15-16)"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Generate contextualized exercises on percentages for 1st ESO students using a shopping scenario. Include exercises at 3 difficulty levels: basic, intermediate, and advanced.",
+      "expected_output": "A shopping-contextualized exercise set with three clear difficulty tiers, each containing engaging, realistic problems.",
+      "assertions": [
+        "All exercises use a shopping/retail context with realistic prices and scenarios",
+        "Three difficulty levels are clearly differentiated (basic: find percentage; intermediate: discount calculation; advanced: compound scenarios)",
+        "Exercises include clear learning objectives stating what competency each level targets"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Generate practice exercises for fractions with progressive difficulty",
+      "Create adaptive problems that adjust to student performance",
+      "Audit this exercise set for quality and difficulty progression",
+      "Design a difficulty curve for Chemistry stoichiometry exercises",
+      "Make contextualized math problems using real-world scenarios"
+    ],
+    "should_not_trigger": [
+      "Adapt this text for a student with visual impairment",
+      "Translate these exercises to Catalan",
+      "Design a rubric for evaluating projects",
+      "How do I motivate students who find math boring?",
+      "Check if this content complies with GDPR"
+    ]
+  }
+}

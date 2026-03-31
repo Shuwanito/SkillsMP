@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-data-causal",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our data shows a strong correlation (r=0.78) between students who use the AI tutor more and higher exam scores. The product team wants to claim the AI tutor improves grades. Is this causal? Build a causal graph to analyze.",
+      "expected_output": "Identifies confounders (student motivation, prior knowledge), builds a DAG with DoWhy, proposes methods to estimate causal effect (IV, propensity matching).",
+      "assertions": [
+        "Identifies at least 2 confounding variables (e.g., student motivation, prior knowledge, study time)",
+        "Constructs a causal DAG showing the relationships between tutor usage, confounders, and grades",
+        "Proposes a causal estimation method (propensity score matching, IV, or diff-in-diff)"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "We ran an A/B test on a new quiz format. Group A (new format) scored 12% higher. But Group A also had 20% more advanced students than Group B due to a randomization bug. Can we still estimate the treatment effect?",
+      "expected_output": "Identifies the selection bias, proposes adjustment methods (stratification, regression adjustment, IPW), and quantifies the bias impact.",
+      "assertions": [
+        "Identifies the randomization failure causing selection bias in the experiment",
+        "Proposes adjustment methods like stratification, propensity weighting, or regression adjustment",
+        "Warns that the raw 12% improvement is likely inflated and estimates the bias direction"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Generate a synthetic dataset of 10,000 students for testing our dropout prediction model. The dataset should preserve the causal structure: family income affects both study hours and dropout, study hours affect grades, and grades affect dropout.",
+      "expected_output": "Generates data following the specified causal structure with structural equations, validates distributional properties, checks for unintended biases.",
+      "assertions": [
+        "Generates data using structural causal equations that respect the specified DAG",
+        "Validates that the synthetic data preserves the intended causal relationships",
+        "Checks for distributional biases or artifacts in the generated dataset"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Perform a counterfactual analysis: What would happen to student retention if we increased AI tutor availability from 8 hours/day to 24 hours/day? Current retention is 72%.",
+      "expected_output": "Builds counterfactual model, estimates retention change with uncertainty bounds, identifies assumptions and limitations of the counterfactual.",
+      "assertions": [
+        "Builds a counterfactual model using the existing observational data",
+        "Provides a retention estimate with uncertainty bounds or confidence intervals",
+        "Explicitly states the assumptions required for the counterfactual to be valid"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Our marketing team claims that email campaigns cause a 15% increase in course enrollments based on a before-after comparison. The campaign coincided with the start of a new semester. Evaluate this claim.",
+      "expected_output": "Identifies the temporal confounder (semester start), proposes difference-in-differences or regression discontinuity design, warns against causal claims from before-after comparison.",
+      "assertions": [
+        "Identifies the new semester start as a major temporal confounder",
+        "Warns that a simple before-after comparison cannot establish causation",
+        "Proposes a rigorous method like difference-in-differences or a control group comparison"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Is the correlation between tutor usage and grades actually causal?",
+      "Our A/B test had a randomization bug, can we still trust the results?",
+      "Generate synthetic data that preserves causal relationships for testing",
+      "What would happen to retention if we changed our tutor availability?",
+      "Is this before-after comparison a valid causal claim?"
+    ],
+    "should_not_trigger": [
+      "Design an ETL pipeline for our data warehouse",
+      "Fine-tune an LLM for math tutoring",
+      "Review this React component for performance issues",
+      "Set up a CI/CD pipeline with automated testing",
+      "Design a serverless architecture for notifications"
+    ]
+  }
+}

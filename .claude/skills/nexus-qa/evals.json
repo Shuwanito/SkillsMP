@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-qa",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a test strategy for our quiz engine module. It handles quiz creation, question randomization, time limits, scoring, and grade calculation. Current test coverage is 23%.",
+      "expected_output": "Proposes layered test strategy (unit, integration, e2e), prioritizes critical paths (scoring, grade calculation), identifies edge cases, and sets coverage targets.",
+      "assertions": [
+        "Designs a layered test strategy covering unit, integration, and end-to-end tests",
+        "Prioritizes testing of critical business logic: scoring and grade calculation",
+        "Identifies specific edge cases (time expiry during submission, tie-breaking, zero-score scenarios)"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Perform a security audit plan for our FastAPI authentication system. It uses JWT tokens, OAuth2 with Google, password hashing with bcrypt, and session management with Redis.",
+      "expected_output": "Proposes audit covering OWASP Top 10, specific JWT vulnerabilities, OAuth2 misconfigurations, bcrypt cost factor, and Redis session security.",
+      "assertions": [
+        "Plans audit against OWASP Top 10 with specific checks for each applicable category",
+        "Identifies JWT-specific risks (algorithm confusion, token expiry, secret strength)",
+        "Reviews OAuth2 configuration for common misconfigurations (redirect URI validation, PKCE)"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Our application has no observability. Propose a logging, metrics, and tracing strategy for a FastAPI application running on Kubernetes with PostgreSQL and Redis.",
+      "expected_output": "Proposes structured logging with correlation IDs, key metrics (latency, error rate, saturation), and distributed tracing with minimal performance impact.",
+      "assertions": [
+        "Recommends structured JSON logging with request correlation IDs",
+        "Defines key metrics following RED or USE methodology for API, database, and cache",
+        "Proposes distributed tracing with performance overhead assessment"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Check our student data API for GDPR compliance. The API exposes: GET /students (lists all students with email and grades), GET /students/{id}/history (full activity log), and DELETE /students/{id} (soft delete only).",
+      "expected_output": "Identifies GDPR violations: listing all student PII without consent check, inadequate right-to-erasure implementation, missing data minimization.",
+      "assertions": [
+        "Flags that GET /students exposes PII without proper access controls or consent verification",
+        "Identifies soft delete as insufficient for GDPR right-to-erasure compliance",
+        "Recommends data minimization on the list endpoint (exclude email/grades by default)"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Evaluate property-based testing tools for our Python backend. We want to generate randomized test inputs for our API validators, data transformations, and mathematical scoring functions.",
+      "expected_output": "Evaluates Hypothesis vs other property-based testing tools, proposes specific properties to test, shows integration with pytest.",
+      "assertions": [
+        "Recommends Hypothesis as the primary property-based testing tool for Python",
+        "Defines specific properties to test (e.g., score always between 0-100, idempotent transformations)",
+        "Shows integration approach with the existing pytest test framework"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design a test strategy for our quiz engine module",
+      "Plan a security audit for our authentication system",
+      "Propose a logging and observability strategy for our FastAPI app",
+      "Check our student API for GDPR compliance issues",
+      "Evaluate property-based testing tools for our Python backend"
+    ],
+    "should_not_trigger": [
+      "Design an edge computing architecture for global latency reduction",
+      "Fine-tune a multimodal LLM for educational content",
+      "Build a Terraform module for AWS ECS deployment",
+      "Create a data pipeline with Kafka and Flink",
+      "Decompose this task into sub-tasks and assign agents"
+    ]
+  }
+}

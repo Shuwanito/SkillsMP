@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-qa-generative",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a fuzz testing strategy for our student registration API endpoint. It accepts: name (string, 1-100 chars), email (valid email format), age (integer 5-120), and enrollment_date (ISO date). Generate fuzzing categories.",
+      "expected_output": "Proposes boundary values, format violations, injection payloads, Unicode edge cases, and overflow attempts for each field, with prioritized campaign plan.",
+      "assertions": [
+        "Defines boundary value fuzz inputs for each field (e.g., 0-char name, 101-char name, age 4, age 121)",
+        "Includes format violation inputs (malformed email, invalid date formats, non-integer age)",
+        "Proposes injection payloads (SQL injection in name, XSS in email, command injection)"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Design property-based tests for our grade calculation function. It takes a list of scores (0-100 each) with weights (must sum to 1.0) and returns a weighted average. Define the invariants.",
+      "expected_output": "Defines key properties: result always 0-100, weighted average monotonicity, empty list handling, weight normalization verification.",
+      "assertions": [
+        "Defines the property that the result is always between min(scores) and max(scores)",
+        "Tests that weights must sum to 1.0 and the function handles violation gracefully",
+        "Includes edge case properties: single score, all identical scores, empty score list"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Use AI-driven generative testing to discover edge cases in our quiz timer system. The timer counts down from a configurable duration (1-180 minutes), pauses on tab switch, and auto-submits on expiry. No tests exist today.",
+      "expected_output": "Proposes generative test scenarios: rapid pause/resume, timezone changes during quiz, system clock manipulation, network disconnection at expiry, concurrent timers.",
+      "assertions": [
+        "Generates test scenarios for rapid pause/resume cycling",
+        "Proposes edge cases around time boundaries (expiry at exact second, clock skew, DST changes)",
+        "Includes scenarios for system-level disruptions (network loss, tab crash, battery death during quiz)"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Our test suite has 85% line coverage but a critical bug in production was missed: when two students submit the same quiz simultaneously, their scores get swapped. Design generative tests to catch concurrency bugs.",
+      "expected_output": "Proposes concurrent execution testing, race condition generators, identifies that line coverage misses concurrency issues, designs stress and interleaving tests.",
+      "assertions": [
+        "Identifies that line coverage is insufficient for detecting concurrency bugs",
+        "Proposes concurrent submission generators that simulate simultaneous requests",
+        "Designs assertion strategies to verify data isolation between concurrent operations"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Generate a comprehensive fuzz campaign for our file upload endpoint. It accepts PDFs (max 10MB), images (PNG/JPG, max 5MB), and CSV files for bulk student import. Focus on discovering crashes and security vulnerabilities.",
+      "expected_output": "Proposes malformed file headers, oversized files, polyglot files, path traversal filenames, zip bombs disguised as valid formats, and MIME type mismatches.",
+      "assertions": [
+        "Proposes malformed file content with valid extensions (corrupted PDF headers, truncated images)",
+        "Includes path traversal and filename injection attacks (../../etc/passwd.pdf)",
+        "Tests MIME type mismatches and polyglot files (e.g., PDF containing embedded scripts)"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design a fuzz testing strategy for our API endpoints",
+      "Create property-based tests for this mathematical function",
+      "Use generative testing to find edge cases in our timer system",
+      "Our tests miss concurrency bugs, how do we catch them with generative testing?",
+      "Generate a fuzz campaign for our file upload endpoint"
+    ],
+    "should_not_trigger": [
+      "Design a REST API for the quiz module",
+      "Set up infrastructure as code with Terraform",
+      "Build a knowledge graph for adaptive learning",
+      "Optimize our React component rendering performance",
+      "Define SLOs and error budgets for our platform"
+    ]
+  }
+}

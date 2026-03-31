@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-ped-motivation",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "My 3rd ESO students are completely disengaged from Mathematics. They say it's boring and pointless. How can I redesign the learning experience to increase intrinsic motivation?",
+      "expected_output": "A motivation analysis based on self-determination theory with specific strategies to boost autonomy, competence, and relatedness in Mathematics.",
+      "assertions": [
+        "Response applies self-determination theory (autonomy, competence, relatedness) to the Mathematics context",
+        "Response proposes strategies that build intrinsic motivation rather than relying on extrinsic rewards",
+        "Response includes concrete, implementable activity examples for a Mathematics classroom"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Audit this gamification system: students earn points for completing homework, lose points for late submissions, and compete on a class leaderboard. Top 3 students get prizes each month.",
+      "expected_output": "A critique identifying how the system may undermine intrinsic motivation, with redesign recommendations aligned to SDT and flow theory.",
+      "assertions": [
+        "Response identifies risks of extrinsic reward crowding out intrinsic motivation",
+        "Response flags the punitive point-loss and competitive leaderboard as potential demotivators for struggling students",
+        "Response proposes a redesigned system that supports SDT principles (autonomy, competence, relatedness)"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Design a gamification system for a 6th Primaria Science course on ecosystems that promotes sustained engagement over a full trimester, not just initial excitement.",
+      "expected_output": "A gamification design with meaningful progression, SDT alignment, and mechanisms for sustained rather than novelty-driven engagement.",
+      "assertions": [
+        "Gamification system includes meaningful progression beyond points and badges",
+        "Design addresses sustained engagement with escalating challenges, not just initial novelty",
+        "Response ensures gamification serves pedagogical goals and aligns with SDT principles"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "A teacher reports that high-performing students are bored and low-performing students are anxious in 2nd ESO English. Neither group is in 'flow.' How can I optimize the challenge-skill balance?",
+      "expected_output": "A flow-theory analysis with differentiated strategies to match challenge levels to skill levels for both groups.",
+      "assertions": [
+        "Response applies flow theory (challenge-skill balance, clear goals, immediate feedback)",
+        "Response provides differentiated strategies for both high-performers (increase challenge) and low-performers (scaffold to reduce anxiety)",
+        "Response proposes mechanisms for dynamic difficulty adjustment as students progress"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Propose engagement metrics and tracking mechanisms for an AI-driven educational platform. We need to measure whether students are genuinely motivated, not just clicking through content.",
+      "expected_output": "A set of engagement metrics that distinguish genuine motivation from surface-level interaction, with tracking implementation proposals.",
+      "assertions": [
+        "Response distinguishes between behavioral engagement (clicks, time) and psychological engagement (effort, persistence, voluntary return)",
+        "Response proposes at least 3 specific metrics with measurement methodology",
+        "Metrics are grounded in motivation science (SDT, flow theory) rather than arbitrary analytics"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "My students are unmotivated, how do I engage them?",
+      "Design a gamification system for my classroom",
+      "Audit our rewards system for unintended motivational effects",
+      "How do I create flow state in learning experiences?",
+      "What engagement metrics should I track for my ed-tech platform?"
+    ],
+    "should_not_trigger": [
+      "Design a curriculum aligned with LOMLOE",
+      "Create a rubric for student projects",
+      "How do I reduce cognitive load in this lesson?",
+      "Adapt this content for a student with ASD",
+      "Check GDPR compliance for our student data"
+    ]
+  }
+}

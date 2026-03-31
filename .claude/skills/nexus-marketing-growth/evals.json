@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-marketing-growth",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a viral growth loop for NEXUS where teachers who use our AI agents naturally refer other teachers. Include viral coefficient estimation.",
+      "expected_output": "A growth loop design with trigger, action, reward, and referral mechanics. Includes viral coefficient estimate and conditions for sustainable virality.",
+      "assertions": [
+        "Response describes a complete growth loop with trigger, action, and reward stages",
+        "Response estimates viral coefficient or k-factor with assumptions",
+        "Response addresses sustainability of the loop beyond initial novelty"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Our free-to-paid conversion rate is 2.1%. Analyze the funnel and propose 3 experiments to improve it to 4% within one quarter.",
+      "expected_output": "A funnel analysis identifying drop-off points, 3 specific A/B test proposals with hypotheses, success criteria, and expected impact.",
+      "assertions": [
+        "Response identifies specific funnel stages and likely drop-off points",
+        "Response proposes at least 3 experiments with clear hypotheses",
+        "Response defines success criteria and expected conversion impact for each experiment"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Design a referral program specifically for educational institutions where a school that refers another school gets rewarded. What incentive structure works best?",
+      "expected_output": "A referral program design with incentive structure, reward tiers, tracking mechanics, and projected referral rates based on comparable programs.",
+      "assertions": [
+        "Response includes a specific incentive structure with reward details",
+        "Response adapts the referral model to educational institution dynamics",
+        "Response references comparable referral programs or benchmarks for projected rates"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Identify 5 quick-win product-led growth opportunities in our current product that could drive organic adoption with minimal engineering effort.",
+      "expected_output": "A prioritized list of 5 PLG opportunities with estimated impact, engineering effort, and implementation recommendations.",
+      "assertions": [
+        "Response identifies at least 5 specific product-led growth opportunities",
+        "Response rates each opportunity by impact-to-effort ratio",
+        "Response distinguishes actionable metrics from vanity metrics in measuring success"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Analyze how successful EdTech SaaS companies like Notion, Canva for Education, or Quizlet achieved product-led growth. What tactics can NEXUS adapt?",
+      "expected_output": "A comparative analysis of PLG strategies from successful EdTech/SaaS companies with transferable tactics for NEXUS.",
+      "assertions": [
+        "Response analyzes at least 2 specific companies and their growth tactics",
+        "Response identifies transferable tactics applicable to NEXUS context",
+        "Response prioritizes tactics by feasibility and expected impact for NEXUS"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design a viral referral loop for our education product",
+      "How can we improve our free-to-paid conversion rate?",
+      "What product-led growth tactics should we implement?",
+      "Create an A/B testing plan for our onboarding funnel",
+      "How did Duolingo or Quizlet achieve viral growth and what can we learn?"
+    ],
+    "should_not_trigger": [
+      "What is our current MRR and burn rate?",
+      "Design a compliance training module for banking sector",
+      "Build a legal document retrieval pipeline",
+      "Evaluate partnership opportunities with Microsoft Education",
+      "Create a soft skills coaching program for managers"
+    ]
+  }
+}

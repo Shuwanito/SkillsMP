@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-frontend-xr",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design an immersive WebXR experience for a chemistry lab simulation where students can interact with virtual molecules, mix chemicals, and observe reactions. Must work on Quest 3 and have a browser fallback.",
+      "expected_output": "Proposes WebXR API usage with Three.js or A-Frame, defines hand tracking interactions, designs progressive enhancement with 2D fallback, addresses performance budgets.",
+      "assertions": [
+        "Designs the XR experience using WebXR APIs with a specific framework recommendation",
+        "Includes hand tracking or controller-based interaction for molecule manipulation",
+        "Provides a functional non-XR browser fallback with progressive enhancement"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Our WebAssembly physics simulation module is 8MB and takes 4 seconds to initialize. Students abandon the page before it loads. Optimize the WASM module.",
+      "expected_output": "Proposes streaming compilation, lazy loading, module splitting, compression, and a loading UX strategy to keep students engaged during init.",
+      "assertions": [
+        "Recommends WASM streaming compilation to reduce perceived load time",
+        "Proposes module splitting or lazy loading to load only required physics modules",
+        "Suggests a loading UX strategy (progress bar, mini-game) to reduce abandonment"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Design multimodal interaction patterns for an XR anatomy learning experience. Students should be able to use voice commands, hand gestures, and gaze to explore a 3D human body model.",
+      "expected_output": "Defines specific voice commands for navigation, gesture vocabulary for manipulation, gaze-based selection, and how the three modalities complement each other.",
+      "assertions": [
+        "Defines a voice command vocabulary for navigation and labeling",
+        "Designs hand gesture interactions for rotating, zooming, and selecting body parts",
+        "Includes gaze-based selection as a complementary input method"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "We need to support XR experiences across Meta Quest 3, Apple Vision Pro, and standard desktop browsers. What is the device compatibility strategy and performance budget for each?",
+      "expected_output": "Creates a compatibility matrix, defines rendering budgets per device, proposes adaptive quality levels, and identifies feature gaps between platforms.",
+      "assertions": [
+        "Creates a device compatibility matrix covering all three target platforms",
+        "Defines different performance budgets (polygon count, draw calls, frame rate) per device tier",
+        "Proposes adaptive quality levels that scale with device capabilities"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Evaluate whether to use WebAssembly or JavaScript for our real-time 3D graph visualization that renders 10,000 nodes with physics-based layout. Current JS implementation runs at 12fps.",
+      "expected_output": "Benchmarks WASM vs JS for this workload, quantifies expected FPS improvement, considers compilation complexity, and recommends a hybrid approach if warranted.",
+      "assertions": [
+        "Compares WebAssembly and JavaScript performance for the specific 10K node rendering workload",
+        "Estimates the FPS improvement achievable with WASM",
+        "Considers the added complexity of WASM and recommends the justified approach"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design a WebXR experience for our virtual lab simulation",
+      "Optimize our WebAssembly module that is too slow to load",
+      "Create multimodal interaction patterns for the XR anatomy viewer",
+      "What is our device compatibility strategy for XR across Quest and Vision Pro?",
+      "Should we use WebAssembly or JavaScript for this 3D rendering workload?"
+    ],
+    "should_not_trigger": [
+      "Review this FastAPI endpoint for security issues",
+      "Audit our React dashboard for WCAG accessibility compliance",
+      "Set up a data pipeline with dbt and Airflow",
+      "Design a CI/CD pipeline for our deployment",
+      "Analyze student dropout rates with causal inference"
+    ]
+  }
+}

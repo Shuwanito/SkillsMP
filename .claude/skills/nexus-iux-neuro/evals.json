@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-iux-neuro",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Analyze our student dashboard for cognitive load issues. It shows 12 metrics simultaneously, has 3 navigation levels, a notification bell with unread count, and auto-playing tutorial tooltips.",
+      "expected_output": "A cognitive load assessment identifying overload sources, quantifying cognitive demand, and proposing specific reductions using progressive disclosure, chunking, and attention management",
+      "assertions": [
+        "Response must identify the 12 simultaneous metrics as a cognitive overload issue with reference to Miller's law or working memory limits",
+        "Response must propose specific information architecture changes such as progressive disclosure, grouping, or on-demand detail",
+        "Response must address the auto-playing tooltips as an attention fragmentation problem and recommend user-controlled alternatives"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Our quiz flow has 5 steps: select subject, choose difficulty, answer questions, review answers, view results. Users report feeling 'lost' and 'overwhelmed.' Apply neuro-UX principles to fix this.",
+      "expected_output": "A neuro-UX redesign of the quiz flow applying principles like cognitive anchoring, progress visibility, and reduced decision fatigue to address user confusion",
+      "assertions": [
+        "Response must identify specific friction points in the 5-step flow using behavioral science principles",
+        "Response must propose UX changes grounded in named neuro-UX principles (e.g., Hick's law, cognitive anchoring, Zeigarnik effect)",
+        "Response must include a redesigned flow with measurable improvements such as expected reduction in time-to-complete or drop-off rate"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Design an adaptive interface for our learning platform that adjusts complexity based on user expertise level. A beginner student and an advanced student should see different versions of the same page.",
+      "expected_output": "An adaptive interface design with user expertise detection, UI complexity tiers, and transition logic between simple and advanced views",
+      "assertions": [
+        "Response must define at least 2 interface complexity tiers with specific UI element differences for each",
+        "Response must propose a method for detecting or classifying user expertise level based on behavioral signals",
+        "Response must include transition logic for how the interface adapts as users progress from beginner to advanced"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "We're seeing a 60% bounce rate on our course catalog page which shows 200+ courses in a grid with thumbnails, ratings, difficulty level, and duration. Users say they can't find what they want. Diagnose the behavioral issue.",
+      "expected_output": "A behavioral analysis of the catalog page identifying decision paralysis, poor information scent, and cognitive overload with evidence-based redesign proposals",
+      "assertions": [
+        "Response must diagnose choice overload or decision paralysis as a primary factor using behavioral science evidence",
+        "Response must identify specific information architecture issues such as poor filtering, weak categorization, or low information scent",
+        "Response must propose a redesign that reduces cognitive demand with expected impact on bounce rate"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Evaluate whether our use of gamification (points, streaks, leaderboards) is genuinely improving learning outcomes or just increasing superficial engagement. Apply behavioral science analysis.",
+      "expected_output": "A behavioral science evaluation of gamification elements distinguishing between intrinsic motivation support and extrinsic engagement manipulation with evidence-based recommendations",
+      "assertions": [
+        "Response must distinguish between gamification that supports intrinsic motivation vs. elements that create extrinsic dependency",
+        "Response must evaluate each gamification element (points, streaks, leaderboards) individually for learning outcome impact",
+        "Response must explicitly flag any elements that constitute dark patterns or engagement manipulation and recommend ethical alternatives"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Analyze our dashboard for cognitive overload and simplify it",
+      "Users feel lost in our quiz flow, apply neuro-UX to fix it",
+      "Design an adaptive interface that changes based on user expertise",
+      "Our catalog page has a 60% bounce rate, diagnose the behavioral issue",
+      "Is our gamification helping learning or just boosting vanity metrics?"
+    ],
+    "should_not_trigger": [
+      "Audit our login form for WCAG 3.0 screen reader compliance",
+      "Simulate an APT attack on our authentication system",
+      "What is the optimal pricing tier for our corporate training module?",
+      "Set up a headless browser fleet for automated web auditing",
+      "Build a digital twin of our production database infrastructure"
+    ]
+  }
+}

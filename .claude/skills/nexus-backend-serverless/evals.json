@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-backend-serverless",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our quiz scoring function runs on a dedicated server but only gets traffic in bursts during exam periods (10x normal load for 2 hours, then idle for 22 hours). Should we move it to serverless?",
+      "expected_output": "Analyzes the bursty workload pattern as ideal for serverless, estimates cost savings vs always-on server, proposes Lambda or equivalent with provisioned concurrency for cold starts.",
+      "assertions": [
+        "Identifies the bursty workload pattern as well-suited for serverless",
+        "Provides cost comparison between current always-on server and serverless pricing",
+        "Addresses cold start mitigation strategy for the burst periods"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Design an event-driven architecture for our notification system. Events include: student completes quiz, teacher grades assignment, system detects learning gap, and payment received. Currently all handled synchronously.",
+      "expected_output": "Proposes event bus with SNS/SQS or EventBridge, defines event schemas, separates producers and consumers, designs dead letter queues for failures.",
+      "assertions": [
+        "Proposes an event bus or message broker for decoupling (e.g., SNS/SQS, EventBridge)",
+        "Defines at least 4 event types with clear schemas and consumer mappings",
+        "Includes error handling with dead letter queues or retry mechanisms"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Our Lambda functions have cold start times of 3-5 seconds because they load large ML libraries (numpy, pandas, scikit-learn). How can we reduce this to under 500ms?",
+      "expected_output": "Proposes provisioned concurrency, Lambda layers, container images, dependency trimming, and lazy loading strategies with specific tradeoffs.",
+      "assertions": [
+        "Recommends provisioned concurrency or warm-up strategies",
+        "Suggests reducing package size via dependency trimming or Lambda layers",
+        "Proposes lazy loading of heavy libraries to defer initialization cost"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Our serverless bill jumped from $200/month to $2,400/month after we moved the analytics pipeline to Lambda. The functions run every 5 minutes processing 50MB of data each time. Diagnose and optimize.",
+      "expected_output": "Identifies the high-frequency execution pattern as cost-inefficient for serverless, recommends batch processing, longer intervals, or moving to containers for this workload.",
+      "assertions": [
+        "Identifies that running every 5 minutes with large data is cost-inefficient on Lambda",
+        "Recommends batching or reducing invocation frequency",
+        "Suggests an alternative compute option (Fargate, ECS, or Step Functions) for this workload pattern"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Design a serverless function composition for the student enrollment workflow: validate payment -> create account -> assign courses -> send welcome email -> update analytics. Handle failures at each step.",
+      "expected_output": "Proposes Step Functions or Durable Functions for orchestration, defines compensation/rollback for each step, includes retry policies and observability.",
+      "assertions": [
+        "Proposes a workflow orchestrator like AWS Step Functions or Azure Durable Functions",
+        "Defines compensation or rollback actions for failures at each step",
+        "Includes retry policies with exponential backoff for transient failures"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Should we move this workload to serverless functions?",
+      "Design an event-driven architecture for our notification system",
+      "How can we reduce Lambda cold start times for ML workloads?",
+      "Our serverless costs have spiked, help us optimize",
+      "Design a serverless workflow for this multi-step process"
+    ],
+    "should_not_trigger": [
+      "Review this React component for accessibility issues",
+      "Build a causal inference model for student outcomes",
+      "Set up Kubernetes autoscaling for our cluster",
+      "Audit our API for OWASP Top 10 vulnerabilities",
+      "Design a data warehouse schema for learning analytics"
+    ]
+  }
+}

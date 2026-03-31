@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-strategy-partnerships",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Evaluate Google for Education as a strategic partner for NEXUS. What integration points exist, what is the value exchange, and how should we approach the partnership?",
+      "expected_output": "A partnership evaluation covering integration opportunities (Google Classroom, Workspace), value proposition for both parties, and a structured approach plan.",
+      "assertions": [
+        "Response identifies specific integration points with Google Education products",
+        "Response articulates mutual value proposition for both NEXUS and Google",
+        "Response proposes a structured partnership approach with entry strategy"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Design a partner evaluation framework to score potential LMS integration partners. What criteria matter most and how should we weight them?",
+      "expected_output": "A scoring framework with weighted criteria covering strategic fit, technical feasibility, market reach, and revenue potential.",
+      "assertions": [
+        "Response defines at least 5 evaluation criteria with clear definitions",
+        "Response assigns weights to criteria with justification",
+        "Response includes a scoring methodology that can be applied consistently"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Propose a white-label licensing model for NEXUS agents that allows LMS platforms to embed our AI tutoring under their own brand. What terms should we negotiate?",
+      "expected_output": "A licensing model with pricing structure, usage limits, brand guidelines, support obligations, and key negotiation terms.",
+      "assertions": [
+        "Response includes a detailed licensing pricing structure with usage tiers",
+        "Response addresses branding, customization, and white-label terms",
+        "Response identifies key negotiation points and recommended positions"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Identify the top 5 strategic partners in the European educational technology ecosystem that NEXUS should prioritize. Include their strategic value and partnership type.",
+      "expected_output": "A ranked list of 5 partners with profiles, strategic value assessment, recommended partnership type, and priority justification.",
+      "assertions": [
+        "Response identifies at least 5 specific companies or organizations as partners",
+        "Response categorizes the partnership type for each (integration, reseller, co-development, etc.)",
+        "Response ranks partners by strategic value with clear justification"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Design an API ecosystem strategy for NEXUS that enables third-party developers to build on top of our agent platform. What API tiers and developer program should we offer?",
+      "expected_output": "An API strategy with tier definitions, developer program structure, documentation requirements, and monetization model for the API ecosystem.",
+      "assertions": [
+        "Response defines API tiers with feature differentiation and rate limits",
+        "Response includes a developer program structure with onboarding path",
+        "Response proposes a monetization model for API access"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Evaluate Google for Education as a strategic partner",
+      "Create a framework for scoring potential LMS integration partners",
+      "Design a white-label licensing model for our AI agents",
+      "Who are the top strategic partners we should pursue in Europe?",
+      "Design an API ecosystem strategy for third-party developers"
+    ],
+    "should_not_trigger": [
+      "Calculate our monthly MRR and growth rate",
+      "Build a referral program for schools",
+      "Create a clinical case simulation for radiology",
+      "Design a GDPR compliance audit workflow",
+      "Build a churn prediction model for our customers"
+    ]
+  }
+}

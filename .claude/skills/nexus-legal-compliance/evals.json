@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-legal-compliance",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Assess the EU AI Act compliance of our AI tutoring product. What risk classification does it fall under and what obligations do we need to meet?",
+      "expected_output": "A compliance assessment with AI Act risk classification, applicable obligations, gap analysis against current compliance, and remediation roadmap.",
+      "assertions": [
+        "Response correctly classifies the AI tutoring product under EU AI Act risk categories",
+        "Response lists specific obligations applicable to the identified risk level",
+        "Response provides a gap analysis with remediation steps and timeline"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Create a GDPR compliance checklist for our healthcare training module that processes learner performance data. Cover data minimization, consent, retention, and cross-border transfers.",
+      "expected_output": "A comprehensive GDPR checklist covering all specified areas with actionable items, responsible roles, and compliance status indicators.",
+      "assertions": [
+        "Response covers data minimization, consent mechanisms, retention policies, and cross-border transfers",
+        "Response provides actionable checklist items with clear compliance criteria",
+        "Response accounts for healthcare-specific data sensitivity (health data as special category)"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Design a normative change alert system that monitors GDPR, EU AI Act, and LOPDGDD for regulatory updates relevant to our AI education products. What sources and cadence should we track?",
+      "expected_output": "An alert system design with monitored sources, scanning cadence, relevance filtering criteria, and escalation workflow for material changes.",
+      "assertions": [
+        "Response identifies specific regulatory sources to monitor for each regulation",
+        "Response defines scanning cadence and relevance filtering methodology",
+        "Response includes escalation workflow for material regulatory changes"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Evaluate the legal risk of using LLM-generated content in our medical education modules. What compliance frameworks apply and what safeguards do we need?",
+      "expected_output": "A risk assessment covering applicable frameworks (EU AI Act, medical device regulations, liability), identified risks, and required safeguards.",
+      "assertions": [
+        "Response identifies applicable regulatory frameworks for AI in medical education",
+        "Response assesses specific legal risks with severity and likelihood ratings",
+        "Response proposes concrete safeguards and mitigation measures"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Create a sector-specific compliance audit for deploying our AI agents in the Spanish public education system. Cover LOPDGDD, accessibility (ENS), and educational sector regulations.",
+      "expected_output": "A compliance audit with Spanish-specific regulatory requirements, checklist items, and readiness assessment for public sector deployment.",
+      "assertions": [
+        "Response covers LOPDGDD requirements specific to education sector data processing",
+        "Response addresses Spanish accessibility and ENS (Esquema Nacional de Seguridad) requirements",
+        "Response identifies educational sector-specific regulations applicable in Spain"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Is our AI product compliant with the EU AI Act?",
+      "Create a GDPR checklist for our healthcare training module",
+      "Set up regulatory change monitoring for AI and data protection laws",
+      "What are the legal risks of using LLM content in medical education?",
+      "Audit our compliance for deploying in Spanish public schools"
+    ],
+    "should_not_trigger": [
+      "Design a clinical simulation for emergency medicine",
+      "What is our customer acquisition cost?",
+      "Build a referral program for educational institutions",
+      "Create a brand positioning strategy",
+      "Design an onboarding flow for enterprise clients"
+    ]
+  }
+}

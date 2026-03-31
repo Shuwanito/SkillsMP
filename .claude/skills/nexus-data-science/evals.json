@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-data-science",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design an AI model for predicting student dropout risk based on engagement metrics (login frequency, assignment completion rate, quiz scores, forum participation). The model must be explainable to non-technical school administrators.",
+      "expected_output": "Proposes model architecture with XAI integration (SHAP/LIME), defines feature engineering strategy, includes interpretability layer for admins.",
+      "assertions": [
+        "Proposes a suitable model architecture for tabular prediction (e.g., gradient boosting, neural net)",
+        "Integrates explainability tools like SHAP or LIME for model transparency",
+        "Designs an interpretable output format accessible to non-technical administrators"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Our RAG pipeline for the educational assistant has a retrieval accuracy of only 62%. Students report getting irrelevant context in responses. Propose improvements to the embedding and retrieval system.",
+      "expected_output": "Diagnoses retrieval issues, proposes hybrid search (dense + sparse), reranking, chunk optimization, and embedding fine-tuning strategies.",
+      "assertions": [
+        "Diagnoses potential causes of low retrieval accuracy (chunk size, embedding quality, indexing)",
+        "Proposes hybrid search combining dense and sparse retrieval methods",
+        "Recommends a reranking step or embedding fine-tuning to improve relevance"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "We want to implement federated learning across 5 partner schools so we can train on their student data without centralizing it. Each school has different data schemas and sizes ranging from 500 to 50,000 students.",
+      "expected_output": "Designs federated learning architecture, addresses data heterogeneity, proposes schema normalization, handles class imbalance across participants.",
+      "assertions": [
+        "Designs a federated learning architecture with a central aggregation server",
+        "Addresses data schema differences with normalization or adapter layers",
+        "Handles the significant size imbalance (500 vs 50,000) in aggregation weighting"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Build a knowledge graph for our educational content. We have 5,000 lessons, 20,000 quiz questions, and prerequisite relationships between topics. The graph should power adaptive learning path recommendations.",
+      "expected_output": "Designs knowledge graph schema with entities and relationships, proposes graph database, defines traversal algorithms for path recommendations.",
+      "assertions": [
+        "Defines entities (lessons, topics, questions) and relationships (prerequisite, covers, assesses)",
+        "Recommends a graph database technology for storage and querying",
+        "Proposes graph traversal algorithms for adaptive learning path generation"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Our generative AI tutor sometimes halluccinates incorrect math solutions. The hallucination rate is estimated at 8%. Propose a strategy to detect and mitigate hallucinations in real-time.",
+      "expected_output": "Proposes multi-layer hallucination detection: symbolic verification for math, retrieval grounding, confidence scoring, and human-in-the-loop escalation.",
+      "assertions": [
+        "Proposes symbolic or rule-based verification specifically for mathematical content",
+        "Includes retrieval-augmented grounding to verify generated answers against source material",
+        "Designs a confidence scoring mechanism with escalation for low-confidence outputs"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design an AI model for predicting student dropout risk with explainability",
+      "Our RAG pipeline has low retrieval accuracy, how do we improve it?",
+      "Implement federated learning across partner schools without sharing data",
+      "Build a knowledge graph for adaptive learning path recommendations",
+      "How do we detect and reduce hallucinations in our AI tutor?"
+    ],
+    "should_not_trigger": [
+      "Set up a Kubernetes cluster for our backend services",
+      "Design a React dashboard for teacher analytics",
+      "Write a CI/CD pipeline for automated deployments",
+      "Review the FastAPI endpoint for SQL injection vulnerabilities",
+      "Calculate the unit economics for our SaaS pricing model"
+    ]
+  }
+}

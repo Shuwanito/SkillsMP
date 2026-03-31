@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-planner",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Decompose this task: Migrate the monolithic authentication system to a microservices architecture with SSO support, including database migration, API redesign, frontend integration, and comprehensive testing.",
+      "expected_output": "Breaks the task into atomic sub-tasks with clear dependencies: DB schema design, auth service extraction, SSO integration, API gateway setup, frontend auth flow update, unit/integration/e2e tests.",
+      "assertions": [
+        "Decomposes into at least 5 atomic sub-tasks that are independently assignable",
+        "Defines dependency ordering between sub-tasks (e.g., DB before API, API before frontend)",
+        "Assigns each sub-task to a specific agent or department based on domain"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Plan the execution of a new feature: AI-powered adaptive quiz generation. It needs ML model training, API endpoint creation, frontend quiz UI, data pipeline for learning analytics, and A/B testing setup.",
+      "expected_output": "Creates a multi-phase plan with agent assignments based on trust scores, parallel execution where possible, and dependency graph.",
+      "assertions": [
+        "Identifies parallel tracks that can execute simultaneously (e.g., ML training and frontend UI)",
+        "Assigns agents from appropriate departments (data for ML, development for API, frontend for UI)",
+        "Includes a dependency graph showing which tasks block others"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "The primary agent assigned to the API redesign task has a trust score of 0.6. There are two backup agents with scores of 0.85 and 0.78. Re-evaluate the assignment.",
+      "expected_output": "Recommends reassigning to the higher trust-score agent, provides justification, and designates the other as fallback.",
+      "assertions": [
+        "Recommends reassigning the task to the agent with 0.85 trust score",
+        "Provides justification based on trust score comparison and task criticality",
+        "Designates a fallback agent for the sub-task"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "A complex task has been partially completed: 3 of 7 sub-tasks are done, 1 is blocked due to a dependency on an external API, and 3 are pending. Replan the remaining work.",
+      "expected_output": "Identifies the blocked task, proposes workaround or parallel path, resequences remaining tasks, and updates the execution plan.",
+      "assertions": [
+        "Identifies the blocked sub-task and its external API dependency",
+        "Proposes a workaround such as mocking the external API or resequencing",
+        "Produces an updated execution plan for the remaining 4 tasks"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Plan the rollout of a multi-department initiative: implement end-to-end observability across the platform. This involves infrastructure changes, code instrumentation, dashboard creation, alert configuration, and documentation.",
+      "expected_output": "Creates phased rollout plan spanning devops, development, frontend, and QA departments with clear milestones and verification steps.",
+      "assertions": [
+        "Creates a phased plan with at least 3 distinct phases",
+        "Assigns tasks to agents across multiple departments (devops, development, QA)",
+        "Includes verification or validation steps between phases"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Break down this complex feature into smaller tasks and assign agents",
+      "Create an execution plan for migrating our database",
+      "Decompose this initiative into atomic sub-tasks with dependencies",
+      "Which agents should handle each part of this project?",
+      "Replan the remaining work after this task got blocked"
+    ],
+    "should_not_trigger": [
+      "Review this Python code for bugs",
+      "Deploy the application to production",
+      "Audit the frontend for accessibility violations",
+      "Generate synthetic training data for the ML model",
+      "What is the current status of the treasury wallet?"
+    ]
+  }
+}

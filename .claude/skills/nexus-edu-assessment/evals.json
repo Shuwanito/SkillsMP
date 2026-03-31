@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-edu-assessment",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a rubric for evaluating 4th ESO students' oral presentations on climate change, aligned with LOMLOE communication competency.",
+      "expected_output": "A detailed rubric with clear performance levels, measurable criteria, and alignment to LOMLOE communication competency descriptors.",
+      "assertions": [
+        "Rubric includes at least 3 performance levels with distinct, measurable criteria",
+        "Criteria are unambiguous and avoid subjective language like 'good' or 'adequate' without definition",
+        "Rubric explicitly maps to LOMLOE communication competency descriptors"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Audit this formative assessment: students answer 20 multiple-choice questions on Spanish literature. The teacher says it measures critical thinking competency.",
+      "expected_output": "An audit report identifying that multiple-choice format is insufficient for measuring critical thinking, with alternative assessment recommendations.",
+      "assertions": [
+        "Response identifies the misalignment between multiple-choice format and critical thinking competency",
+        "Response explains why the assessment fails to measure the intended competency",
+        "Response proposes alternative assessment formats that genuinely measure critical thinking"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Create a portfolio-based evaluation strategy for a semester-long 1st Bachillerato Art course that tracks competency development over time.",
+      "expected_output": "A portfolio evaluation framework with milestone checkpoints, competency tracking criteria, and reflection components.",
+      "assertions": [
+        "Response defines portfolio components with specific milestone checkpoints across the semester",
+        "Response includes competency tracking mechanisms showing progression over time",
+        "Response incorporates student self-reflection and metacognitive elements"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "I have a summative exam for 2nd ESO Mathematics that covers algebra and geometry. Review it for competency coverage gaps.",
+      "expected_output": "A competency coverage analysis identifying which math competencies are tested and which are missing, with specific item-level feedback.",
+      "assertions": [
+        "Response analyzes individual exam items against specific mathematical competencies",
+        "Response identifies competencies that are over-represented or absent from the exam",
+        "Response provides concrete suggestions for additional items to fill coverage gaps"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Design a formative assessment sequence for 5th Primaria Science that provides actionable feedback to students about their understanding of the water cycle.",
+      "expected_output": "A sequence of formative assessments with built-in feedback mechanisms that help students identify and address their understanding gaps.",
+      "assertions": [
+        "Response includes multiple formative checkpoints rather than a single assessment",
+        "Each checkpoint provides specific, actionable feedback paths based on student responses",
+        "Assessment items are age-appropriate for 5th Primaria (ages 10-11)"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design a rubric for evaluating student presentations",
+      "Audit this exam for competency alignment",
+      "Create a portfolio assessment for my Art course",
+      "How do I build formative assessments that give actionable feedback?",
+      "Check if my test actually measures what I intend"
+    ],
+    "should_not_trigger": [
+      "Design a curriculum for 3rd ESO Biology",
+      "How can I adapt this lesson for a student with dyslexia?",
+      "Create engaging classroom activities with gamification",
+      "Translate this assessment to French",
+      "Analyze student behavioral patterns in the classroom"
+    ]
+  }
+}

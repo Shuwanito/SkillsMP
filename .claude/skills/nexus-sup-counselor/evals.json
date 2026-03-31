@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-sup-counselor",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design an early warning system for our educational platform that detects students at risk of academic failure based on behavioral signals (login frequency, assignment completion, grade trends).",
+      "expected_output": "An early warning framework with specific indicators, threshold definitions, and escalation pathways for at-risk students.",
+      "assertions": [
+        "Response defines specific measurable indicators (e.g., login drop >50%, 3+ missed assignments, grade decline pattern)",
+        "Response includes tiered escalation pathways (automated alert -> teacher review -> counselor intervention)",
+        "Response addresses false positive management to avoid unnecessary alarm"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "A 4th ESO student's grades have dropped sharply across all subjects over the last month. The student seems tired and withdrawn. How should the school counselor approach this situation?",
+      "expected_output": "A counseling approach plan that prioritizes emotional safety, avoids premature diagnosis, and includes professional referral pathways.",
+      "assertions": [
+        "Response prioritizes creating a safe, non-judgmental space for the student before investigating causes",
+        "Response avoids clinical diagnoses and recommends professional referral if emotional/mental health concerns emerge",
+        "Response outlines a step-by-step approach (initial conversation, information gathering, support plan, follow-up)"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Design a peer tutoring and mentoring program for a secondary school where older students (3rd-4th ESO) mentor younger students (1st-2nd ESO) in academic subjects.",
+      "expected_output": "A structured mentoring program design with selection criteria, training, matching, monitoring, and evaluation components.",
+      "assertions": [
+        "Response includes mentor selection criteria and training requirements",
+        "Response defines a structured matching process and regular session format",
+        "Response includes program evaluation metrics measuring impact on both mentors and mentees"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Build a referral pathway workflow for our platform: when should the system suggest a student needs professional help (psychologist, speech therapist, social worker) rather than in-platform support?",
+      "expected_output": "A referral decision framework with clear criteria for when platform support is insufficient and professional intervention is needed.",
+      "assertions": [
+        "Response defines clear criteria distinguishing platform-solvable issues from those requiring professional referral",
+        "Response includes specific referral pathways to different professionals (psychologist, speech therapist, social worker) based on issue type",
+        "Response maintains strict confidentiality standards and informed consent requirements in the workflow"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "A group of 1st ESO students are struggling with the transition from primary school. They report feeling overwhelmed, lonely, and unable to manage the workload. Design a group guidance intervention.",
+      "expected_output": "A group counseling intervention addressing transition anxiety, social connection, and study skill development for early secondary students.",
+      "assertions": [
+        "Response designs a structured group intervention with defined sessions addressing transition-specific challenges",
+        "Response addresses emotional needs (belonging, confidence) alongside practical skills (organization, study habits)",
+        "Response is age-appropriate and culturally sensitive for 12-13 year old students"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design an early warning system for at-risk students",
+      "How should I approach a student whose grades are dropping?",
+      "Create a peer mentoring program for our school",
+      "When should we refer a student to a professional?",
+      "Help students struggling with the primary-to-secondary transition"
+    ],
+    "should_not_trigger": [
+      "Design a rubric for a science project",
+      "Create adaptive exercises for Mathematics",
+      "Analyze the cognitive load of this lesson",
+      "Build a conflict mediation plan between two students",
+      "Audit this curriculum for LOMLOE compliance"
+    ]
+  }
+}

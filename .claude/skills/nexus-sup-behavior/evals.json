@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-sup-behavior",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "A 3rd ESO student repeatedly disrupts class by talking out of turn, especially during the first 10 minutes of each session. The teacher has tried verbal warnings and detentions with no improvement. Analyze this pattern and propose interventions.",
+      "expected_output": "A functional behavioral assessment identifying antecedents and consequences, with positive intervention strategies replacing punitive approaches.",
+      "assertions": [
+        "Response applies functional behavioral assessment (antecedent-behavior-consequence analysis)",
+        "Response identifies likely antecedents for the timing pattern (first 10 minutes) and proposes environmental modifications",
+        "Response recommends positive behavioral supports rather than punitive measures"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Two students in 2nd ESO have an ongoing conflict that has escalated to verbal aggression in the hallways. The school wants a mediation and resolution plan.",
+      "expected_output": "A structured conflict resolution and mediation framework with specific steps, roles, and follow-up monitoring.",
+      "assertions": [
+        "Response proposes a structured mediation process with clear phases (preparation, dialogue, agreement, follow-up)",
+        "Response assigns roles (mediator, participants) and defines ground rules for the mediation",
+        "Response includes a follow-up plan with measurable outcomes to prevent recurrence"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Design a school-wide coexistence improvement plan for a secondary school experiencing increased bullying incidents, social isolation, and low peer cooperation.",
+      "expected_output": "A comprehensive coexistence plan with prevention, intervention, and monitoring components addressing multiple levels (individual, class, school).",
+      "assertions": [
+        "Plan addresses multiple levels: individual support, classroom climate, and school-wide culture",
+        "Plan includes prevention strategies (not just reactive interventions after incidents)",
+        "Plan defines measurable outcomes and monitoring mechanisms to track improvement"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "A 5th Primaria student shows withdrawal behavior: stops participating, avoids eye contact, and sits alone at recess. This started 3 weeks ago. What functional assessment approach should the school take?",
+      "expected_output": "A sensitive functional assessment approach for withdrawal behavior, emphasizing observation over confrontation and recommending professional referral if warranted.",
+      "assertions": [
+        "Response proposes non-intrusive observation and data collection methods appropriate for withdrawal behavior",
+        "Response considers multiple possible causes (social, emotional, family, academic) rather than assuming a single explanation",
+        "Response recommends professional referral for potential emotional or mental health concerns"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "A teacher reports that a group of 4th ESO students cheat on every test. Rather than just punishing them, the school wants to understand the behavioral pattern and address root causes.",
+      "expected_output": "A functional analysis of academic dishonesty identifying contributing factors and proposing systemic positive interventions.",
+      "assertions": [
+        "Response applies functional analysis to understand why cheating occurs (pressure, poor study skills, assessment design, culture)",
+        "Response avoids purely punitive recommendations and focuses on addressing root causes",
+        "Response proposes systemic changes (assessment design, academic integrity culture) alongside individual support"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "A student keeps disrupting class, what should I do?",
+      "Design a conflict mediation plan for two students",
+      "Create a school-wide anti-bullying coexistence plan",
+      "Analyze this student's withdrawal behavior pattern",
+      "How do I address chronic cheating with positive behavioral support?"
+    ],
+    "should_not_trigger": [
+      "Design a curriculum for 3rd ESO Science",
+      "How do I scaffold algebra for struggling students?",
+      "Create a gamified lesson plan for English",
+      "Adapt content for a student with ADHD",
+      "Build a parent communication report template"
+    ]
+  }
+}

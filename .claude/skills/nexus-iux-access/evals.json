@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-iux-access",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Audit our student dashboard page for WCAG 3.0 compliance. It has a data table with quiz scores, a progress chart (canvas-based), a navigation sidebar, and interactive filter dropdowns.",
+      "expected_output": "A WCAG 3.0 audit report identifying accessibility violations in each component with severity ratings, affected user groups, and specific remediation steps",
+      "assertions": [
+        "Response must evaluate each component (table, chart, sidebar, dropdowns) against specific WCAG 3.0 criteria",
+        "Response must identify canvas-based chart as a high-risk accessibility barrier and propose alternatives (SVG, ARIA live regions, data table fallback)",
+        "Response must classify each finding by severity and specify which disability categories are affected"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Our login form has these issues reported by a screen reader user: the password field has no visible label, the 'Remember me' checkbox lacks an accessible name, and error messages don't announce to screen readers. Fix these.",
+      "expected_output": "Specific ARIA and semantic HTML remediation for each reported issue with code examples and testing instructions",
+      "assertions": [
+        "Response must provide specific HTML/ARIA fixes for each of the 3 reported issues",
+        "Response must include code examples showing the corrected markup with proper label associations and aria-live regions",
+        "Response must recommend testing steps with specific screen readers (NVDA, VoiceOver, JAWS) to verify the fixes"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Evaluate our color scheme for accessibility: primary blue #2563EB on white #FFFFFF, error red #DC2626 on light gray #F3F4F6, and secondary text #9CA3AF on white #FFFFFF.",
+      "expected_output": "A color contrast analysis with WCAG 3.0 contrast ratios for each combination, pass/fail assessment, and alternative color suggestions for failures",
+      "assertions": [
+        "Response must calculate the contrast ratio for each color combination against WCAG 3.0 requirements",
+        "Response must identify #9CA3AF on #FFFFFF as failing contrast requirements and suggest compliant alternatives",
+        "Response must address color-blind accessibility beyond just contrast ratios"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Design an accessible quiz-taking interface for students with motor disabilities who use switch access or voice control. The quiz has multiple choice, drag-and-drop matching, and timed essay questions.",
+      "expected_output": "An inclusive design proposal for the quiz interface with alternative interaction patterns for each question type that work with switch access and voice control",
+      "assertions": [
+        "Response must propose keyboard and switch-accessible alternatives for drag-and-drop matching interactions",
+        "Response must address timed essay questions with accommodation options for motor-disabled users",
+        "Response must ensure all proposed designs maintain functional equivalence with the standard quiz experience"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "We're adding a real-time video tutoring feature. What accessibility requirements should we consider for deaf students, blind students, and students with cognitive disabilities?",
+      "expected_output": "A comprehensive accessibility requirements document for video tutoring covering captioning, audio description, cognitive load management, and interface adaptations for each disability category",
+      "assertions": [
+        "Response must address requirements for deaf users including real-time captioning, sign language interpretation, and visual notifications",
+        "Response must address requirements for blind users including audio descriptions, screen reader compatibility, and non-visual interaction",
+        "Response must address cognitive accessibility including simplified interface mode, pace control, and attention management"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Audit our student dashboard for WCAG 3.0 accessibility compliance",
+      "Fix screen reader issues on our login form",
+      "Check if our color scheme meets accessibility contrast requirements",
+      "Design an accessible quiz interface for students with motor disabilities",
+      "What accessibility requirements do we need for our video tutoring feature?"
+    ],
+    "should_not_trigger": [
+      "Reduce cognitive load on the student dashboard using behavioral science",
+      "Run a penetration test on our authentication system",
+      "Design a pricing model for our corporate training product",
+      "Set up headless browsers for cross-browser visual testing",
+      "What emerging AI technologies should we evaluate for education?"
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-strategy-cs",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a customer onboarding flow for a new enterprise client deploying our Corporate Training Module. Optimize for time-to-value within 14 days.",
+      "expected_output": "A day-by-day onboarding plan with key milestones, touchpoints, success criteria, and escalation triggers for the 14-day window.",
+      "assertions": [
+        "Response includes a structured onboarding timeline with specific daily or weekly milestones",
+        "Response defines time-to-value metric and how to measure first value delivery",
+        "Response includes escalation triggers for at-risk onboarding situations"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Our monthly churn rate is 4.2% and we need to reduce it to under 3%. Build a retention strategy with specific interventions based on churn signal detection.",
+      "expected_output": "A retention strategy with churn signal identification, intervention playbooks for each signal, and projected impact on churn reduction.",
+      "assertions": [
+        "Response identifies specific churn signals with detection methodology",
+        "Response provides intervention playbooks matched to each churn signal",
+        "Response projects the expected churn reduction with assumptions"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Design a customer health score model for NEXUS SaaS clients. What signals should we track and how should we weight them?",
+      "expected_output": "A health score model with input signals, weighting methodology, score thresholds for action, and recommended response per health tier.",
+      "assertions": [
+        "Response defines specific health score signals with data sources",
+        "Response includes a weighting methodology with justification",
+        "Response maps score thresholds to specific customer success actions"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Identify upselling opportunities in our installed base of 10 enterprise education clients. What expansion strategies should we deploy?",
+      "expected_output": "An expansion strategy with specific upsell paths, timing recommendations, and projected revenue uplift from the installed base.",
+      "assertions": [
+        "Response identifies at least 3 specific upsell or expansion paths",
+        "Response recommends timing and triggers for expansion conversations",
+        "Response projects revenue uplift with realistic estimates"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Create an AI-automated customer success playbook that detects usage drops and automatically triggers re-engagement sequences. Define the triggers and actions.",
+      "expected_output": "An automation playbook with trigger conditions, automated actions, escalation rules, and content for re-engagement sequences.",
+      "assertions": [
+        "Response defines specific automated trigger conditions based on usage data",
+        "Response describes automated actions and re-engagement content for each trigger",
+        "Response includes escalation rules for when automation is insufficient"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design an onboarding flow for new enterprise clients",
+      "How do we reduce our churn rate from 4% to under 3%?",
+      "Build a customer health score model for our SaaS clients",
+      "What upselling opportunities exist in our current client base?",
+      "Create an automated re-engagement playbook for inactive users"
+    ],
+    "should_not_trigger": [
+      "Design a pricing strategy for the SMB segment",
+      "Build a differential diagnosis simulation engine",
+      "What M&A targets should we pursue?",
+      "Create a competency assessment for data analysts",
+      "Monitor GDPR regulatory changes in the EU"
+    ]
+  }
+}

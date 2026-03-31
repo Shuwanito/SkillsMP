@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-data-engineer",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design an ETL pipeline to ingest student activity logs from 3 sources: a PostgreSQL database (batch), a Kafka stream (real-time), and CSV exports from partner schools (daily). Target is a Snowflake data warehouse.",
+      "expected_output": "Proposes hybrid ETL/ELT architecture, defines ingestion strategy per source, includes data quality gates, schema evolution handling, and orchestration with Airflow.",
+      "assertions": [
+        "Designs different ingestion strategies for each of the 3 source types",
+        "Includes data quality validation gates between ingestion and loading stages",
+        "Proposes orchestration with Airflow or equivalent with retry and monitoring"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Our dbt models are taking 45 minutes to run. The bottleneck is 3 models that join 5 large tables (10M+ rows each) with no incremental strategy. All models run as full refreshes nightly.",
+      "expected_output": "Recommends incremental models with merge strategy, partitioning, materialization optimization, and model dependency refactoring.",
+      "assertions": [
+        "Recommends converting the bottleneck models to incremental materialization",
+        "Proposes partitioning or clustering strategies for the large join tables",
+        "Suggests model dependency refactoring to enable parallel execution"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "We detected schema drift: the partner school CSV added 3 new columns last week and renamed 2 existing ones, which broke our pipeline. Design a schema evolution strategy.",
+      "expected_output": "Proposes schema contracts, automated drift detection, backward-compatible evolution rules, alerting, and a schema registry approach.",
+      "assertions": [
+        "Proposes a schema contract or data contract approach with partner schools",
+        "Designs automated schema drift detection with alerting before pipeline failure",
+        "Includes backward-compatible evolution rules for handling additions and renames"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Design a real-time streaming pipeline for student engagement analytics. Events include page views, quiz attempts, video watch time, and chat messages. We need sub-second aggregations for the live dashboard.",
+      "expected_output": "Proposes streaming architecture with Kafka/Flink or similar, defines windowing strategies, addresses exactly-once semantics and late-arriving events.",
+      "assertions": [
+        "Proposes a streaming platform (Kafka + Flink, or equivalent) for sub-second processing",
+        "Defines windowing strategies (tumbling, sliding, session) for different aggregation needs",
+        "Addresses exactly-once semantics and handling of late-arriving events"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Implement data quality checks for our student records pipeline. Common issues: duplicate student IDs, null email addresses, enrollment dates in the future, and GPA values outside 0-4 range.",
+      "expected_output": "Proposes Great Expectations or dbt tests, defines specific expectations for each data quality issue, includes alerting and quarantine for failed records.",
+      "assertions": [
+        "Recommends a data quality framework like Great Expectations or dbt tests",
+        "Defines specific validation rules for each of the 4 identified quality issues",
+        "Includes a quarantine mechanism for failed records with alerting"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design an ETL pipeline to ingest data from multiple sources into our warehouse",
+      "Our dbt models are running too slowly, how do we optimize them?",
+      "Schema drift broke our pipeline, design a schema evolution strategy",
+      "Build a real-time streaming pipeline for student engagement analytics",
+      "Implement data quality checks for our student records pipeline"
+    ],
+    "should_not_trigger": [
+      "Fine-tune an LLM for our educational assistant",
+      "Design a WebXR chemistry lab simulation",
+      "Review this FastAPI endpoint for security vulnerabilities",
+      "Create a deployment rollback strategy for production",
+      "Analyze whether study hours cause better grades using causal inference"
+    ]
+  }
+}

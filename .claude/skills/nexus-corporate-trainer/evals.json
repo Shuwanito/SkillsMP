@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-corporate-trainer",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design an automated digital onboarding program for a fintech startup hiring 50 engineers per quarter. Include week-by-week structure, milestones, and ROI measurement.",
+      "expected_output": "A structured onboarding program with weekly modules, milestone checkpoints, completion tracking, and ROI measurement methodology.",
+      "assertions": [
+        "Response includes a week-by-week onboarding structure with specific module topics",
+        "Response defines milestone checkpoints with measurable success criteria",
+        "Response includes ROI measurement methodology for the onboarding program"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Create a compliance training program for GDPR awareness targeting all employees at a healthcare company. Include microlearning modules, assessments, and spaced repetition schedule.",
+      "expected_output": "A compliance training program with module structure, microlearning format, assessment design, and spaced repetition calendar for knowledge retention.",
+      "assertions": [
+        "Response includes microlearning modules with specific GDPR topics covered",
+        "Response designs assessments to verify compliance understanding",
+        "Response incorporates spaced repetition schedule for long-term retention"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Build an upskilling program for customer service agents transitioning to AI-assisted support roles. They need to learn prompt engineering, AI tool usage, and escalation judgment.",
+      "expected_output": "An upskilling program with learning path, skill modules, practical exercises, and competency progression from current to target role.",
+      "assertions": [
+        "Response covers all three skill areas: prompt engineering, AI tools, and escalation judgment",
+        "Response includes practical exercises or hands-on activities for each skill",
+        "Response defines a progression path from current competency to target level"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Design a training ROI report for a client who spent €30K on our Corporate Training Module for 300 employees over 6 months. What metrics should we track and how do we demonstrate value?",
+      "expected_output": "An ROI report framework with tracked metrics, calculation methodology, benchmark comparisons, and value demonstration narrative.",
+      "assertions": [
+        "Response defines specific ROI metrics with measurement methodology",
+        "Response calculates or frameworks cost-per-employee and value-per-employee metrics",
+        "Response provides benchmark comparisons to industry training spend norms"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Create an adaptive course catalog for a retail company with 5,000 employees across stores, warehouses, and corporate offices. Each role needs different training paths.",
+      "expected_output": "An adaptive catalog structure with role-based training paths, prerequisite logic, difficulty progression, and personalization rules.",
+      "assertions": [
+        "Response defines distinct training paths for at least 3 different roles",
+        "Response includes prerequisite or sequencing logic between courses",
+        "Response incorporates adaptive elements that personalize the learning experience"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design a digital onboarding program for new engineering hires",
+      "Create a GDPR compliance training with microlearning modules",
+      "Build an upskilling program for employees transitioning to AI roles",
+      "How do we measure and report training ROI to our clients?",
+      "Create an adaptive training catalog for different employee roles"
+    ],
+    "should_not_trigger": [
+      "Identify M&A targets in the EdTech space",
+      "Design a growth hack for increasing sign-ups",
+      "Build a differential diagnosis engine for medical training",
+      "Automate contract review with NLP",
+      "Evaluate public tender opportunities for EdTech in Spain"
+    ]
+  }
+}

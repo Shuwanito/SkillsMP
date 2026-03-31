@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-strategy-sales",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create an automated product demo for a healthcare company evaluating our Corporate Training Module. They train 200 nurses annually and want to reduce onboarding time by 40%.",
+      "expected_output": "A personalized demo script with prospect-specific value metrics, ROI calculations based on 200 nurses and 40% time reduction, and key decision points.",
+      "assertions": [
+        "Response creates a demo flow personalized to nursing onboarding use case",
+        "Response includes ROI calculation specific to 200 nurses and 40% time reduction target",
+        "Response addresses prospect pain points rather than generic feature listing"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Build an ROI calculator for our Skills Assessment Platform. An HR department spends €50K/year on external assessments for 500 employees. Show the savings with NEXUS.",
+      "expected_output": "An ROI calculator with current cost breakdown, NEXUS pricing, projected savings, payback period, and additional qualitative benefits.",
+      "assertions": [
+        "Response provides a clear cost comparison between current spend and NEXUS solution",
+        "Response calculates specific savings amount and payback period",
+        "Response includes qualitative benefits beyond direct cost savings"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Design an automated follow-up sequence for leads who attended a demo but have not converted after 2 weeks. Include 5 touchpoints with progressive value content.",
+      "expected_output": "A 5-touchpoint follow-up sequence with timing, content theme, channel, and call-to-action for each touchpoint.",
+      "assertions": [
+        "Response includes exactly 5 touchpoints with specific timing between each",
+        "Response provides distinct value-adding content for each touchpoint, not just reminders",
+        "Response includes clear call-to-action progression toward conversion"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Generate a technical proposal for a school district with 15 schools and 8,000 students. They need AI tutoring in math and science with LMS integration. Include pricing and timeline.",
+      "expected_output": "A technical proposal with solution architecture, implementation timeline, pricing for 15 schools, integration plan, and expected student outcome improvements.",
+      "assertions": [
+        "Response includes a solution description tailored to math/science AI tutoring at scale",
+        "Response provides pricing structured for a 15-school district deployment",
+        "Response includes implementation timeline with phases and milestones"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Design a sales pipeline automation for our White-Label Agent Factory targeting enterprise buyers. Define pipeline stages, qualification criteria, and conversion benchmarks.",
+      "expected_output": "A pipeline design with stage definitions, qualification criteria (BANT/MEDDIC), expected conversion rates per stage, and automation triggers.",
+      "assertions": [
+        "Response defines at least 5 pipeline stages with clear entry/exit criteria",
+        "Response includes qualification framework (BANT, MEDDIC, or similar)",
+        "Response provides conversion rate benchmarks per stage with automation triggers"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Create a personalized demo for a healthcare prospect",
+      "Build an ROI calculator for our assessment platform",
+      "Design a follow-up sequence for post-demo leads",
+      "Generate a technical proposal for a school district",
+      "Automate our enterprise sales pipeline"
+    ],
+    "should_not_trigger": [
+      "What is our brand positioning in the EdTech market?",
+      "Design a community building strategy for educators",
+      "Evaluate the legal compliance of our AI products",
+      "Build a patient case simulation for medical students",
+      "Analyze investment trends in AI education"
+    ]
+  }
+}

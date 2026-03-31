@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-data-ml",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Fine-tune a multimodal LLM (GPT-4o class) for our educational assistant. It should handle text questions, diagram analysis, and handwritten math recognition. We have 10,000 labeled examples. Propose a fine-tuning strategy.",
+      "expected_output": "Proposes LoRA/QLoRA fine-tuning approach, defines data preprocessing for each modality, includes validation strategy and overfitting prevention.",
+      "assertions": [
+        "Recommends parameter-efficient fine-tuning (LoRA, QLoRA, or adapter tuning)",
+        "Defines data preprocessing strategies for each modality (text, diagrams, handwriting)",
+        "Includes a validation strategy with holdout set and overfitting detection"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Our fine-tuned model shows 95% accuracy on training data but only 68% on the test set. The model also performs well on a subset of the test data that closely resembles training examples. Diagnose the issue.",
+      "expected_output": "Diagnoses overfitting and likely data leakage, recommends investigation steps, proposes regularization and data audit strategies.",
+      "assertions": [
+        "Identifies the 27% accuracy gap as clear overfitting",
+        "Investigates potential data leakage between training and test sets",
+        "Proposes specific remediation: regularization, data augmentation, or reduced model complexity"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Compare Claude 3.5 Sonnet, GPT-4o, and Gemini 1.5 Pro for our educational assistant use case. Key requirements: math reasoning, multilingual support (Spanish/English), cost under $0.01 per student interaction, and low latency.",
+      "expected_output": "Compares all three on math benchmarks, language support, pricing, latency, with a recommendation based on the specific requirements.",
+      "assertions": [
+        "Compares all three models on math reasoning capability with reference to benchmarks",
+        "Analyzes cost per interaction against the $0.01 budget constraint",
+        "Evaluates multilingual Spanish/English performance for each model"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "We need synthetic training data for a student question classifier. Categories: homework help, concept explanation, exam preparation, emotional support, and off-topic. Generate a strategy for creating 50,000 synthetic examples.",
+      "expected_output": "Proposes LLM-based generation with diversity controls, defines quality validation pipeline, addresses class balance and bias detection.",
+      "assertions": [
+        "Proposes an LLM-based synthetic data generation approach with diversity controls",
+        "Defines a quality validation pipeline to filter low-quality or biased examples",
+        "Addresses class balance across all 5 categories"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Design an MLOps pipeline for our educational AI models. We retrain weekly, serve 3 model versions simultaneously, and need A/B testing capability. Current process is entirely manual.",
+      "expected_output": "Designs end-to-end MLOps pipeline with automated training, model registry, multi-version serving, A/B testing framework, and monitoring.",
+      "assertions": [
+        "Designs automated weekly retraining with data validation gates",
+        "Includes a model registry with versioning and multi-version serving",
+        "Proposes A/B testing framework with statistical significance monitoring"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "How should we fine-tune a multimodal LLM for our educational assistant?",
+      "Our model has high training accuracy but low test accuracy, what is wrong?",
+      "Compare LLM providers for our use case on cost, quality, and latency",
+      "Generate synthetic training data for our student question classifier",
+      "Design an MLOps pipeline for automated model retraining and serving"
+    ],
+    "should_not_trigger": [
+      "Design a REST API for the quiz module",
+      "Audit the frontend for WCAG accessibility compliance",
+      "Set up infrastructure as code with Terraform",
+      "Route this task to the correct department",
+      "Analyze the legal compliance of our data processing"
+    ]
+  }
+}

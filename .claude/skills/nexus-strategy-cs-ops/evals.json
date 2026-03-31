@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-strategy-cs-ops",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a multi-signal customer health scoring system for our EdTech SaaS platform. Include usage, engagement, support ticket, and payment signals with relative weights.",
+      "expected_output": "A health scoring framework with signal categories, specific metrics per category, weighting rationale, and threshold definitions for green/yellow/red status.",
+      "assertions": [
+        "Response includes at least 4 signal categories with specific measurable metrics",
+        "Response provides relative weights with justification for the weighting",
+        "Response defines action thresholds with recommended interventions per status level"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Build a churn prediction model specification for NEXUS. What early warning indicators should we track and what intervention should trigger at each risk level?",
+      "expected_output": "A churn prediction model with risk indicators, scoring methodology, risk tier definitions, and intervention playbook per tier.",
+      "assertions": [
+        "Response identifies at least 5 specific early warning indicators for churn",
+        "Response defines risk tiers with clear scoring criteria",
+        "Response maps proactive interventions to each risk tier"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Create segment-specific onboarding playbooks for three customer types: small schools (under 500 students), mid-size districts, and large universities.",
+      "expected_output": "Three onboarding playbooks with tailored steps, timeline, success metrics, and resource requirements per segment.",
+      "assertions": [
+        "Response provides distinct playbooks for each of the three customer segments",
+        "Response tailors onboarding complexity and timeline to segment characteristics",
+        "Response defines success metrics specific to each segment"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Design an NPS program for NEXUS with survey cadence, detractor recovery workflow, and promoter activation strategy. How do we turn detractors into promoters?",
+      "expected_output": "An NPS program with survey design, cadence recommendation, detractor recovery process with SLAs, and promoter leverage tactics.",
+      "assertions": [
+        "Response includes NPS survey cadence with segment-appropriate timing",
+        "Response provides a detractor recovery workflow with SLA for response time",
+        "Response describes promoter activation tactics to leverage positive sentiment"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Analyze our existing customer base to identify expansion revenue opportunities. We have 10 clients paying an average of €200/month. Where can we upsell and cross-sell?",
+      "expected_output": "An expansion analysis identifying specific upsell and cross-sell paths, estimated revenue per opportunity, and recommended approach for each client segment.",
+      "assertions": [
+        "Response identifies specific upsell and cross-sell opportunities with descriptions",
+        "Response estimates revenue potential per opportunity type",
+        "Response aligns expansion proposals with genuine customer needs, not just revenue targets"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design a customer health scoring system with multiple signals",
+      "Build a churn prediction model for our SaaS platform",
+      "Create onboarding playbooks segmented by customer size",
+      "Set up an NPS program with detractor recovery workflow",
+      "Where are the expansion revenue opportunities in our client base?"
+    ],
+    "should_not_trigger": [
+      "Design a go-to-market plan for the healthcare vertical",
+      "Create a brand narrative for NEXUS",
+      "Model the ROI of acquiring a legal tech startup",
+      "Build a clinical simulation for medical students",
+      "Design a competency assessment framework"
+    ]
+  }
+}

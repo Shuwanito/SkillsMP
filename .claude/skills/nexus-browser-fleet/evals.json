@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-browser-fleet",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Set up a headless browser fleet to audit all 47 pages of our educational platform for broken links, missing images, and JavaScript errors. We need full coverage with results in under 10 minutes.",
+      "expected_output": "A fleet orchestration plan specifying instance count, page distribution, audit checks, and timing to achieve full coverage of 47 pages in under 10 minutes",
+      "assertions": [
+        "Response must specify the number of headless browser instances needed and how pages are distributed across them",
+        "Response must define specific audit checks for broken links, missing images, and JS errors with detection methods",
+        "Response must include timing estimates that demonstrate feasibility of completing within the 10-minute constraint"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Our browser fleet keeps crashing during large-scale scraping jobs. We're running 20 Puppeteer instances and 3 of them become unresponsive after 15 minutes. Diagnose and fix.",
+      "expected_output": "A diagnostic analysis of fleet instability with root cause identification (memory leaks, resource exhaustion, etc.) and specific remediation steps",
+      "assertions": [
+        "Response must identify likely root causes for Puppeteer instance crashes such as memory leaks, zombie processes, or resource exhaustion",
+        "Response must propose specific configuration fixes including memory limits, page lifecycle management, and instance recycling",
+        "Response must include monitoring recommendations to detect and auto-remediate unstable instances"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Design a browser automation pipeline using Pinchtab to monitor our competitors' pricing pages (5 competitor sites) daily and alert us to any changes.",
+      "expected_output": "A complete automation pipeline design with scheduling, page monitoring, change detection logic, and alerting configuration for 5 competitor sites",
+      "assertions": [
+        "Response must define a pipeline architecture with scheduling, browser automation, and change detection components",
+        "Response must specify change detection logic that distinguishes meaningful pricing changes from cosmetic updates",
+        "Response must include alerting configuration with notification channels and escalation for significant changes"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "We need to validate that our web application renders correctly across Chrome, Firefox, and Safari. Set up a cross-browser fleet that runs visual regression tests on our 12 key pages.",
+      "expected_output": "A cross-browser testing fleet configuration with visual regression testing setup, screenshot comparison logic, and pass/fail criteria for 12 pages across 3 browsers",
+      "assertions": [
+        "Response must configure headless instances for all 3 browsers with appropriate viewport and rendering settings",
+        "Response must define visual regression comparison methodology with pixel diff thresholds and baseline management",
+        "Response must specify which 12 page types to prioritize and what visual elements to validate on each"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Scale our audit fleet to handle 500 pages across 3 different client sites simultaneously. What is the optimal instance count, and how do we prevent resource contention?",
+      "expected_output": "A fleet scaling plan with instance sizing, resource allocation, isolation strategy, and load balancing for concurrent multi-site auditing",
+      "assertions": [
+        "Response must calculate optimal instance count based on pages-per-instance throughput and target completion time",
+        "Response must address resource contention with specific isolation strategies (containers, resource limits, queue management)",
+        "Response must include a load balancing strategy that prevents any single client site from starving others"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Set up headless browsers to audit all pages on our website for errors",
+      "Our Puppeteer fleet keeps crashing, how do we fix it?",
+      "Automate daily monitoring of competitor pricing pages",
+      "Run cross-browser visual regression tests on our key pages",
+      "Scale our browser fleet to handle 500 pages across multiple sites"
+    ],
+    "should_not_trigger": [
+      "Evaluate an external AI assistant for integration into our workflow",
+      "Build a threat model for our authentication system",
+      "Design adaptive interfaces that reduce cognitive load",
+      "What emerging technologies should we add to our 2027 roadmap?",
+      "Create a product roadmap for the next quarter"
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-ai-coach",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a personalized AI coaching program for mid-level managers transitioning to senior leadership roles. Cover communication, strategic thinking, and team management over a 12-week program.",
+      "expected_output": "A 12-week coaching program with weekly themes, adaptive exercises, progress milestones, and measurable development outcomes for each competency area.",
+      "assertions": [
+        "Response includes a 12-week structure with specific weekly themes and activities",
+        "Response covers all three competency areas: communication, strategic thinking, team management",
+        "Response defines measurable development outcomes and progress tracking methodology"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Build a continuous feedback loop system between managers and their direct reports. Include feedback templates, frequency cadence, and sentiment tracking.",
+      "expected_output": "A feedback system design with templates, recommended cadence, sentiment analysis methodology, and privacy safeguards.",
+      "assertions": [
+        "Response provides feedback templates with structured and open-ended components",
+        "Response recommends a feedback cadence with justification",
+        "Response includes sentiment tracking methodology while protecting employee privacy"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Create a leadership simulation where a new team lead must handle a conflict between two senior team members who disagree on a project approach. Include branching scenarios and coaching feedback.",
+      "expected_output": "A simulation with scenario description, role details, branching decision paths, coaching feedback per decision, and competency assessment.",
+      "assertions": [
+        "Response presents a realistic workplace conflict scenario with context",
+        "Response includes branching paths with different outcomes based on leader decisions",
+        "Response provides coaching feedback that develops conflict resolution competency"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Design a soft skills development program for engineers who struggle with client communication. Use the GROW coaching model as the framework.",
+      "expected_output": "A coaching program structured around the GROW model with specific exercises for client communication improvement, role-plays, and progress metrics.",
+      "assertions": [
+        "Response structures the program using the GROW model (Goal, Reality, Options, Will)",
+        "Response includes specific exercises targeted at engineer-to-client communication",
+        "Response defines progress metrics for measuring communication improvement"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Assess the organizational development needs of a 200-person tech company where employee engagement scores have dropped 15% in the last quarter. What coaching interventions do you recommend?",
+      "expected_output": "A needs assessment with root cause analysis framework, recommended coaching interventions, priority ranking, and expected impact on engagement.",
+      "assertions": [
+        "Response provides a framework for diagnosing root causes of engagement decline",
+        "Response recommends at least 3 specific coaching interventions",
+        "Response projects expected impact on engagement with measurement approach"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design a coaching program for managers transitioning to leadership",
+      "Build a continuous feedback system between managers and reports",
+      "Create a leadership conflict resolution simulation",
+      "Develop a soft skills program for engineers using the GROW model",
+      "What coaching interventions can improve employee engagement?"
+    ],
+    "should_not_trigger": [
+      "Calculate our monthly burn rate",
+      "Design a clinical case simulation for medical students",
+      "Build a legal document retrieval pipeline",
+      "Create a viral referral program for teachers",
+      "Evaluate public tender opportunities in Spain"
+    ]
+  }
+}

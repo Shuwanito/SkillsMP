@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-cso",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Define the strategic roadmap for NEXUS diversification from EdTech into healthcare, legal, and HR verticals over the next 18 months. Which vertical do we prioritize first and why?",
+      "expected_output": "A strategic roadmap with phased vertical entry, prioritization criteria, resource requirements, and cross-functional coordination plan.",
+      "assertions": [
+        "Response provides a phased roadmap with clear timelines for each vertical",
+        "Response justifies vertical prioritization with market data and feasibility analysis",
+        "Response includes cross-functional coordination requirements across Finance, Marketing, and Product"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Analyze competitive movements in the AI agent ecosystem market in 2026. What threats and opportunities should NEXUS respond to strategically?",
+      "expected_output": "A competitive analysis covering key players, their recent moves, threat assessment, and strategic response recommendations.",
+      "assertions": [
+        "Response identifies specific competitors and their recent strategic moves",
+        "Response assesses both threats and opportunities with severity/priority ratings",
+        "Response proposes strategic responses aligned to NEXUS capabilities"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "We have detected strong market demand for AI compliance training in the banking sector. Convert this market need into a strategic acquisition priority with agent requirements and timeline.",
+      "expected_output": "A needs-to-priorities conversion with market size validation, required agent capabilities, acquisition plan, and implementation timeline.",
+      "assertions": [
+        "Response validates the market demand with size and growth estimates",
+        "Response specifies required new agent capabilities to serve this market",
+        "Response provides an acquisition or development timeline with milestones"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Evaluate whether NEXUS should pursue horizontal expansion (more features in education) or vertical expansion (new industries). Use strategic frameworks to justify.",
+      "expected_output": "A strategic analysis using established frameworks (Ansoff matrix, Porter, etc.) comparing horizontal vs vertical expansion with a recommendation.",
+      "assertions": [
+        "Response applies at least one recognized strategic framework",
+        "Response compares both expansion directions with pros and cons",
+        "Response provides a clear recommendation with data-backed justification"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Identify 3 M&A targets that would accelerate NEXUS expansion into the corporate training market. What capabilities would each acquisition add?",
+      "expected_output": "Three M&A target profiles with capability gap fill analysis, estimated deal size, integration complexity, and strategic fit score.",
+      "assertions": [
+        "Response identifies at least 3 specific acquisition targets or profiles",
+        "Response maps each target to specific capability gaps it would fill",
+        "Response assesses integration complexity and strategic fit for each"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "What should our strategic roadmap look like for the next 18 months?",
+      "Analyze competitive threats in the AI agent ecosystem",
+      "How do we convert market demand into strategic priorities?",
+      "Should we expand horizontally in education or vertically into new industries?",
+      "Identify M&A targets for corporate training expansion"
+    ],
+    "should_not_trigger": [
+      "Design a viral referral program for teachers",
+      "Create a clinical simulation for nursing training",
+      "Calculate our monthly burn rate and runway",
+      "Build a legal RAG pipeline for contract analysis",
+      "Design a 360-degree employee feedback system"
+    ]
+  }
+}

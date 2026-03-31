@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-cyber-red",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Run a penetration test on our FastAPI backend and identify any known CVEs in our Python dependencies including uvicorn 0.27.0, pydantic 2.5.3, and sqlalchemy 2.0.25",
+      "expected_output": "A vulnerability report listing known CVEs for each dependency version, severity ratings (CVSS), exploitability assessment, and specific remediation steps such as version upgrades",
+      "assertions": [
+        "Response must reference specific CVE identifiers from NVD/NIST for the listed dependency versions",
+        "Each vulnerability must include a severity rating (Critical/High/Medium/Low) with CVSS score",
+        "Remediation recommendations must include specific safe version numbers to upgrade to"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Simulate an APT attack scenario targeting our educational platform's authentication system that uses JWT tokens and OAuth2 with Google",
+      "expected_output": "A detailed APT emulation plan covering reconnaissance, initial access, persistence, and credential theft phases targeting JWT and OAuth2 weaknesses",
+      "assertions": [
+        "Response must outline at least 3 distinct attack phases following a recognized framework like MITRE ATT&CK",
+        "Response must identify specific JWT vulnerabilities such as algorithm confusion, token replay, or weak secret attacks",
+        "Response must include proof-of-concept descriptions without providing weaponized exploit code"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Map the attack surface of a Next.js 14 frontend application that communicates with a FastAPI backend via REST API and uses Supabase for authentication",
+      "expected_output": "A comprehensive attack surface map identifying entry points across frontend, API, and authentication layers with risk ratings",
+      "assertions": [
+        "Response must identify attack vectors in at least 3 layers: frontend (XSS, CSRF), API (injection, BOLA), and auth (session, token)",
+        "Each attack vector must include a risk rating based on exploitability and impact",
+        "Response must specifically address Supabase-related attack vectors such as RLS bypass or API key exposure"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Check our Node.js project for supply chain vulnerabilities. We use next@14.1.0, @supabase/supabase-js@2.39.0, and openai@4.28.0",
+      "expected_output": "A supply chain security assessment covering known vulnerabilities, dependency tree risks, and typosquatting threats for the specified packages",
+      "assertions": [
+        "Response must check each listed package version against known CVE databases and security advisories",
+        "Response must assess transitive dependency risks, not just direct dependencies",
+        "Response must include actionable remediation steps prioritized by severity"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Evaluate the security of our API endpoint POST /api/students/upload that accepts file uploads for student assignments. The endpoint uses multer for file handling with no size limit configured",
+      "expected_output": "A security assessment of the file upload endpoint covering injection risks, DoS via large files, malicious file types, and path traversal vulnerabilities",
+      "assertions": [
+        "Response must identify the denial-of-service risk from missing file size limits",
+        "Response must cover file type validation bypass, path traversal, and malicious content execution risks",
+        "Response must provide specific configuration recommendations for multer including size limits, allowed MIME types, and filename sanitization"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Run a penetration test on our authentication system",
+      "Check our dependencies for known CVEs and exploits",
+      "Simulate an attacker trying to breach our API endpoints",
+      "Map the attack surface of our web application",
+      "Test our file upload endpoint for security vulnerabilities"
+    ],
+    "should_not_trigger": [
+      "Set up a SIEM dashboard for monitoring login attempts",
+      "Design a new user onboarding flow for students",
+      "What are the latest trends in educational AI?",
+      "Create a pricing model for our SaaS product",
+      "Write unit tests for the student dashboard component"
+    ]
+  }
+}

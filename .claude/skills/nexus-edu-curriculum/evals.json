@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-edu-curriculum",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Audit this 3rd ESO Biology curriculum for LOMLOE alignment. It covers cells, genetics, and ecosystems but has no explicit transversal competency mapping.",
+      "expected_output": "A detailed alignment report identifying which LOMLOE competencies are covered and which are missing, with specific article references and recommendations to integrate transversal competencies.",
+      "assertions": [
+        "Response cites specific LOMLOE articles or competency descriptors relevant to 3rd ESO Biology",
+        "Response identifies gaps in transversal competency integration (e.g., STEM, digital, personal-social)",
+        "Response provides actionable recommendations for mapping each topic to specific competencies"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Design a curriculum sequence for 1st Bachillerato Mathematics that progressively builds from algebra to calculus, aligned with LOMLOE key competencies.",
+      "expected_output": "A structured curriculum sequence with progressive complexity, explicit competency targets per unit, and cross-curricular connections.",
+      "assertions": [
+        "Response includes a multi-unit sequence with clear progression from algebra foundations to calculus",
+        "Each unit maps to specific LOMLOE mathematical and transversal competencies",
+        "Response includes cross-curricular connections (e.g., physics applications, data analysis)"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Compare the Andalusia and Catalonia regional adaptations of the LOMLOE curriculum for 4th ESO History. Identify key differences that affect content sequencing.",
+      "expected_output": "A comparative analysis of regional regulatory variations with specific differences in content requirements, sequencing implications, and compliance notes.",
+      "assertions": [
+        "Response identifies specific regulatory differences between Andalusia and Catalonia for 4th ESO History",
+        "Response flags content or sequencing adjustments needed for each region",
+        "Response documents regional variations with references to autonomous community normative documents"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "I have a primary school curriculum (3rd Primaria) that covers Language, Math, and Science as isolated subjects. How can I integrate transversal competencies across all three?",
+      "expected_output": "A cross-curricular integration plan showing how transversal competencies can be woven across Language, Math, and Science with concrete examples.",
+      "assertions": [
+        "Response proposes specific integration points across Language, Math, and Science for 3rd Primaria",
+        "Response explicitly maps at least 3 transversal competencies with concrete activity examples",
+        "Response maintains age-appropriate complexity for 3rd Primaria students (ages 8-9)"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Review this curriculum proposal: 2nd ESO Technology covers programming, robotics, and 3D printing, but the learning progression jumps directly from block programming to Python without intermediate steps.",
+      "expected_output": "An audit report identifying the progression gap, with a proposed intermediate scaffolding sequence and alignment verification against LOMLOE Technology competencies.",
+      "assertions": [
+        "Response identifies the abrupt progression jump as a sequencing problem",
+        "Response proposes intermediate steps (e.g., visual programming with text elements, pseudocode)",
+        "Response validates the revised sequence against LOMLOE Technology competency requirements"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Audit my curriculum for LOMLOE alignment",
+      "Design a learning sequence for 2nd ESO Science",
+      "How do I integrate key competencies across subjects?",
+      "Check if this curriculum meets Andalusia regional requirements",
+      "Create a progressive curriculum for primary school Mathematics"
+    ],
+    "should_not_trigger": [
+      "Create a multiple-choice quiz for Biology",
+      "How do I motivate students who are bored in class?",
+      "Translate this lesson plan to Catalan",
+      "Design a gamification system for my classroom",
+      "Analyze the cognitive load of this reading assignment"
+    ]
+  }
+}

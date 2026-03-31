@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-finance-revenue",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a monetization strategy for our Skills Marketplace. We currently charge $0.50-$5.00 per execution. How can we add upselling and cross-selling to increase ARPU by 30%?",
+      "expected_output": "A monetization strategy with specific upsell and cross-sell mechanisms, projected ARPU uplift per mechanism, and implementation recommendations.",
+      "assertions": [
+        "Response proposes at least 3 specific upselling or cross-selling mechanisms",
+        "Response includes projected revenue uplift per mechanism with calculations",
+        "Response addresses impact on user experience and retention"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Model the marketplace economics for our educational content marketplace. What commission rate optimizes for both creator incentive and platform revenue?",
+      "expected_output": "An analysis of marketplace commission models with comparisons to similar platforms, a recommended rate with justification, and sensitivity analysis.",
+      "assertions": [
+        "Response analyzes multiple commission rate scenarios with trade-offs",
+        "Response references comparable marketplace commission structures",
+        "Response recommends a specific rate with justification balancing creator and platform"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Identify revenue leaks in our current 8 active revenue streams. Where are we leaving money on the table and how can we capture it?",
+      "expected_output": "An audit identifying specific revenue leaks or missed opportunities across streams, with quantified estimates and capture strategies.",
+      "assertions": [
+        "Response identifies at least 3 specific revenue leaks or missed opportunities",
+        "Response quantifies the estimated revenue impact of each leak",
+        "Response provides actionable strategies to capture the missed revenue"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Design an affiliate and licensing revenue model for our White-Label Agent Factory. What margins should we target and how should we structure partner tiers?",
+      "expected_output": "A structured affiliate/licensing model with partner tiers, commission structures, margin targets, and projected revenue from each tier.",
+      "assertions": [
+        "Response includes a tiered partner structure with clear criteria per tier",
+        "Response specifies margin targets and commission structures",
+        "Response projects revenue per tier with scaling assumptions"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Our corporate training vertical shows high demand but low conversion. Analyze the monetization model and suggest changes to improve revenue per customer from the current €200/month average.",
+      "expected_output": "A monetization optimization analysis with specific pricing, packaging, or value delivery changes and projected revenue per customer improvement.",
+      "assertions": [
+        "Response diagnoses specific reasons for low conversion relative to demand",
+        "Response proposes concrete pricing or packaging changes with projected impact",
+        "Response grounds recommendations in comparable SaaS/EdTech monetization data"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "How can we monetize our agent skills more effectively?",
+      "Design a licensing model for the white-label factory",
+      "What revenue streams are we missing in the healthcare vertical?",
+      "Propose an upselling strategy for existing enterprise clients",
+      "Model the economics of our content marketplace"
+    ],
+    "should_not_trigger": [
+      "How do we reduce our cloud infrastructure costs?",
+      "Design a clinical case simulation for cardiology",
+      "What partnerships should we pursue with LMS platforms?",
+      "Create an employee onboarding training program",
+      "Evaluate the EU AI Act impact on our products"
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-clinical-simulator",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design an interactive clinical case simulation for a 65-year-old patient presenting with acute chest pain in the emergency department. Include branching pathways for differential diagnosis.",
+      "expected_output": "A clinical case with patient presentation, vital signs, branching decision points for differential diagnosis (MI, PE, aortic dissection, etc.), and scoring rubric.",
+      "assertions": [
+        "Response includes realistic patient presentation with vitals, history, and physical exam findings",
+        "Response provides branching pathways with at least 3 differential diagnoses",
+        "Response includes a competency scoring rubric aligned to clinical standards"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Build a triage training module for emergency department nurses. Cover the 5-level ESI triage system with 10 patient scenarios of varying acuity.",
+      "expected_output": "A triage training module with ESI level descriptions, 10 patient scenarios with correct triage classifications, and assessment methodology.",
+      "assertions": [
+        "Response correctly describes the 5-level ESI triage system",
+        "Response includes at least 8 distinct patient scenarios spanning multiple ESI levels",
+        "Response provides correct triage classification with clinical reasoning for each"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Create an OSCE-style competency assessment for third-year medical students evaluating their history-taking and physical examination skills for a patient with abdominal pain.",
+      "expected_output": "An OSCE station design with standardized patient script, checklist of expected history and exam components, and scoring criteria.",
+      "assertions": [
+        "Response includes a standardized patient script with presenting complaint and key findings",
+        "Response provides a comprehensive checklist of expected history-taking and exam maneuvers",
+        "Response defines scoring criteria with pass/fail thresholds for the station"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Design a differential diagnosis engine for pediatric fever in children under 5 years old. Include red flag symptoms, weighted evidence, and decision logic.",
+      "expected_output": "A diagnostic decision tree with common and dangerous etiologies, red flag criteria, evidence weighting, and recommended workup per pathway.",
+      "assertions": [
+        "Response covers common causes and dangerous etiologies of pediatric fever",
+        "Response identifies red flag symptoms requiring immediate escalation",
+        "Response includes weighted evidence logic for guiding diagnostic workup"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Build a simulation for training residents on managing a cardiac arrest using the ACLS algorithm. Include decision points for rhythm identification, medication administration, and team leadership.",
+      "expected_output": "A cardiac arrest simulation with ACLS-compliant algorithm, rhythm scenarios, medication timing, and team communication assessment.",
+      "assertions": [
+        "Response follows ACLS guidelines for cardiac arrest management",
+        "Response includes multiple rhythm scenarios (VF, PEA, asystole) with correct interventions",
+        "Response assesses team leadership and communication alongside clinical decision-making"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design a clinical case simulation for emergency medicine",
+      "Build a triage training module for nurses",
+      "Create an OSCE assessment for medical students",
+      "Design a differential diagnosis engine for pediatric symptoms",
+      "Build a cardiac arrest simulation using ACLS protocol"
+    ],
+    "should_not_trigger": [
+      "Calculate our customer acquisition cost",
+      "Design a brand narrative for NEXUS",
+      "Create a sales pipeline for enterprise clients",
+      "Build a contract analysis system for legal documents",
+      "Design an employee competency assessment framework"
+    ]
+  }
+}

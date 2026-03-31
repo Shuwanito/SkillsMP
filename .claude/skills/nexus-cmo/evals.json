@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-cmo",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Define the brand positioning and value proposition for NEXUS AI agents targeting the K-12 education market. How do we differentiate from Khan Academy and Duolingo?",
+      "expected_output": "A positioning statement with unique value proposition, competitive differentiation map against Khan Academy and Duolingo, and target segment definition.",
+      "assertions": [
+        "Response includes a clear positioning statement with target audience",
+        "Response provides specific differentiation points against named competitors",
+        "Response aligns messaging with actual NEXUS product capabilities"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Design a go-to-market strategy for launching our Clinical Simulation Engine in the European healthcare education market. Include channel priorities and timeline.",
+      "expected_output": "A GTM plan with market segmentation, channel prioritization, launch timeline, and key messaging by segment.",
+      "assertions": [
+        "Response segments the European healthcare education market meaningfully",
+        "Response prioritizes acquisition channels with rationale",
+        "Response includes a phased timeline with specific milestones"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Create a thought leadership content strategy for positioning NEXUS as the leading AI agent ecosystem for education. What topics, formats, and channels should we prioritize?",
+      "expected_output": "A content strategy with topic pillars, content formats, distribution channels, and a publishing cadence aligned to the AI education narrative.",
+      "assertions": [
+        "Response defines at least 3 topic pillars relevant to AI education thought leadership",
+        "Response recommends specific content formats and distribution channels",
+        "Response includes a realistic publishing cadence or content calendar outline"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Analyze the current EdTech marketing landscape in 2026. What trends should inform our marketing strategy and where are competitors weak?",
+      "expected_output": "A market analysis covering key EdTech marketing trends, competitor weak spots, and strategic recommendations for NEXUS positioning.",
+      "assertions": [
+        "Response identifies at least 3 current EdTech marketing trends",
+        "Response analyzes competitor weaknesses with specific examples",
+        "Response translates trends into actionable marketing recommendations"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Identify the top 5 B2B acquisition channels for selling AI agent services to educational institutions. Rank them by expected cost-per-lead and conversion potential.",
+      "expected_output": "A ranked list of B2B channels with estimated CPL, conversion rates, and rationale for each, tailored to educational institution buyers.",
+      "assertions": [
+        "Response identifies at least 5 specific B2B acquisition channels",
+        "Response provides CPL estimates or relative cost rankings for each",
+        "Response tailors channel recommendations to the educational institution buyer persona"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "How should we position NEXUS against competitors in the EdTech market?",
+      "Design a go-to-market plan for the corporate training product",
+      "What content marketing strategy should we adopt for thought leadership?",
+      "Identify the best B2B channels for reaching school administrators",
+      "Analyze current EdTech marketing trends and their implications"
+    ],
+    "should_not_trigger": [
+      "Calculate our LTV:CAC ratio for the SMB segment",
+      "Design a 360-degree feedback assessment system",
+      "Build a differential diagnosis simulation for medical students",
+      "Automate GDPR compliance auditing workflows",
+      "Create a spaced repetition module for employee training"
+    ]
+  }
+}

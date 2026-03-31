@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-strategy-gov",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Identify current public tenders for educational technology in Spain. What opportunities are open for AI-powered tutoring solutions in the next 6 months?",
+      "expected_output": "A list of relevant tender opportunities with deadlines, requirements, estimated contract values, and strategic recommendations for bid preparation.",
+      "assertions": [
+        "Response identifies specific public procurement portals and tender sources in Spain",
+        "Response describes requirements and timelines for relevant opportunities",
+        "Response provides strategic recommendations for bid preparation"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Design an EU funding proposal outline for NEXUS under the Erasmus+ program to deploy AI tutoring agents in 5 European countries. Include budget structure and impact metrics.",
+      "expected_output": "A proposal outline with project description, consortium structure, budget breakdown, expected outcomes, and impact measurement framework aligned to Erasmus+ criteria.",
+      "assertions": [
+        "Response follows Erasmus+ proposal structure with required sections",
+        "Response includes a realistic budget structure with allocation categories",
+        "Response defines measurable impact metrics aligned to EU funding criteria"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Map the homologation requirements for deploying an AI education tool across 5 Spanish autonomous communities: Catalonia, Andalusia, Madrid, Basque Country, and Galicia.",
+      "expected_output": "A comparison matrix of requirements per community with key differences, compliance checklist, and recommended homologation sequence.",
+      "assertions": [
+        "Response addresses requirements for at least 4 of the 5 specified communities",
+        "Response highlights key regulatory differences between communities",
+        "Response recommends a prioritized sequence for homologation"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Build a relationship map of key decision-makers in the Spanish Ministry of Education and regional education departments. Who should NEXUS engage with first?",
+      "expected_output": "A stakeholder map with institutional roles, decision-making authority, recommended engagement approach, and prioritized contact sequence.",
+      "assertions": [
+        "Response identifies relevant institutional bodies and their roles in EdTech procurement",
+        "Response maps decision-making authority and influence levels",
+        "Response recommends a prioritized engagement sequence with approach per stakeholder"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "What adaptations does our AI tutoring product need to comply with public sector procurement requirements in the EU? Focus on accessibility, data sovereignty, and certification.",
+      "expected_output": "A compliance gap analysis covering accessibility (WCAG), data sovereignty (GDPR, local hosting), and certification requirements with remediation plan.",
+      "assertions": [
+        "Response covers accessibility requirements with specific standards (WCAG/EN 301 549)",
+        "Response addresses data sovereignty including local hosting and GDPR compliance",
+        "Response identifies certification or accreditation requirements for public sector"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "What public tenders for EdTech are open in Spain right now?",
+      "Design an EU funding proposal for deploying AI tutors across Europe",
+      "What are the homologation requirements for EdTech in Catalonia?",
+      "Who are the key decision-makers at the Spanish Ministry of Education?",
+      "What compliance adaptations do we need for public sector procurement?"
+    ],
+    "should_not_trigger": [
+      "Design a viral growth loop for our product",
+      "Build a revenue model for the skills marketplace",
+      "Create a clinical simulation for emergency medicine",
+      "Design a competency assessment for project managers",
+      "How should we position our brand against Duolingo?"
+    ]
+  }
+}

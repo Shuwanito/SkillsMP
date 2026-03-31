@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-content-adapter",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Adapt this 3rd ESO Biology text on cellular respiration for a student with intellectual disability who reads at a 5th Primaria level. The original text is 500 words with scientific terminology.",
+      "expected_output": "An adapted version that simplifies language and structure while preserving the core scientific concepts, following easy-reading guidelines.",
+      "assertions": [
+        "Adaptation uses easy-reading principles (short sentences, common vocabulary, clear structure) without losing core scientific content",
+        "Response preserves the essential concept of cellular respiration rather than oversimplifying to the point of inaccuracy",
+        "Response includes visual aids or pictogram suggestions to support comprehension"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Audit this 'accessible' version of a Mathematics lesson: the original teaches quadratic equations, but the 'adapted' version just removes all equations and replaces them with word problems. Is this genuine accessibility?",
+      "expected_output": "A critique identifying that removing equations is not accessibility but content reduction, with proposals for genuine mathematical accessibility.",
+      "assertions": [
+        "Response identifies the removal of equations as content reduction, not accessibility improvement",
+        "Response distinguishes between genuine accessibility (alternative representations) and oversimplification",
+        "Response proposes alternatives that maintain mathematical rigor while improving access (visual models, manipulatives, step-by-step scaffolding)"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Make this History lesson on World War II accessible for screen reader users. The original relies heavily on maps, timelines, and image-based infographics.",
+      "expected_output": "Accessibility adaptations for screen reader users including alt text, structured descriptions, and alternative representations for visual content.",
+      "assertions": [
+        "Response provides detailed alt text and structured descriptions for maps and infographics",
+        "Response proposes alternative representations for timeline content (structured lists, narrative descriptions)",
+        "Response follows WCAG accessibility guidelines for educational content"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Create a high-contrast, pictogram-supported version of classroom rules for a primary school class that includes students with ASD and students with limited Spanish proficiency.",
+      "expected_output": "A visual communication design using pictograms and high contrast that serves both ASD students needing visual structure and language learners needing visual support.",
+      "assertions": [
+        "Response uses standardized pictograms (e.g., ARASAAC) that are clear and unambiguous",
+        "Design uses high contrast and clear visual hierarchy following accessibility standards",
+        "Response serves both target populations (ASD visual structure needs and language barrier needs) simultaneously"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Convert a 4th ESO Chemistry lab safety guide into multiple accessible formats: easy reading, screen-reader compatible, and a visual-only version with pictograms.",
+      "expected_output": "Three distinct accessible versions of the same content, each optimized for its target format while maintaining safety-critical information.",
+      "assertions": [
+        "Response produces three distinct format adaptations (easy reading, screen reader, visual/pictogram)",
+        "All versions preserve safety-critical information completely without omission",
+        "Each format follows its specific accessibility guidelines (plain language standards, WCAG, pictogram conventions)"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Adapt this text for a student who reads below grade level",
+      "Make this lesson accessible for screen reader users",
+      "Create a pictogram version of these classroom rules",
+      "Audit this adapted content for genuine accessibility",
+      "Convert this material into easy-reading format"
+    ],
+    "should_not_trigger": [
+      "Translate this lesson to French",
+      "Create adaptive exercises with progressive difficulty",
+      "Design a curriculum aligned with LOMLOE",
+      "Analyze the cognitive load of this presentation",
+      "Design a gamification system for my classroom"
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-medical-content",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create an evidence-based CME module on the latest guidelines for type 2 diabetes management. Include learning objectives, content outline, and post-test questions aligned to ACCME standards.",
+      "expected_output": "A CME module design with learning objectives, evidence-based content outline referencing current guidelines (ADA/EASD), and post-test assessment.",
+      "assertions": [
+        "Response includes learning objectives aligned to CME accreditation standards",
+        "Response references current clinical guidelines (ADA, EASD, or equivalent) with citations",
+        "Response provides post-test questions that assess clinical decision-making"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Adapt the RAG engine for efficient medical literature retrieval from PubMed. Design the configuration for searching clinical trials on immunotherapy in non-small cell lung cancer.",
+      "expected_output": "A RAG configuration with search parameters, MeSH term mapping, result filtering criteria, and quality scoring for retrieved articles.",
+      "assertions": [
+        "Response specifies PubMed search parameters including MeSH terms for the query",
+        "Response defines result filtering and quality scoring methodology",
+        "Response addresses retrieval precision and recall optimization for medical literature"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Generate an interactive clinical case for internal medicine residents on managing acute heart failure. Include branching decision points and evidence-based treatment pathways.",
+      "expected_output": "A clinical case with patient presentation, diagnostic workup, treatment decisions with branching pathways, and evidence citations for each pathway.",
+      "assertions": [
+        "Response includes a realistic patient presentation with diagnostic workup",
+        "Response provides branching treatment pathways based on clinical decisions",
+        "Response cites evidence-based sources for treatment recommendations"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Identify content gaps in our current medical education modules. We cover cardiology, endocrinology, and neurology. What high-demand specialties are we missing and what content should we prioritize?",
+      "expected_output": "A gap analysis identifying missing specialties, demand assessment, and content prioritization roadmap with development effort estimates.",
+      "assertions": [
+        "Response identifies at least 3 high-demand medical specialties not currently covered",
+        "Response assesses demand or market size for each identified specialty",
+        "Response provides a prioritized content development roadmap"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Review and update our clinical protocols module on antibiotic stewardship. Identify any outdated recommendations based on the latest WHO and IDSA guidelines.",
+      "expected_output": "A protocol review with identified outdated recommendations, updated guidance with citations, and a change summary for the module.",
+      "assertions": [
+        "Response identifies specific areas where protocols may be outdated",
+        "Response references current WHO or IDSA guidelines with publication dates",
+        "Response provides a clear change summary with old vs new recommendations"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Create a CME module on diabetes management guidelines",
+      "Configure PubMed RAG retrieval for oncology research",
+      "Generate an interactive clinical case for heart failure management",
+      "What medical education content gaps do we have?",
+      "Update our antibiotic stewardship protocols to latest guidelines"
+    ],
+    "should_not_trigger": [
+      "Design a pricing strategy for our SMB product",
+      "Build a referral program for schools",
+      "Create a sales proposal for a corporate client",
+      "Automate GDPR compliance checking",
+      "Design a growth loop for viral acquisition"
+    ]
+  }
+}

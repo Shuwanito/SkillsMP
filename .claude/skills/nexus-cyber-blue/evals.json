@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-cyber-blue",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a SIEM configuration for our educational platform that monitors authentication events, API rate limiting violations, and suspicious database queries. We use ELK Stack.",
+      "expected_output": "A detailed SIEM configuration plan for ELK Stack with specific log sources, correlation rules, alert thresholds, and dashboard layouts for the three monitoring areas",
+      "assertions": [
+        "Response must include specific Elasticsearch index patterns and Logstash pipeline configurations for auth, API, and DB log sources",
+        "Response must define correlation rules with specific thresholds for alerting on anomalous patterns",
+        "Response must address false positive reduction strategies for each monitoring category"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Create an incident response playbook for a scenario where we detect unauthorized access to student personal data via a compromised API key",
+      "expected_output": "A step-by-step incident response playbook covering detection, containment, eradication, recovery, and post-incident phases specific to API key compromise and data breach",
+      "assertions": [
+        "Response must follow a recognized IR framework with at least 5 phases: detection, containment, eradication, recovery, lessons learned",
+        "Response must include specific actions for API key revocation, session invalidation, and affected user notification",
+        "Response must address GDPR/data protection compliance requirements for student data breach notification"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Our SIEM is generating 200+ alerts per day with an estimated 70% false positive rate on our brute force detection rule. How can we tune this without missing real attacks?",
+      "expected_output": "A false positive reduction strategy with specific rule tuning recommendations, baseline adjustments, and whitelist criteria while maintaining detection coverage",
+      "assertions": [
+        "Response must propose specific threshold adjustments with rationale for the brute force detection rule",
+        "Response must include whitelisting criteria that do not create blind spots for legitimate attacks",
+        "Response must recommend metrics to track the impact of tuning on both false positive rate and detection rate"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Design anomaly detection rules for our platform to identify unusual student account behavior such as impossible travel, credential stuffing, and account takeover patterns",
+      "expected_output": "A set of anomaly detection rules with specific behavioral baselines, detection logic, and response actions for each attack pattern",
+      "assertions": [
+        "Response must define behavioral baselines for normal student login patterns including time, location, and device fingerprinting",
+        "Response must include detection logic for at least 3 distinct attack patterns: impossible travel, credential stuffing, and account takeover",
+        "Each detection rule must specify the response action (alert, block, require MFA) based on confidence level"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Evaluate our current security monitoring architecture: we have CloudWatch logs for AWS, application logs in stdout, and no centralized log aggregation. Recommend improvements to reduce our MTTD below 15 minutes.",
+      "expected_output": "A monitoring architecture redesign proposal with centralized logging, real-time alerting, and specific technology recommendations to achieve sub-15-minute MTTD",
+      "assertions": [
+        "Response must propose a centralized log aggregation architecture with specific technology choices",
+        "Response must include a real-time alerting pipeline with latency estimates that justify the sub-15-minute MTTD target",
+        "Response must identify gaps in the current stdout-only approach and specific risks of missing detections"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Configure our SIEM to detect brute force attacks on student accounts",
+      "Create an incident response plan for a data breach scenario",
+      "How can we reduce false positives in our security alerts?",
+      "Design anomaly detection for unusual login patterns",
+      "Improve our security monitoring to detect threats faster"
+    ],
+    "should_not_trigger": [
+      "Simulate a SQL injection attack on our API",
+      "What pricing model should we use for our corporate training product?",
+      "Build a digital twin of our production infrastructure",
+      "Design an accessible login form that meets WCAG 3.0",
+      "Research the latest trends in quantum computing for education"
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-ped-cognitive",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Analyze this 2nd ESO Physics lesson on electromagnetism. It introduces magnetic fields, electromagnetic induction, and Faraday's law all in a single 50-minute session with a 30-slide presentation.",
+      "expected_output": "A cognitive load analysis identifying overload risks, with specific recommendations for chunking, scaffolding, and reducing extraneous load.",
+      "assertions": [
+        "Response identifies specific cognitive overload risks (too many new concepts, excessive slides for time)",
+        "Response distinguishes between intrinsic, extraneous, and germane cognitive load in the analysis",
+        "Response proposes a chunking strategy that breaks the content into manageable units across multiple sessions"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Design a scaffolding progression for teaching algebraic equations to 1st ESO students who have only worked with basic arithmetic. The jump from numbers to variables is causing widespread confusion.",
+      "expected_output": "A graduated scaffolding sequence that bridges arithmetic to algebra with intermediate steps and gradual support removal.",
+      "assertions": [
+        "Response provides a multi-step scaffolding progression from concrete arithmetic to abstract algebraic thinking",
+        "Scaffolding removes support gradually rather than abruptly at any stage",
+        "Response considers working memory constraints of 12-13 year old students"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Create a spaced repetition schedule for a 4th ESO History course covering 8 major topics over a semester. Students currently cram before exams and forget everything after.",
+      "expected_output": "A spaced repetition calendar integrating retrieval practice across the semester, with specific review intervals and activity types.",
+      "assertions": [
+        "Response provides a concrete schedule with expanding review intervals (e.g., 1 day, 3 days, 1 week, 2 weeks)",
+        "Response integrates retrieval practice activities (not just re-reading) at each review point",
+        "Schedule covers all 8 topics with interleaving rather than blocked review"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Evaluate this online learning module: it uses animated videos with background music, pop-up text boxes, narration, and simultaneous on-screen equations. Is the multimedia design optimal for learning?",
+      "expected_output": "An analysis based on multimedia learning principles (Mayer) identifying redundancy, split-attention, and coherence issues.",
+      "assertions": [
+        "Response identifies specific multimedia design problems (redundancy effect, split-attention, seductive details)",
+        "Response references cognitive science principles (e.g., Mayer's multimedia principles, dual-coding theory)",
+        "Response provides specific remediation suggestions for each identified issue"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "How should I design retrieval practice activities for 6th Primaria students learning the solar system? They need to remember planet names, order, sizes, and key characteristics.",
+      "expected_output": "Age-appropriate retrieval practice activities that go beyond simple quizzes, using varied formats to strengthen long-term memory.",
+      "assertions": [
+        "Response proposes multiple retrieval practice formats (e.g., free recall, cued recall, elaborative interrogation)",
+        "Activities are age-appropriate for 11-12 year old students",
+        "Response explains how retrieval practice strengthens memory compared to passive review"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "This lesson has too much content for one session, how do I fix it?",
+      "Design a scaffolding progression for teaching fractions",
+      "Create a spaced repetition schedule for my History course",
+      "Analyze the cognitive load of this learning module",
+      "How do I use retrieval practice effectively in my classroom?"
+    ],
+    "should_not_trigger": [
+      "Design a rubric for oral presentations",
+      "Create adaptations for a student with dyslexia",
+      "How do I improve student motivation and engagement?",
+      "Design a curriculum aligned with LOMLOE",
+      "Build a family communication report template"
+    ]
+  }
+}

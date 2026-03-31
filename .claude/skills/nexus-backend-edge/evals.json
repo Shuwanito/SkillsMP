@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-backend-edge",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our EdTech platform serves students in 15 countries. API latency from centralized US-East servers is 350ms for European users and 500ms for Asian users. Propose an edge computing strategy to reduce latency below 100ms globally.",
+      "expected_output": "Proposes edge deployment across multiple regions, identifies which endpoints can be served from edge, suggests caching and data replication strategy.",
+      "assertions": [
+        "Proposes multi-region edge deployment with specific region recommendations",
+        "Identifies which API endpoints are suitable for edge serving vs centralized",
+        "Includes a caching or data replication strategy to handle state at the edge"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Evaluate Cloudflare Workers, Deno Deploy, and AWS Lambda@Edge for serving our quiz API at the edge. Our backend is FastAPI/Python.",
+      "expected_output": "Compares all three platforms on Python support, cold start times, pricing, and global coverage. Notes Python limitations on some platforms.",
+      "assertions": [
+        "Evaluates all three platforms with specific comparisons on latency and cold starts",
+        "Identifies Python compatibility constraints on each platform",
+        "Recommends the best option with cost and performance justification"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Design a CDN caching strategy for our learning content API. Content types include: static course materials (rarely change), quiz questions (change weekly), and real-time leaderboards (change per second).",
+      "expected_output": "Proposes tiered caching with long TTLs for static content, short TTLs for quizzes, and no-cache or WebSocket for leaderboards, with cache invalidation strategy.",
+      "assertions": [
+        "Assigns different cache TTLs based on content change frequency",
+        "Proposes cache invalidation or purge mechanisms for quiz content updates",
+        "Recommends real-time delivery (WebSocket or SSE) for leaderboard data instead of caching"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Our edge nodes in Southeast Asia are experiencing 15% failure rates during peak hours. Design a failover and graceful degradation strategy.",
+      "expected_output": "Proposes health-check-based failover to nearest healthy region, local caching for degraded mode, circuit breaker pattern, and user-facing degradation messaging.",
+      "assertions": [
+        "Designs automatic failover to the nearest healthy edge region",
+        "Proposes local caching or stale-while-revalidate for graceful degradation",
+        "Includes a circuit breaker pattern to prevent cascading failures"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "We want to move AI inference for personalized learning recommendations to the edge. The model is 500MB. Is this feasible, and what strategies would you recommend?",
+      "expected_output": "Analyzes model size constraints at the edge, proposes model compression, distillation, or split inference strategies. Evaluates WebAssembly for inference.",
+      "assertions": [
+        "Identifies the 500MB model size as a challenge for edge deployment",
+        "Proposes model compression techniques such as quantization, pruning, or distillation",
+        "Evaluates WebAssembly or ONNX runtime as edge inference options"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "How can we reduce API latency for users in different global regions?",
+      "Evaluate edge computing platforms for our Python backend",
+      "Design a CDN caching strategy for our content API",
+      "Our edge nodes are failing, design a failover strategy",
+      "Can we run AI inference at the edge for personalization?"
+    ],
+    "should_not_trigger": [
+      "Review this FastAPI endpoint for SQL injection",
+      "Set up a CI/CD pipeline with GitHub Actions",
+      "Design a React component for course navigation",
+      "Train a classification model on student engagement data",
+      "Write unit tests for the authentication module"
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-pm",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We have 15 feature requests from users: AI-powered study groups, gamification badges, parent dashboard, offline mode, multilingual support, dark mode, calendar integration, progress sharing, video lessons, quiz builder, adaptive difficulty, teacher analytics, mobile app, LMS integration, and accessibility improvements. Prioritize them for Q2 2026.",
+      "expected_output": "A prioritized feature list using a scoring framework (RICE, MoSCoW, or weighted scoring) with justification for each priority level based on user impact, business value, and effort",
+      "assertions": [
+        "Response must use a recognized prioritization framework with explicit scoring criteria",
+        "Response must categorize features into at least 3 priority tiers with clear justification for each placement",
+        "Response must identify which features align with core educational value vs. nice-to-have enhancements"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Define the product vision for expanding our AI educational assistant from K-12 students to also serve university students and adult learners. What changes are needed?",
+      "expected_output": "A strategic product vision document covering target audience expansion, capability gaps, content requirements, and a phased approach to serving multiple education segments",
+      "assertions": [
+        "Response must identify specific capability gaps between K-12 and university/adult learning needs",
+        "Response must propose a phased expansion strategy with clear milestones",
+        "Response must address how the product vision maintains coherence while serving multiple segments"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Evaluate the ROI of adding a real-time collaborative whiteboard feature. Development estimate is 3 months with 2 engineers. Our current MRR is EUR 12,000 with 800 active users.",
+      "expected_output": "An ROI analysis with projected user acquisition, retention impact, revenue uplift estimates, and a recommendation on whether to proceed based on financial projections",
+      "assertions": [
+        "Response must include quantified cost estimates based on the provided development parameters",
+        "Response must project revenue impact with assumptions clearly stated (adoption rate, retention improvement, conversion uplift)",
+        "Response must provide a clear go/no-go recommendation with payback period estimate"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Our product roadmap has 8 major initiatives but we only have bandwidth for 4 this quarter. The initiatives are: AI tutor v2, mobile app, LMS integrations, teacher dashboard, content marketplace, analytics suite, API platform, and accessibility overhaul. Help us decide.",
+      "expected_output": "A roadmap alignment analysis that evaluates each initiative against strategic objectives and recommends the top 4 with rationale for deferring the others",
+      "assertions": [
+        "Response must evaluate each initiative against at least 3 strategic criteria such as user impact, revenue potential, and strategic alignment",
+        "Response must recommend exactly 4 initiatives with clear justification for selection",
+        "Response must explain the deferral rationale for the 4 not selected and flag any risks of delaying them"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Users are complaining that our onboarding flow is too complex with 7 steps and a 40% drop-off rate at step 3. Analyze this and propose simplifications.",
+      "expected_output": "A user-centric analysis of the onboarding friction with specific simplification proposals, expected drop-off improvements, and A/B test recommendations",
+      "assertions": [
+        "Response must identify the likely causes of the step 3 drop-off based on common onboarding friction patterns",
+        "Response must propose specific simplifications that reduce steps or cognitive load with expected impact",
+        "Response must recommend a measurement strategy to validate the improvements (A/B testing, funnel metrics)"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Prioritize our feature backlog for the next quarter",
+      "Define the product vision for expanding to new education segments",
+      "What is the ROI of building this new feature?",
+      "Help us decide which roadmap initiatives to pursue this quarter",
+      "Our onboarding has a high drop-off rate, how should we simplify it?"
+    ],
+    "should_not_trigger": [
+      "Design a dynamic pricing model for our AaaS offering",
+      "Run a penetration test on our authentication system",
+      "What emerging technologies should we evaluate for 2027?",
+      "Configure our CI/CD pipeline for faster deployments",
+      "Create WCAG 3.0 compliant form components"
+    ]
+  }
+}

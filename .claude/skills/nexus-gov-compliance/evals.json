@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-gov-compliance",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Audit our educational platform's student data collection practices for GDPR compliance. We collect names, ages, grades, learning analytics, and IP addresses from students aged 12-18 across Spain.",
+      "expected_output": "A GDPR compliance audit covering data minimization, consent requirements for minors, retention policies, and specific regulatory citations.",
+      "assertions": [
+        "Response analyzes each data type against GDPR data minimization principles",
+        "Response addresses specific consent requirements for minors under GDPR Article 8 (parental consent for under-16 in Spain)",
+        "Response cites specific GDPR articles and Spanish LOPDGDD provisions relevant to educational data"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Our AI tutoring system profiles students to personalize learning paths. A parent has complained this constitutes automated decision-making about their child. Assess the compliance risk.",
+      "expected_output": "A compliance risk assessment covering GDPR automated decision-making provisions, with specific risk levels and remediation options.",
+      "assertions": [
+        "Response analyzes the profiling against GDPR Article 22 (automated decision-making) and recital 71",
+        "Response assesses whether the profiling produces legal or similarly significant effects on the student",
+        "Response proposes remediation (human oversight, right to explanation, opt-out mechanism) with specific implementation guidance"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Check if our platform's curriculum content for 2nd ESO meets LOMLOE requirements across all autonomous communities. We use a single national version with no regional adaptations.",
+      "expected_output": "A LOMLOE compliance assessment identifying the risk of using a single national version without regional adaptations, with specific regulatory references.",
+      "assertions": [
+        "Response identifies that LOMLOE requires autonomous community-specific curriculum adaptations",
+        "Response cites specific LOMLOE articles on regional curriculum authority",
+        "Response lists specific autonomous communities where the national-only approach creates compliance gaps"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "We want to add a feature where students can message teachers directly through the platform. What child protection and data protection compliance requirements must we meet?",
+      "expected_output": "A compliance requirements analysis covering both child protection protocols and data protection for messaging between minors and adults.",
+      "assertions": [
+        "Response covers child protection requirements (content monitoring, reporting obligations, safeguarding protocols)",
+        "Response addresses GDPR requirements for messaging data (retention, access, encryption)",
+        "Response references Spanish child protection regulations (LOPIVI) alongside GDPR requirements"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "A data breach has exposed learning analytics data for 500 students aged 10-16. What are our compliance obligations for notification and remediation under GDPR and Spanish law?",
+      "expected_output": "A breach response compliance guide with specific notification timelines, authorities to contact, and remediation requirements.",
+      "assertions": [
+        "Response specifies the 72-hour notification requirement to the AEPD (Spanish DPA) under GDPR Article 33",
+        "Response addresses notification obligations to affected families given the involvement of minors",
+        "Response outlines specific remediation steps and documentation requirements"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Audit our platform for GDPR compliance with student data",
+      "Check if our curriculum meets LOMLOE requirements",
+      "What are the child protection requirements for our messaging feature?",
+      "We had a data breach involving student data, what must we do?",
+      "Does our AI profiling system comply with automated decision-making regulations?"
+    ],
+    "should_not_trigger": [
+      "Design a rubric for student presentations",
+      "Create a gamified lesson for English class",
+      "How do I adapt content for a student with dyslexia?",
+      "Analyze the cognitive load of this learning module",
+      "Design a family communication strategy"
+    ]
+  }
+}

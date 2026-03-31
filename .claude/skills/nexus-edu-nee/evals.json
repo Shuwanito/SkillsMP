@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-edu-nee",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a curricular adaptation for a 2nd ESO student diagnosed with ADHD who struggles with sustained attention during 50-minute classes and frequently loses track of multi-step instructions.",
+      "expected_output": "An individualized adaptation plan with specific ADHD accommodations, UDL principles, progress monitoring checkpoints, and evidence-based citations.",
+      "assertions": [
+        "Response provides ADHD-specific accommodations (e.g., chunked instructions, movement breaks, visual timers) rather than generic advice",
+        "Response applies UDL principles covering multiple means of engagement, representation, and action/expression",
+        "Response includes explicit follow-up metrics and progress monitoring checkpoints"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "A 4th Primaria student with dyslexia is falling behind in reading comprehension. The current adaptation is simply 'give more time on tests.' Evaluate this adaptation and propose improvements.",
+      "expected_output": "A critique of the insufficient adaptation with specific, individualized dyslexia strategies and evidence-based alternatives.",
+      "assertions": [
+        "Response flags the 'extra time only' approach as insufficient and explains why",
+        "Response proposes multiple evidence-based dyslexia strategies (e.g., multisensory reading, text-to-speech, structured literacy)",
+        "Response cites at least 2 evidence-based sources supporting the proposed strategies"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Design a UDL-based learning environment for a mixed classroom that includes a gifted student, a student with ASD, and a student with mild intellectual disability in 3rd ESO Science.",
+      "expected_output": "A UDL environment design that addresses all three profiles with differentiated supports while maintaining an inclusive classroom structure.",
+      "assertions": [
+        "Response addresses each student profile (gifted, ASD, mild intellectual disability) with specific, individualized strategies",
+        "Response applies all three UDL principles (engagement, representation, action/expression) to the classroom design",
+        "Response maintains inclusive participation rather than segregating students into separate tracks"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "A student with ASD in 1st ESO has difficulty with group work and transitions between activities. The teacher wants specific strategies for the classroom, not a clinical assessment.",
+      "expected_output": "Classroom-level strategies for supporting the ASD student during group work and transitions, with practical implementation steps.",
+      "assertions": [
+        "Response provides ASD-specific classroom strategies for group work (e.g., visual role cards, structured turn-taking, social scripts)",
+        "Response addresses transition difficulties with concrete tools (e.g., visual schedules, transition warnings, sensory considerations)",
+        "Response avoids clinical language and focuses on practical teacher-implementable accommodations"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Review this adaptation plan: a gifted 5th Primaria student is given extra worksheets when they finish early. No enrichment or acceleration is mentioned. No follow-up plan exists.",
+      "expected_output": "A critique identifying the lack of genuine enrichment, with proposals for meaningful gifted education strategies and progress monitoring.",
+      "assertions": [
+        "Response identifies 'extra worksheets' as busywork rather than genuine enrichment or acceleration",
+        "Response proposes enrichment strategies (e.g., depth projects, mentoring, curriculum compacting, creative challenges)",
+        "Response includes a follow-up and progress monitoring plan with specific checkpoints"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design adaptations for a student with ADHD",
+      "How do I support a dyslexic student in reading class?",
+      "Create a UDL-based inclusive classroom environment",
+      "Review this special education adaptation plan",
+      "What strategies work for ASD students during group activities?"
+    ],
+    "should_not_trigger": [
+      "Design a rubric for evaluating essays",
+      "Create a gamified lesson on irregular verbs",
+      "Audit this curriculum for LOMLOE alignment",
+      "How do I improve student motivation with gamification?",
+      "Translate this lesson plan to Basque"
+    ]
+  }
+}

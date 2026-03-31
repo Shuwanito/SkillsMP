@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-legal-rag",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Configure a RAG pipeline for searching Spanish jurisprudence in CENDOJ. The use case is finding precedent cases on data protection violations by educational institutions.",
+      "expected_output": "A RAG pipeline configuration with search parameters, CENDOJ-specific settings, relevance scoring, and result formatting for legal research.",
+      "assertions": [
+        "Response specifies CENDOJ-specific search parameters and access methodology",
+        "Response includes relevance scoring criteria for data protection case law",
+        "Response addresses source traceability with citation format for judicial decisions"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Design an automated contract analysis system for reviewing SaaS service agreements. Extract key clauses: liability limitations, data processing terms, SLA commitments, and termination conditions.",
+      "expected_output": "A contract analysis system design with clause extraction rules, NLP pipeline specification, and output format for extracted clauses.",
+      "assertions": [
+        "Response defines extraction rules for all 4 specified clause types",
+        "Response describes the NLP pipeline with entity and clause recognition methodology",
+        "Response specifies output format with confidence scores and source references"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Build a compliance checking system that validates our terms of service against EU consumer protection regulations and the Digital Services Act. What rules should we encode?",
+      "expected_output": "A compliance checking system with encoded rules, validation logic, flagging criteria for non-compliant clauses, and remediation suggestions.",
+      "assertions": [
+        "Response encodes specific rules from EU consumer protection and DSA regulations",
+        "Response defines validation logic for checking terms of service against rules",
+        "Response provides flagging criteria with remediation suggestions for violations"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Design a legal entity extraction pipeline for processing EU regulatory documents. Extract organizations, dates, regulation references, and obligation statements.",
+      "expected_output": "An NLP pipeline design with entity types, extraction methodology, relationship mapping, and validation against known regulatory entities.",
+      "assertions": [
+        "Response defines specific entity types to extract with examples",
+        "Response describes extraction methodology with NLP techniques",
+        "Response includes validation and quality assurance for extracted entities"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Configure a RAG engine for EUR-Lex to search EU regulations and directives related to artificial intelligence. Optimize for retrieving the most relevant regulatory articles given a natural language query.",
+      "expected_output": "A RAG configuration for EUR-Lex with search parameters, CELEX number handling, relevance optimization, and precision/recall tuning.",
+      "assertions": [
+        "Response configures EUR-Lex-specific search parameters including CELEX identifiers",
+        "Response optimizes for legal terminology matching and regulatory context",
+        "Response addresses precision/recall trade-offs specific to legal retrieval"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Configure a RAG pipeline for searching Spanish court decisions",
+      "Design a contract analysis system for SaaS agreements",
+      "Build a compliance checker for our terms of service",
+      "Extract legal entities from EU regulatory documents",
+      "Set up a legal search engine for EUR-Lex regulations"
+    ],
+    "should_not_trigger": [
+      "Design a customer onboarding flow",
+      "Build a clinical simulation for nursing training",
+      "Calculate the ROI of our corporate training module",
+      "Create a viral growth loop for teacher referrals",
+      "Design a tiered pricing strategy for SMBs"
+    ]
+  }
+}

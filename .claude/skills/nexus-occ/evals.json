@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-occ",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We have a critical bug report from a customer affecting authentication, a feature request for dark mode, and a performance optimization task for the search endpoint. Route these to the appropriate departments and agents.",
+      "expected_output": "Routes bug to cybersecurity/QA, feature request to frontend, and performance to backend. Prioritizes the critical bug. Assigns based on agent trust scores and availability.",
+      "assertions": [
+        "Classifies the authentication bug as high-urgency and routes to security or QA department",
+        "Routes the dark mode feature request to the frontend department",
+        "Routes the performance optimization to the backend or development department"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Three agents have submitted conflicting proposals for the database migration strategy. Agent A suggests PostgreSQL 17, Agent B recommends CockroachDB, Agent C proposes staying with current PostgreSQL 15. Coordinate triple validation.",
+      "expected_output": "Activates triple validation protocol, evaluates each proposal against criteria, identifies consensus or escalation path, and documents decision rationale.",
+      "assertions": [
+        "Activates triple validation coordination for the conflicting proposals",
+        "Evaluates each proposal against measurable criteria like cost, performance, and migration risk",
+        "Produces a decision or escalation path with documented rationale"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "The data department reports anomalous behavior: the ML pipeline is consuming 3x normal resources and producing outputs with 40% lower accuracy. Investigate and activate correction protocols.",
+      "expected_output": "Detects the anomaly, activates correction protocol, coordinates with data and devops departments, and proposes a rollback or investigation plan.",
+      "assertions": [
+        "Identifies the resource spike and accuracy drop as a critical anomaly",
+        "Activates correction protocol involving data and devops departments",
+        "Proposes immediate containment steps such as rollback or resource limits"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Consolidate the weekly learning reports from development, frontend, data, and QA departments into a unified knowledge base update.",
+      "expected_output": "Aggregates findings from all four departments, identifies cross-department insights, resolves conflicts, and produces a consolidated learning report.",
+      "assertions": [
+        "Aggregates findings from all four specified departments",
+        "Identifies cross-departmental synergies or overlapping discoveries",
+        "Produces a consolidated report stored in shared memory"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "The ecosystem has 12 pending tasks with varying urgency levels. 3 agents are overloaded while 4 agents are idle. Rebalance the task distribution to optimize throughput.",
+      "expected_output": "Analyzes workload distribution, redistributes tasks based on agent capabilities and trust scores, ensures fair load balancing while maintaining quality.",
+      "assertions": [
+        "Identifies the workload imbalance between overloaded and idle agents",
+        "Proposes redistribution based on agent capabilities and trust scores",
+        "Ensures critical tasks remain assigned to qualified agents despite rebalancing"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Route this task to the appropriate department and agent",
+      "Coordinate validation across multiple agents for this proposal",
+      "There is an anomaly in the system that needs correction",
+      "Consolidate the learning reports from all departments",
+      "Rebalance workload distribution across the ecosystem agents"
+    ],
+    "should_not_trigger": [
+      "Write a Python function to sort a list",
+      "Design a React component for a login form",
+      "Optimize this SQL query for better performance",
+      "Run fuzz tests on the API endpoints",
+      "Set up a Terraform module for AWS ECS"
+    ]
+  }
+}

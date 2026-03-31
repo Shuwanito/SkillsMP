@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-devops-obs",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Define SLOs for our educational platform. Key user journeys: student login (must complete in <2s), quiz submission (must succeed 99.9% of time), and content loading (LCP <2.5s). Current error budget is unknown.",
+      "expected_output": "Defines SLIs and SLOs for each journey, calculates error budgets, proposes burn-rate alerts, and defines escalation policies.",
+      "assertions": [
+        "Defines specific SLIs (Service Level Indicators) for each of the 3 user journeys",
+        "Sets measurable SLO targets with corresponding error budgets",
+        "Proposes burn-rate alerting to detect when error budget consumption is too fast"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Our alerting system fires 200+ alerts per day but only 5% are actionable. The on-call team is suffering from alert fatigue. Diagnose and fix the alert noise problem.",
+      "expected_output": "Analyzes alert rules for overly sensitive thresholds, proposes alert consolidation, severity-based routing, and signal-to-noise optimization.",
+      "assertions": [
+        "Identifies overly sensitive thresholds or redundant rules as the noise source",
+        "Proposes alert consolidation and deduplication strategies",
+        "Recommends severity-based routing so only critical alerts page on-call"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Design a distributed tracing strategy for our microservices (8 services, 3 databases, 2 external APIs). We have no tracing today and debugging production issues takes hours.",
+      "expected_output": "Proposes OpenTelemetry instrumentation, trace propagation strategy, sampling policy, and integration with visualization tools like Jaeger or Tempo.",
+      "assertions": [
+        "Recommends OpenTelemetry for instrumentation with specific SDK guidance",
+        "Designs trace context propagation across all 8 services, databases, and external APIs",
+        "Proposes a sampling strategy that balances cost with debugging visibility"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Design a chaos engineering experiment to validate our platform's resilience. We want to test: database failover, API latency injection, and pod failure recovery. This is our first chaos experiment.",
+      "expected_output": "Proposes a graduated chaos engineering plan starting with safe experiments, defines steady state hypotheses, blast radius controls, and abort conditions.",
+      "assertions": [
+        "Proposes a graduated approach starting with the least risky experiment",
+        "Defines steady-state hypotheses and expected behavior for each experiment",
+        "Includes blast radius controls and automatic abort conditions for safety"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Our observability stack has blind spots: we monitor API response times and error rates but have no visibility into database query performance, background job health, or third-party API reliability. Identify and fill the gaps.",
+      "expected_output": "Maps current observability coverage, identifies the 3 blind spots, proposes specific instrumentation for each, and designs unified dashboards.",
+      "assertions": [
+        "Identifies the 3 specific blind spots: database queries, background jobs, and third-party APIs",
+        "Proposes specific instrumentation for each blind spot (query timing, job metrics, API health checks)",
+        "Designs a unified dashboard or correlation strategy to link all observability signals"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Define SLOs and error budgets for our platform's key user journeys",
+      "We have too many alerts and alert fatigue, help reduce the noise",
+      "Design a distributed tracing strategy for our microservices",
+      "Plan our first chaos engineering experiment to test resilience",
+      "We have observability blind spots in database and background jobs"
+    ],
+    "should_not_trigger": [
+      "Design a Terraform module for our AWS infrastructure",
+      "Review this FastAPI endpoint for performance issues",
+      "Fine-tune an LLM for our educational assistant",
+      "Build a data pipeline with dbt for student analytics",
+      "Design a React micro-frontend architecture"
+    ]
+  }
+}

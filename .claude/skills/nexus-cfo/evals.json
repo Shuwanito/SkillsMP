@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-cfo",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Calculate the unit economics for our Corporate Training Module assuming a CAC of €120, monthly churn of 3%, and average revenue per user of €45/month. What is the LTV and LTV:CAC ratio?",
+      "expected_output": "A detailed unit economics breakdown including LTV calculation (ARPU/churn = €45/0.03 = €1,500), LTV:CAC ratio (€1,500/€120 = 12.5x), payback period, and commentary on whether these economics are healthy for a SaaS EdTech product.",
+      "assertions": [
+        "Response includes correct LTV calculation with formula and result",
+        "Response includes LTV:CAC ratio with interpretation of whether it is healthy",
+        "Response presents at least base and pessimistic scenarios for the projections"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Design a tiered pricing strategy for our Skills Assessment Platform targeting SMBs, mid-market, and enterprise segments. Include price points and feature differentiation.",
+      "expected_output": "A structured pricing table with 3 tiers, each with specific price points, feature sets, user limits, and justification based on market comparables. Should reference competitor pricing data.",
+      "assertions": [
+        "Response includes at least 3 distinct pricing tiers with specific price points",
+        "Response differentiates features across tiers in a logical progression",
+        "Response references comparable market pricing or competitor benchmarks"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Project our burn rate and runway for the next 12 months given monthly operating costs of €18,000, current MRR of €8,500 growing at 12% monthly, and €95,000 in the bank.",
+      "expected_output": "A month-by-month cash flow projection showing when revenue covers costs, the break-even month, remaining runway, and recommendations for extending runway if needed.",
+      "assertions": [
+        "Response includes a month-by-month or quarterly cash flow projection",
+        "Response identifies the break-even point or states if runway runs out first",
+        "Response provides actionable recommendations for cash flow management"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Analyze the revenue diversification opportunities for NEXUS given our current 70% dependency on skill marketplace sales. What new revenue streams should we prioritize?",
+      "expected_output": "An analysis identifying at least 3 new revenue streams with estimated potential, implementation effort, and strategic fit. Should address reducing single-stream dependency.",
+      "assertions": [
+        "Response identifies at least 3 concrete alternative revenue streams",
+        "Response includes estimated revenue potential for each stream",
+        "Response addresses risk reduction from diversification with prioritization criteria"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Compare the unit economics of our white-label agent factory (60-70% margin) versus our subscription skill marketplace ($0.50-$5.00/execution). Which should we invest in scaling first?",
+      "expected_output": "A comparative financial analysis of both models including margins, scalability, customer acquisition dynamics, and a data-backed recommendation on investment priority.",
+      "assertions": [
+        "Response compares margins, scalability, and acquisition costs for both models",
+        "Response includes a clear recommendation with supporting financial rationale",
+        "Response considers both short-term revenue and long-term strategic value"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "What are our current unit economics and LTV:CAC ratio?",
+      "Design a pricing strategy for the new healthcare vertical",
+      "How long is our financial runway at current burn rate?",
+      "Build a P&L projection for Q3 2026",
+      "Analyze cash flow scenarios for the next 6 months"
+    ],
+    "should_not_trigger": [
+      "How do I fix a bug in the React frontend?",
+      "Design a clinical simulation for nursing students",
+      "Write a compliance checklist for GDPR",
+      "Create an onboarding flow for new employees",
+      "Analyze competitor brand positioning in EdTech"
+    ]
+  }
+}

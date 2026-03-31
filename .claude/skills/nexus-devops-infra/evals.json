@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-devops-infra",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a Terraform module for deploying our FastAPI application on AWS ECS Fargate with auto-scaling, an ALB, and RDS PostgreSQL. Include networking (VPC, subnets, security groups).",
+      "expected_output": "Provides modular Terraform structure with networking, compute, database, and load balancer modules. Includes auto-scaling policies and security group rules.",
+      "assertions": [
+        "Designs a modular Terraform structure with separate networking, compute, and database modules",
+        "Includes ECS Fargate service with auto-scaling policies based on CPU/memory metrics",
+        "Defines security groups with least-privilege rules between ALB, ECS, and RDS"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Our Terraform state shows 47 resources but running terraform plan shows 12 resources need to be recreated. Someone manually modified infrastructure through the AWS console. Diagnose and remediate the drift.",
+      "expected_output": "Identifies manual console changes as drift source, proposes import or re-align strategy, recommends drift prevention policies.",
+      "assertions": [
+        "Identifies manual AWS console modifications as the cause of infrastructure drift",
+        "Proposes remediation via terraform import or state manipulation for the drifted resources",
+        "Recommends drift prevention measures such as SCPs or config rules"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Our Kubernetes cluster has 15 nodes but average utilization is only 20%. Monthly cost is $4,500. Optimize the cluster for cost while maintaining reliability for our workloads.",
+      "expected_output": "Proposes right-sizing, cluster autoscaler, spot instances, resource requests/limits tuning, and estimates new monthly cost.",
+      "assertions": [
+        "Recommends enabling cluster autoscaler to scale nodes based on actual demand",
+        "Proposes spot or preemptible instances for non-critical workloads",
+        "Suggests right-sizing resource requests and limits with specific analysis"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Evaluate a multi-cloud strategy for our platform. Currently all-in on AWS. Stakeholders want to reduce vendor lock-in. Our services use ECS, RDS, S3, SQS, and CloudFront.",
+      "expected_output": "Assesses lock-in risk per service, evaluates multi-cloud vs cloud-agnostic abstractions, estimates migration complexity and cost, recommends pragmatic approach.",
+      "assertions": [
+        "Assesses vendor lock-in risk for each AWS service used",
+        "Evaluates the cost and complexity of multi-cloud migration",
+        "Recommends a pragmatic approach balancing portability against operational overhead"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Implement a service mesh for our 8 microservices running on Kubernetes. We need mTLS between services, traffic splitting for canary deployments, and observability. Evaluate Istio vs Linkerd vs Cilium.",
+      "expected_output": "Compares all three service meshes on performance overhead, feature set, and operational complexity. Recommends one based on requirements and team expertise.",
+      "assertions": [
+        "Compares Istio, Linkerd, and Cilium on resource overhead and operational complexity",
+        "Evaluates mTLS, traffic splitting, and observability capabilities for each option",
+        "Recommends one service mesh with justification based on the stated requirements"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design a Terraform module for deploying our app on AWS ECS",
+      "Our infrastructure has drifted from the Terraform state, how do we fix it?",
+      "Optimize our Kubernetes cluster costs, utilization is very low",
+      "Should we adopt a multi-cloud strategy to reduce vendor lock-in?",
+      "Evaluate service mesh options for our Kubernetes microservices"
+    ],
+    "should_not_trigger": [
+      "Review this Python function for code quality issues",
+      "Design an ML model for student dropout prediction",
+      "Build a WebXR chemistry lab simulation",
+      "Generate fuzz tests for our API endpoints",
+      "Analyze the causal effect of tutoring on grades"
+    ]
+  }
+}

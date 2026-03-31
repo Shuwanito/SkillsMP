@@ -1,0 +1,83 @@
+{
+  "skill_name": "nexus-edu-lesson",
+  "version": "1.0.0",
+  "created": "2026-03-31",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Design a project-based learning (PBL) scenario for 3rd ESO Physics on forces and motion where students build a Rube Goldberg machine.",
+      "expected_output": "A complete PBL lesson plan with clear learning objectives, phased activities, competency targets, differentiation layers, and assessment criteria.",
+      "assertions": [
+        "Response includes explicit, measurable learning objectives tied to forces and motion concepts",
+        "Response structures the PBL in phases (research, design, build, present) with progressive complexity",
+        "Response includes differentiation strategies for diverse learner levels within the same project"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 2,
+      "prompt": "Create a gamified lesson plan for 6th Primaria English class on irregular verbs. Students should practice through game mechanics, not just drills.",
+      "expected_output": "A lesson plan integrating meaningful gamification elements that serve learning objectives, not just engagement for its own sake.",
+      "assertions": [
+        "Gamification mechanics directly reinforce irregular verb learning (not superficial points/badges)",
+        "Response includes clear learning objectives that the gamification serves",
+        "Activities provide progressive challenge that adapts to student mastery level"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 3,
+      "prompt": "Audit this lesson plan: a 2nd ESO History class on the French Revolution consists of a 45-minute lecture followed by a worksheet. No learning objectives are stated.",
+      "expected_output": "An audit identifying missing learning objectives, lack of student engagement, and absence of differentiation, with a redesigned activity sequence.",
+      "assertions": [
+        "Response flags the absence of explicit learning objectives as a critical gap",
+        "Response identifies the passive lecture format as insufficient for engagement and deeper learning",
+        "Response proposes a redesigned sequence with active learning activities and stated objectives"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 4,
+      "prompt": "Design a learning situation for 1st Primaria Mathematics on basic addition, incorporating manipulatives and collaborative tasks for 6-year-olds.",
+      "expected_output": "An age-appropriate learning situation with concrete manipulatives, collaborative elements, and scaffolded activities for young learners.",
+      "assertions": [
+        "Activities are developmentally appropriate for 6-year-olds (concrete, hands-on, short duration)",
+        "Response incorporates physical manipulatives and collaborative peer interaction",
+        "Each activity maps to a specific, measurable learning objective for basic addition"
+      ],
+      "grading": "pass/fail per assertion"
+    },
+    {
+      "id": 5,
+      "prompt": "Create a didactic sequence for 4th ESO Chemistry on the periodic table that builds from atom structure to element properties to chemical bonding over 6 sessions.",
+      "expected_output": "A 6-session didactic sequence with progressive complexity, inter-session connections, and varied activity types.",
+      "assertions": [
+        "Response provides a clear 6-session progression from atom structure to chemical bonding",
+        "Each session includes varied activity types (not all lectures or all worksheets)",
+        "Response includes differentiation layers for students at different comprehension levels"
+      ],
+      "grading": "pass/fail per assertion"
+    }
+  ],
+  "benchmarks": {
+    "accuracy_target": 0.85,
+    "relevance_target": 0.80,
+    "completeness_target": 0.75
+  },
+  "trigger_evals": {
+    "should_trigger": [
+      "Design a lesson plan for 3rd ESO Biology on ecosystems",
+      "Create a gamified activity for learning vocabulary",
+      "Build a project-based learning scenario for my class",
+      "Audit this lesson plan for engagement and objectives",
+      "Design a didactic sequence on fractions for 4th Primaria"
+    ],
+    "should_not_trigger": [
+      "Design a rubric for student presentations",
+      "Audit this curriculum for LOMLOE alignment",
+      "How do I detect learning difficulties in my students?",
+      "Adapt this content for a student with ADHD",
+      "Check if my platform complies with GDPR"
+    ]
+  }
+}
