@@ -1,0 +1,82 @@
+skills:
+- name: nexus-code-reviewer
+  author: NEXUS AI Corp
+  description: 'Automated code review: security, architecture, QA, best practices'
+  category: development
+  pricing: $0.50/execution
+  source: https://github.com/Shuwanito/SkillsMP/tree/main/.claude/skills/nexus-code-reviewer
+  standard: agentskills.io
+  certified: Gold
+- name: nexus-security-auditor
+  author: NEXUS AI Corp
+  description: Red/Blue team security audit with CVE scanning and OWASP analysis
+  category: cybersecurity
+  pricing: $2.00/execution
+  source: https://github.com/Shuwanito/SkillsMP/tree/main/.claude/skills/nexus-security-auditor
+  standard: agentskills.io
+  certified: Gold
+- name: nexus-curriculum-designer
+  author: NEXUS AI Corp
+  description: AI curriculum design aligned with LOMLOE and international standards
+  category: education
+  pricing: $1.00/execution
+  source: https://github.com/Shuwanito/SkillsMP/tree/main/.claude/skills/nexus-curriculum-designer
+  standard: agentskills.io
+  certified: Gold
+- name: nexus-legal-analyzer
+  author: NEXUS AI Corp
+  description: Legal RAG with GDPR, EU AI Act compliance and contract analysis
+  category: legal
+  pricing: $3.00/execution
+  source: https://github.com/Shuwanito/SkillsMP/tree/main/.claude/skills/nexus-legal-analyzer
+  standard: agentskills.io
+  certified: Gold
+- name: nexus-clinical-case-gen
+  author: NEXUS AI Corp
+  description: Medical education clinical case generator with PubMed RAG
+  category: healthcare
+  pricing: $5.00/execution
+  source: https://github.com/Shuwanito/SkillsMP/tree/main/.claude/skills/nexus-clinical-case-gen
+  standard: agentskills.io
+  certified: Gold
+- name: nexus-talent-assessor
+  author: NEXUS AI Corp
+  description: Adaptive competency assessment with skill gap analysis
+  category: hr
+  pricing: $2.00/execution
+  source: https://github.com/Shuwanito/SkillsMP/tree/main/.claude/skills/nexus-talent-assessor
+  standard: agentskills.io
+  certified: Gold
+- name: nexus-market-researcher
+  author: NEXUS AI Corp
+  description: Strategic market intelligence with competitive analysis
+  category: strategy
+  pricing: $1.50/execution
+  source: https://github.com/Shuwanito/SkillsMP/tree/main/.claude/skills/nexus-market-researcher
+  standard: agentskills.io
+  certified: Gold
+- name: nexus-edge-deployer
+  author: NEXUS AI Corp
+  description: Deploy 1-bit AI models on VPS — AaaS with 98% margins
+  category: infrastructure
+  pricing: $2.00/execution
+  source: https://github.com/Shuwanito/SkillsMP/tree/main/.claude/skills/nexus-edge-deployer
+  standard: agentskills.io
+  certified: Gold
+- name: nexus-corporate-onboarder
+  author: NEXUS AI Corp
+  description: AI-powered employee onboarding with adaptive learning paths
+  category: corporate
+  pricing: $3.00/execution
+  source: https://github.com/Shuwanito/SkillsMP/tree/main/.claude/skills/nexus-corporate-onboarder
+  standard: agentskills.io
+  certified: Gold
+- name: nexus-eu-ai-compliance
+  author: NEXUS AI Corp
+  description: EU AI Act automation — risk classification, Article 11 docs, bias testing
+  category: compliance
+  pricing: $5.00/execution
+  source: https://github.com/Shuwanito/SkillsMP/tree/main/.claude/skills/nexus-eu-ai-compliance
+  standard: agentskills.io
+  certified: Gold
+submitted: '2026-04-02T17:06:29.122764'

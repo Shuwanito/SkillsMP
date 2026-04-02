@@ -1,71 +1,71 @@
 # NEXUS AI Corp — Agent Skills Marketplace
 
-> **10 enterprise-grade AI agent skills** built on the [Agent Skills Standard](https://agentskills.io) by a 68-agent ecosystem spanning 23 departments.
+> 10 enterprise-grade AI agent skills, Gold certified, compatible with 33 platforms.
 
-## Skills
+## Security First
 
-| Skill | Department | Price | Certification |
-|-------|------------|-------|---------------|
-| [nexus-code-reviewer](.claude/skills/nexus-code-reviewer/) | Development | $0.50/exec | Gold |
-| [nexus-security-auditor](.claude/skills/nexus-security-auditor/) | Cybersecurity | $2.00/exec | Gold |
-| [nexus-curriculum-designer](.claude/skills/nexus-curriculum-designer/) | Education | $1.00/exec | Gold |
-| [nexus-legal-analyzer](.claude/skills/nexus-legal-analyzer/) | Legal | $3.00/exec | Gold |
-| [nexus-clinical-case-gen](.claude/skills/nexus-clinical-case-gen/) | Healthcare | $5.00/exec | Gold |
-| [nexus-talent-assessor](.claude/skills/nexus-talent-assessor/) | HR | $2.00/exec | Gold |
-| [nexus-market-researcher](.claude/skills/nexus-market-researcher/) | Strategy | $1.50/exec | Gold |
-| [nexus-corporate-onboarder](.claude/skills/nexus-corporate-onboarder/) | Corporate | $3.00/exec | Gold |
-| [nexus-edge-deployer](.claude/skills/nexus-edge-deployer/) | Infrastructure | $2.00/exec | Gold |
-| [nexus-eu-ai-compliance](.claude/skills/nexus-eu-ai-compliance/) | Compliance | $5.00/exec | Gold |
+**341 malicious skills** have been detected in community hubs ([source](https://serenitiesai.com/articles/agent-skills-guide-2026)). Every NEXUS skill is:
 
-## New in v2.1
+- **Gold Certified** through our 4-level certification program (Bronze > Silver > Gold > Platinum)
+- **Peer reviewed** across 23 departments by 68 specialized agents
+- **Eval tested** with 5+ test cases and 15+ assertions per skill
+- **Security audited** by dedicated Red/Blue team agents
+- **Zero security findings** — no data exfiltration, no credential theft
 
-- **nexus-corporate-onboarder** — AI-powered employee onboarding with adaptive learning paths by role
-- **nexus-edge-deployer** — Deploy 1-bit quantized AI models on VPS for Agent-as-a-Service (98% margins)
-- **nexus-eu-ai-compliance** — EU AI Act automation: risk classification, Article 11 docs, bias testing (deadline August 2026)
+## Skills Catalog
 
-## Compatibility
+### Development & Security
+| Skill | Price | Certification | Description |
+|-------|-------|--------------|-------------|
+| [nexus-code-reviewer](.claude/skills/nexus-code-reviewer/) | $0.50/exec | Gold | Multi-agent code review: security, architecture, performance, quality scoring |
+| [nexus-security-auditor](.claude/skills/nexus-security-auditor/) | $2.00/exec | Gold | Dual Red/Blue team security audit: OWASP Top 10, CVE scanning, GDPR |
 
-All skills use the open SKILL.md standard and are compatible with:
+### Education & Corporate
+| Skill | Price | Certification | Description |
+|-------|-------|--------------|-------------|
+| [nexus-curriculum-designer](.claude/skills/nexus-curriculum-designer/) | $1.00/exec | Gold | AI curriculum design aligned to educational standards (LOMLOE, Common Core) |
+| [nexus-corporate-onboarder](.claude/skills/nexus-corporate-onboarder/) | $3.00/exec | Gold | Adaptive corporate onboarding, compliance training, L&D ROI dashboards |
 
-- Claude Code / Claude Desktop
-- OpenAI Codex CLI / ChatGPT
-- GitHub Copilot
-- Cursor / Windsurf
-- VS Code / JetBrains
-- Gemini CLI
-- LangChain / AutoGen / CrewAI
-- LobeHub / OpenClaw
-- Any agent framework supporting agentskills.io
+### Legal & Compliance
+| Skill | Price | Certification | Description |
+|-------|-------|--------------|-------------|
+| [nexus-legal-analyzer](.claude/skills/nexus-legal-analyzer/) | $3.00/exec | Gold | Jurisprudence search (BOE, EUR-Lex, CENDOJ), contract analysis, compliance |
+| [nexus-eu-ai-compliance](.claude/skills/nexus-eu-ai-compliance/) | $5.00/exec | Gold | EU AI Act automation: risk classification, Article 11 docs, bias testing |
 
-## Integration
+### Healthcare
+| Skill | Price | Certification | Description |
+|-------|-------|--------------|-------------|
+| [nexus-clinical-case-gen](.claude/skills/nexus-clinical-case-gen/) | $5.00/exec | Gold | Clinical case generation with differential diagnosis, OSCE assessments |
 
-```
-.claude/skills/<skill-name>/SKILL.md
-```
+### HR & Talent
+| Skill | Price | Certification | Description |
+|-------|-------|--------------|-------------|
+| [nexus-talent-assessor](.claude/skills/nexus-talent-assessor/) | $2.00/exec | Gold | Psychometric assessments, skill gap analysis, 360-feedback, career paths |
 
-Place the SKILL.md file in your agent's skills directory. The agent will automatically discover and activate the skill via progressive disclosure (Catalog → Instructions → Resources).
+### Strategy & Business
+| Skill | Price | Certification | Description |
+|-------|-------|--------------|-------------|
+| [nexus-market-researcher](.claude/skills/nexus-market-researcher/) | $1.50/exec | Gold | Market sizing, competitive analysis, SWOT, opportunity matrices |
 
-## Pricing
+### Infrastructure
+| Skill | Price | Certification | Description |
+|-------|-------|--------------|-------------|
+| [nexus-edge-deployer](.claude/skills/nexus-edge-deployer/) | $2.00/exec | Gold | Deploy 1-bit AI models on $4/month VPS with 98% margins (AaaS) |
 
-All skills use **outcome-based pricing** — you only pay per execution. No subscriptions, no setup fees.
+## Platform Compatibility
 
-| Plan | Model |
-|------|-------|
-| Per-execution | $0.50 - $5.00 per call |
-| Enterprise | Custom pricing + SLA |
-| White-label | Agent factory with your branding |
+Compatible with **33 agent platforms** via the [Agent Skills Standard](https://agentskills.io):
 
-Contact: https://paypal.me/NexusAICorp
+Claude Code, Claude, OpenAI Codex, GitHub Copilot, VS Code, Cursor, Gemini CLI, Junie (JetBrains), Amp, Goose, Roo Code, OpenHands, Letta, Firebender, Factory, Qodo, TRAE (ByteDance), Spring AI, Databricks, Snowflake, Kiro (AWS), Mistral Vibe, Laravel Boost, OpenCode, Autohand, Mux, Piebald, Agentman, Command Code, Ona, VT Code, Emdash, pi.
 
 ## About NEXUS AI Corp
 
-NEXUS AI Corp is an autonomous AI agent ecosystem with **68 specialized agents** across **23 departments** (development, cybersecurity, education, healthcare, legal, HR, finance, marketing, strategy, corporate, governance, and more). Each skill is backed by multiple specialized agents working in concert.
+NEXUS is an autonomous AI agent ecosystem with **68 specialized agents** across **23 departments**. Our skills are backed by real domain expertise in education, corporate training, healthcare, legal, HR, cybersecurity, and infrastructure.
 
-- 91 total skills (81 agent + 10 marketplace)
-- 74 Gold-certified skills
-- 7 evaluation suites with automated testing
-- Enterprise clients across 8 verticals
+- **68 agents** | **23 departments** | **78 SKILL.md files**
+- **Gold certification** for every published skill
+- **Proprietary license** with enterprise support available
 
-## License
+---
 
-Proprietary. Per-execution pricing available through SkillsMP, LobeHub, and OpenClaw marketplaces.
+*Built by [NEXUS AI Corp](https://github.com/Shuwanito/SkillsMP) | Agent Skills Standard v1.0*
