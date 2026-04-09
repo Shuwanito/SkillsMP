@@ -4,7 +4,7 @@
     {
       "identifier": "nexus-code-reviewer",
       "author": "NEXUS AI Corp",
-      "createdAt": "2026-04-02",
+      "createdAt": "2026-04-09",
       "homepage": "https://github.com/Shuwanito/SkillsMP/tree/main/.claude/skills/nexus-code-reviewer",
       "manifest": "https://raw.githubusercontent.com/Shuwanito/SkillsMP/main/.claude/skills/nexus-code-reviewer/SKILL.md",
       "meta": {
@@ -24,7 +24,7 @@
     {
       "identifier": "nexus-security-auditor",
       "author": "NEXUS AI Corp",
-      "createdAt": "2026-04-02",
+      "createdAt": "2026-04-09",
       "homepage": "https://github.com/Shuwanito/SkillsMP/tree/main/.claude/skills/nexus-security-auditor",
       "manifest": "https://raw.githubusercontent.com/Shuwanito/SkillsMP/main/.claude/skills/nexus-security-auditor/SKILL.md",
       "meta": {
@@ -44,7 +44,7 @@
     {
       "identifier": "nexus-curriculum-designer",
       "author": "NEXUS AI Corp",
-      "createdAt": "2026-04-02",
+      "createdAt": "2026-04-09",
       "homepage": "https://github.com/Shuwanito/SkillsMP/tree/main/.claude/skills/nexus-curriculum-designer",
       "manifest": "https://raw.githubusercontent.com/Shuwanito/SkillsMP/main/.claude/skills/nexus-curriculum-designer/SKILL.md",
       "meta": {
@@ -64,7 +64,7 @@
     {
       "identifier": "nexus-legal-analyzer",
       "author": "NEXUS AI Corp",
-      "createdAt": "2026-04-02",
+      "createdAt": "2026-04-09",
       "homepage": "https://github.com/Shuwanito/SkillsMP/tree/main/.claude/skills/nexus-legal-analyzer",
       "manifest": "https://raw.githubusercontent.com/Shuwanito/SkillsMP/main/.claude/skills/nexus-legal-analyzer/SKILL.md",
       "meta": {
@@ -84,7 +84,7 @@
     {
       "identifier": "nexus-clinical-case-gen",
       "author": "NEXUS AI Corp",
-      "createdAt": "2026-04-02",
+      "createdAt": "2026-04-09",
       "homepage": "https://github.com/Shuwanito/SkillsMP/tree/main/.claude/skills/nexus-clinical-case-gen",
       "manifest": "https://raw.githubusercontent.com/Shuwanito/SkillsMP/main/.claude/skills/nexus-clinical-case-gen/SKILL.md",
       "meta": {
@@ -104,7 +104,7 @@
     {
       "identifier": "nexus-talent-assessor",
       "author": "NEXUS AI Corp",
-      "createdAt": "2026-04-02",
+      "createdAt": "2026-04-09",
       "homepage": "https://github.com/Shuwanito/SkillsMP/tree/main/.claude/skills/nexus-talent-assessor",
       "manifest": "https://raw.githubusercontent.com/Shuwanito/SkillsMP/main/.claude/skills/nexus-talent-assessor/SKILL.md",
       "meta": {
@@ -124,7 +124,7 @@
     {
       "identifier": "nexus-market-researcher",
       "author": "NEXUS AI Corp",
-      "createdAt": "2026-04-02",
+      "createdAt": "2026-04-09",
       "homepage": "https://github.com/Shuwanito/SkillsMP/tree/main/.claude/skills/nexus-market-researcher",
       "manifest": "https://raw.githubusercontent.com/Shuwanito/SkillsMP/main/.claude/skills/nexus-market-researcher/SKILL.md",
       "meta": {
@@ -144,7 +144,7 @@
     {
       "identifier": "nexus-edge-deployer",
       "author": "NEXUS AI Corp",
-      "createdAt": "2026-04-02",
+      "createdAt": "2026-04-09",
       "homepage": "https://github.com/Shuwanito/SkillsMP/tree/main/.claude/skills/nexus-edge-deployer",
       "manifest": "https://raw.githubusercontent.com/Shuwanito/SkillsMP/main/.claude/skills/nexus-edge-deployer/SKILL.md",
       "meta": {
@@ -164,7 +164,7 @@
     {
       "identifier": "nexus-corporate-onboarder",
       "author": "NEXUS AI Corp",
-      "createdAt": "2026-04-02",
+      "createdAt": "2026-04-09",
       "homepage": "https://github.com/Shuwanito/SkillsMP/tree/main/.claude/skills/nexus-corporate-onboarder",
       "manifest": "https://raw.githubusercontent.com/Shuwanito/SkillsMP/main/.claude/skills/nexus-corporate-onboarder/SKILL.md",
       "meta": {
@@ -184,7 +184,7 @@
     {
       "identifier": "nexus-eu-ai-compliance",
       "author": "NEXUS AI Corp",
-      "createdAt": "2026-04-02",
+      "createdAt": "2026-04-09",
       "homepage": "https://github.com/Shuwanito/SkillsMP/tree/main/.claude/skills/nexus-eu-ai-compliance",
       "manifest": "https://raw.githubusercontent.com/Shuwanito/SkillsMP/main/.claude/skills/nexus-eu-ai-compliance/SKILL.md",
       "meta": {
