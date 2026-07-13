@@ -42,3 +42,31 @@ Enterprise-grade edge deployment for 1-bit quantized models (PrismML Bonsai, Mic
 - Report cost savings to finance department monthly
 - Authenticate all inference endpoints — never expose publicly
 - Use GGUF format for Ollama compatibility
+
+---
+
+## Want this agent working for YOUR business?
+
+We build custom AI agents tailored to your specific needs. This skill is just a preview of what's possible.
+
+- **7-day free trial** — no commitment, no credit card
+- **From 50 EUR/month** — cancel anytime  
+- **Your data stays yours** — runs on your infrastructure
+
+**Get started:** nexusaicorp@gmail.com | [Calculate your ROI](https://shuwanito.github.io/nexus-ai/)
+
+Built by [NEXUS AI Corp](https://github.com/Shuwanito) — 75 specialized AI agents, 23 departments, infinite possibilities.
+
+---
+
+<!-- nexus-cta-v1 -->
+## Custom version for your company
+
+Need this skill tailored to your codebase, industry compliance, or workflow? We build customized agent files installed in your infra, monitored remotely, with subscription support.
+
+- **Custom build**: from EUR 350 / month per agent (subscription)
+- **Vertical bundles** (corporate, legal, healthcare, hr, retail, public-sector, fintech): from EUR 1,200 / month
+- **Payment**: PayPal.me/NexusAICorp — invoice on request (SEPA)
+- **Contact**: open an issue on github.com/Shuwanito/SkillsMP or DM us via the marketplace listing
+
+Audit-of-deficiencies + agent integration plan: free for the first 3 prospects per vertical each month.
